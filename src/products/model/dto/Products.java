@@ -1,4 +1,4 @@
-package products.model;
+package products.model.dto;
 
 public class Products {
 	

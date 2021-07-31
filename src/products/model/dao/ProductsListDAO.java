@@ -1,4 +1,4 @@
-package products.controller;
+package products.model.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,10 +6,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import products.model.Products;
+import products.model.dto.Products;
 import util.DBUtill;
 
-public class ProductsListController {
+public class ProductsListDAO {
 
 	/**
 	 	p_name, p_price, p_img_path p_type가져와서 list에 넣어주기

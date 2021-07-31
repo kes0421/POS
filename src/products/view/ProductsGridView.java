@@ -1,49 +1,45 @@
 package products.view;
 
+import java.awt.Color;
 import java.awt.GridLayout;
+import java.awt.Image;
 import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
 import products.model.dao.ProductsListDAO;
 import products.model.dto.Products;
 
-public class MakeProducts extends DefaultFrame{
+public class ProductsGridView extends JFrame{
+	
+	ProductsListDAO list = new ProductsListDAO();
+	
+	// 선택한 타입 넣어놓음
+	ArrayList<Products> selectType = new ArrayList<>();
 
-	static ProductsListDAO list = new ProductsListDAO();
+	// 제품 이름, 가격, 이미지주소 넣어놓음
+	ArrayList<String> name = new ArrayList<>();
+	ArrayList<Integer> price = new ArrayList<>();
+	ArrayList<String> imgPath = new ArrayList<>();
 
-	public MakeProducts() {
+	ArrayList<ImageIcon> imgIcon = new ArrayList<>();
+	ArrayList<String> text = new ArrayList<>();
+	ArrayList<JButton> btns = new ArrayList<>();
+	
+	public ProductsGridView() {
 		super();
-
-		JMenuBar bar = new JMenuBar();
-
-		JMenu combo = new JMenu("Combo");
-		JMenu popcorn = new JMenu("Popcorn");
-		JMenu beverage = new JMenu("Beverage");
-		JMenu snack = new JMenu("Snack");
-
-		bar.add(combo);
-		bar.add(popcorn);
-		bar.add(beverage);
-		bar.add(snack);
-
-		setJMenuBar(bar);
-
-		ArrayList<Products> selectType = new ArrayList<>();
-
-		ArrayList<String> name = new ArrayList<>();
-		ArrayList<Integer> price = new ArrayList<>();
-		ArrayList<String> imgPath = new ArrayList<>();
-
-		ArrayList<ImageIcon> imgIcon = new ArrayList<>();
-		ArrayList<String> text = new ArrayList<>();
-		ArrayList<JButton> btns = new ArrayList<>();
-
+		
+		JPanel productsPanel = new JPanel();
+		JScrollPane scroll = new JScrollPane(productsPanel);
+		
+		add(scroll, "Center");
+		
+		productsPanel.setLayout(new GridLayout(4,2));
+		
 		selectType = typeOfproduct(list.pList(),"팝콘단품");
 
 		for(int i = 0; i < selectType.size(); ++i) {
@@ -51,17 +47,21 @@ public class MakeProducts extends DefaultFrame{
 			price.add(selectType.get(i).getPrice());
 			imgPath.add(selectType.get(i).getImgPath());
 		}
-
+		
 		imgIcon = makeImageIconArray(imgPath);
 		text = p_text(name, price);
 		btns = btn_list(imgIcon, text);
-
-		JPanel panel = new JPanel();
-		add(panel, "Center");
-		panel.add(btns.get(0));
-
+		
+		for(int i = 0; i< btns.size(); ++i) {
+			productsPanel.add(btns.get(i));	
+		}
+		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(600,600);
+		setLocationRelativeTo(null);
+		setVisible(true);
 	}
-
+	
 	public static ArrayList<String> p_text(ArrayList<String> name, ArrayList<Integer> price) {
 		ArrayList<String> result = new ArrayList<>();
 
@@ -76,7 +76,10 @@ public class MakeProducts extends DefaultFrame{
 		ArrayList<ImageIcon> icons = new ArrayList<>();
 
 		for (String path : image_paths) {
-			icons.add(new ImageIcon(path));
+			ImageIcon originIcon = new ImageIcon(path);
+			Image resizeIcon = originIcon.getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH);
+			
+			icons.add(new ImageIcon(resizeIcon));
 		}
 
 		return icons;
@@ -84,11 +87,12 @@ public class MakeProducts extends DefaultFrame{
 
 	public static ArrayList<JButton> btn_list(ArrayList<ImageIcon> icons, ArrayList<String> texts){
 		ArrayList<JButton> btns = new ArrayList<>();
-
-		for (int i = 0; i <icons.size(); ++i) {
+		
+		for (int i = 0; i < icons.size(); ++i) {
 			btns.add(new JButton(texts.get(i),icons.get(i)));
+			btns.get(i).setBackground(Color.white);
 		}
-
+		
 		return btns;
 	}
 
@@ -103,12 +107,10 @@ public class MakeProducts extends DefaultFrame{
 
 		return array;
 	}
-
+	
 	public static void main(String[] args) {
-		MakeProducts frame = new MakeProducts();
-		frame.setDefaultOptions();
-
-
-
+		ProductsGridView frame = new ProductsGridView();
 	}
+	
+	
 }
