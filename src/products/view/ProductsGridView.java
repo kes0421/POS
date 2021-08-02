@@ -35,12 +35,12 @@ public class ProductsGridView extends JFrame{
 		
 		JPanel productsPanel = new JPanel();
 		JScrollPane scroll = new JScrollPane(productsPanel);
-		
-		add(scroll, "Center");
+		scroll.setBounds(0,210, 700, 432);
+		add(scroll);
 		
 		productsPanel.setLayout(new GridLayout(4,2));
 		
-		selectType = typeOfproduct(list.pList(),"½º³¼´ÜÇ°");
+		selectType = typeOfproduct(list.pList(),"ÆËÄÜ´ÜÇ°");
 
 		for(int i = 0; i < selectType.size(); ++i) {
 			name.add(selectType.get(i).getName());
@@ -57,7 +57,8 @@ public class ProductsGridView extends JFrame{
 		}
 		
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setSize(600,600);
+		setSize(700,700);
+//		productsPanel.setBounds(0,210, 700, 432);
 		setLocationRelativeTo(null);
 		setVisible(true);
 	}
