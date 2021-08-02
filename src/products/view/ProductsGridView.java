@@ -40,7 +40,7 @@ public class ProductsGridView extends JFrame{
 		
 		productsPanel.setLayout(new GridLayout(4,2));
 		
-		selectType = typeOfproduct(list.pList(),"ÆËÄÜ´ÜÇ°");
+		selectType = typeOfproduct(list.pList(),"½º³¼´ÜÇ°");
 
 		for(int i = 0; i < selectType.size(); ++i) {
 			name.add(selectType.get(i).getName());
