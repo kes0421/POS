@@ -1,0 +1,19 @@
+package products.view.productsPanels;
+
+import java.awt.GridLayout;
+
+import products.view.ProductsPanel;
+
+public class SnackPanel extends ProductsPanel{
+	
+	public SnackPanel() {
+		
+		setLayout(new GridLayout(4,2));
+		
+		selectType = typeOfproduct(list.pList(), "½º³¼´ÜÇ°");
+		
+		addBtn();
+		
+	}
+
+}

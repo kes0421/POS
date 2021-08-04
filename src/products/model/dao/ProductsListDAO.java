@@ -16,6 +16,7 @@ public class ProductsListDAO {
 	*/
 	public ArrayList<Products> pList() {
 	
+		// product List
 		ArrayList<Products> pList = new ArrayList<>();
 		
 		String sql = "SELECT p_name, p_price, p_img_path, p_type FROM products";
