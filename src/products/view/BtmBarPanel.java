@@ -20,7 +20,7 @@ public class BtmBarPanel extends JPanel {
 	public BtmBarPanel() {
 		// 하단 메뉴바 패널 
 		setBackground(Color.LIGHT_GRAY);
-		setBounds(1, 642, 699, 29);
+		setBounds(1, 635, 699, 29);
 		setLayout(null);
 		setVisible(true);
 

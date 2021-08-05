@@ -2,8 +2,6 @@ package products.view.productsPanels;
 
 import java.awt.GridLayout;
 
-import products.view.ProductsPanel;
-
 public class BeveragePanel extends ProductsPanel{
 
 	public BeveragePanel() {

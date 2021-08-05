@@ -8,7 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 import products.model.dto.Products;
-import products.view.ProductsPanel;
+import products.view.productsPanels.ProductsPanel;
 
 public class ProductBtn extends JFrame implements ActionListener{
 	

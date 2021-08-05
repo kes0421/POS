@@ -29,32 +29,5 @@ public class DBUtill {
 	public static Connection getConnection() throws SQLException {
 		return datasource.getConnection();
 	}
-	
-	public static void main(String[] args) {
-		
-		String sql = "SELECT p_name, p_price, p_img_path FROM PRODUCTS";
-		
-		try (
-				Connection conn = getConnection();
-				PreparedStatement pstmt = conn.prepareStatement(sql);
-				ResultSet rs = pstmt.executeQuery();
-		){
-			
-			ResultSetMetaData meta = rs.getMetaData();
-			
-			int COLUM_SIZE = meta.getColumnCount();
-			
-			while(rs.next()) {
-				for(int i = 1; i <= COLUM_SIZE; ++i) {
-					System.out.printf("%s\t", rs.getObject(i));
-				}
-				System.out.println();
-			}
-			
-		}catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
-	}
 
 }

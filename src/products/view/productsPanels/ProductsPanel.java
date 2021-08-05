@@ -1,4 +1,4 @@
-package products.view;
+package products.view.productsPanels;
 
 import java.awt.Color;
 import java.awt.GridLayout;
@@ -31,7 +31,7 @@ public class ProductsPanel extends JPanel{
 	public ProductsPanel() {
 		// 상품들어갈 패널 콤보제외 
 		setBackground(Color.white);
-		setBounds(0, 210, 700, 432);
+		setBounds(0, 210, 700, 425);
 		setVisible(true);
 		
 		// 스크롤 집어넣을때 사용해라

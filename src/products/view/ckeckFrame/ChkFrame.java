@@ -2,13 +2,23 @@ package products.view.ckeckFrame;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+
+import products.model.dao.ProductsBasketsDAO;
+import products.model.dto.ProductsBasket;
+import products.view.detail.Detail_P2_C;
+
 import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class ChkFrame extends JFrame{
 
+	public ArrayList<ProductsBasket> basketList = new ArrayList<>();;
+	
+	public ChkFrame() {}
+	
 	public ChkFrame(String img_path, String name, int price) {
 		setBounds(100, 100, 500, 200);
 		setDefaultCloseOperation(HIDE_ON_CLOSE);
@@ -19,30 +29,6 @@ public class ChkFrame extends JFrame{
 		img.setBounds(6, 6, 165, 160);
 		getContentPane().add(img);
 		
-		JButton chkBtn = new JButton("확 인");
-		chkBtn.setForeground(Color.BLUE);
-		chkBtn.setBounds(315, 137, 90, 29);
-		chkBtn.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// 장바구니 DB에 상품이름 가격 수량 넣어야함
-				setVisible(false);
-			}
-			
-		});
-		getContentPane().add(chkBtn);
-
-		JButton cancleBtn = new JButton("취 소");
-		cancleBtn.setForeground(Color.RED);
-		cancleBtn.setBounds(404, 137, 90, 29);
-		cancleBtn.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				setVisible(false);
-			}
-		});
-		getContentPane().add(cancleBtn);
-
 		JLabel titleTxT = new JLabel("장바구니에 담으시겠습니까?");
 		titleTxT.setForeground(Color.GRAY);
 		titleTxT.setBounds(289, 6, 205, 16);
@@ -122,6 +108,36 @@ public class ChkFrame extends JFrame{
 			
 		});
 		getContentPane().add(minusBtn);
+		
+		JButton chkBtn = new JButton("확 인");
+		chkBtn.setForeground(Color.BLUE);
+		chkBtn.setBounds(315, 137, 90, 29);
+		chkBtn.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// 장바구니 DB에 상품이름 가격 수량 넣어야함
+				//basketList.add(new ProductsBasket(p_name.getText(), img_path, p_price.getText(), quan_count.getText()));
+				
+				new ProductsBasketsDAO().basketInsert(new ProductsBasket(p_name.getText(), img_path, p_price.getText(), quan_count.getText()));
+				
+				
+				setVisible(false);
+			}
+			
+		});
+		getContentPane().add(chkBtn);
+
+		JButton cancleBtn = new JButton("취 소");
+		cancleBtn.setForeground(Color.RED);
+		cancleBtn.setBounds(404, 137, 90, 29);
+		cancleBtn.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				setVisible(false);
+			}
+		});
+		getContentPane().add(cancleBtn);
 	}
+	
 	
 }

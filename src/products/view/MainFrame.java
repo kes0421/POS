@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 
 import products.view.productsPanels.BeveragePanel;
 import products.view.productsPanels.PopcornPanel;
+import products.view.productsPanels.ProductsPanel;
 import products.view.productsPanels.SnackPanel;
 
 public class MainFrame extends JFrame{
@@ -20,7 +21,6 @@ public class MainFrame extends JFrame{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setBounds(0, 0, 700, 700);
 		setLayout(null);
-		setVisible(true);
 		
 		plusFrame();
 	}
@@ -89,5 +89,6 @@ public class MainFrame extends JFrame{
 	
 	public static void main(String[] args) {
 		MainFrame frame = new MainFrame();
+		frame.setVisible(true);
 	}
 }
