@@ -11,11 +11,11 @@ import javax.swing.JLabel;
 
 public class ChkImg extends JLabel{
 	
-	public ChkImg(String path) {
-		setIcon(makeImageIcon(path));
+	public ChkImg(String path,int width, int height) {
+		setIcon(makeImageIcon(path,width,height));
 	}
 	
-	private static ImageIcon makeImageIcon(String path) {
+	private static ImageIcon makeImageIcon(String path, int width, int height) {
 		BufferedImage image;
 		try {
 			image = ImageIO.read(new File(path));
@@ -24,6 +24,6 @@ public class ChkImg extends JLabel{
 			image = null;
 		}
 		
-		return new ImageIcon(image.getScaledInstance(165, 160, Image.SCALE_SMOOTH));
+		return new ImageIcon(image.getScaledInstance(width, height, Image.SCALE_SMOOTH));
 	}
 }

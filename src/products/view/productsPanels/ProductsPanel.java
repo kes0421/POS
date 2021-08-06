@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 
 import products.model.dao.ProductsListDAO;
 import products.model.dto.Products;
@@ -31,13 +32,7 @@ public class ProductsPanel extends JPanel{
 	public ProductsPanel() {
 		// 상품들어갈 패널 콤보제외 
 		setBackground(Color.white);
-		setBounds(0, 210, 700, 425);
-		setVisible(true);
-		
-		// 스크롤 집어넣을때 사용해라
-		//JScrollPane scroll = new JScrollPane();
-		//scroll.add(this);
-		
+
 	}
 	
 	public void addBtn() {
@@ -56,6 +51,8 @@ public class ProductsPanel extends JPanel{
 			
 			btns.get(i).addActionListener(new P_BtnAct(i, selectType));
 		}
+		
+		
 	}
 	
 	public ArrayList<String> p_text(ArrayList<String> name, ArrayList<Integer> price) {

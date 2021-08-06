@@ -4,10 +4,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
-public class ComboPanel extends JPanel{
+public class ComboDetailPanel extends JPanel{
 	// 기본적인 콤보 레이아웃 틀 // 각 콤보마다 어떤정보를 가져올지 정해야함 
 	
-	public ComboPanel() {
+	public ComboDetailPanel() {
 		setBounds(0, 210, 700, 432);
 		setLayout(null);
 		setVisible(true);

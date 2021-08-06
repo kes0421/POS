@@ -6,12 +6,9 @@ public class BeveragePanel extends ProductsPanel{
 
 	public BeveragePanel() {
 		
-		setLayout(new GridLayout(5,3));
+		setLayout(new GridLayout(8,2));
 		
 		selectType = typeOfproduct(list.pList(), "음료단품");
-		
-//		JScrollPane scroll = new JScrollPane();
-//		scroll.add(this);
 		
 		addBtn();
 	}

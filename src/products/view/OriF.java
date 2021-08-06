@@ -13,7 +13,7 @@ public class OriF extends JFrame{
 	public OriF() {
 		
 		setBackground(Color.LIGHT_GRAY);
-		setBounds(258, 230, 400, 400);
+		setBounds(228, 200, 400, 460);
 		setLayout(null);
 		setDefaultCloseOperation(HIDE_ON_CLOSE);
 		setVisible(true);

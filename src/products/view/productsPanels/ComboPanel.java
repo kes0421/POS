@@ -1,11 +1,16 @@
 package products.view.productsPanels;
 
-import javax.swing.JPanel;
+import java.awt.GridLayout;
 
-public class ComboPanel extends JPanel{
+public class ComboPanel extends ProductsPanel{
 
 	
 	public ComboPanel() {
 		
+		setLayout(new GridLayout(3,2));
+		
+		selectType = typeOfproduct(list.pList(), "ÄÞº¸");
+		
+		addBtn();
 	}
 }

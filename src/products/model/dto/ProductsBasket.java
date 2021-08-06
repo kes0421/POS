@@ -16,6 +16,11 @@ public class ProductsBasket {
 		this.price = price;
 		this.quantity = quantity;
 	}
+	
+	public ProductsBasket(String name) {
+		super();
+		this.name = name;
+	}
 
 	public String getName() {
 		return name;

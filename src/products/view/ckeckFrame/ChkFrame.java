@@ -22,20 +22,21 @@ public class ChkFrame extends JFrame{
 	public ChkFrame(String img_path, String name, int price) {
 		setBounds(100, 100, 500, 200);
 		setDefaultCloseOperation(HIDE_ON_CLOSE);
+		setBackground(Color.white);
 		getContentPane().setLayout(null);
 		setVisible(true);
 
-		ChkImg img = new ChkImg(img_path);
-		img.setBounds(6, 6, 165, 160);
+		ChkImg img = new ChkImg(img_path,165,166);
+		img.setBounds(0, 0, 165, 166);
 		getContentPane().add(img);
 		
 		JLabel titleTxT = new JLabel("장바구니에 담으시겠습니까?");
 		titleTxT.setForeground(Color.GRAY);
-		titleTxT.setBounds(289, 6, 205, 16);
+		titleTxT.setBounds(180, 6, 205, 16);
 		getContentPane().add(titleTxT);	
 		
 		JLabel p_name = new JLabel(name);
-		p_name.setBounds(200, 6, 77, 16);
+		p_name.setBounds(180, 27, 200, 16);
 		getContentPane().add(p_name);
 
 		JLabel quantity = new JLabel("수 량");
@@ -59,13 +60,13 @@ public class ChkFrame extends JFrame{
 		getContentPane().add(quan_count);
 		
 		JLabel p_price = new JLabel(price + "");
-		p_price.setBounds(325, 97, 61, 16);
+		p_price.setBounds(355, 97, 61, 16);
 		getContentPane().add(p_price);
 		
 		JButton plusBtn = new JButton("+");
 		plusBtn.setForeground(Color.BLUE);
 		plusBtn.setBackground(Color.WHITE);
-		plusBtn.setBounds(290, 49, 42, 29);
+		plusBtn.setBounds(300, 49, 42, 29);
 		plusBtn.addActionListener(new ActionListener() {
 			
 			int pri = Integer.parseInt(p_price.getText());

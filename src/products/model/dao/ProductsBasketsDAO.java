@@ -42,6 +42,33 @@ public class ProductsBasketsDAO {
 	}
 	
 	/**
+		장바구니 DB데이터에서 DELETE해주기
+	 */
+
+	public int basketDelete(ProductsBasket productsBasket) {
+		Connection con = null;
+		PreparedStatement ps = null;
+		int result = 0;
+		
+		try {
+			con = DBUtill.getConnection();
+			ps = con.prepareStatement("Delete from productsbaskets where pb_name = ?");
+			
+			ps.setString(1, productsBasket.getName());
+			
+			result = ps.executeUpdate();
+			
+			con.close();
+			ps.close();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+	/**
 	 	장바구니 DB데이터 select해주기
 	*/
 	public ArrayList<ProductsBasket> basketList(){
@@ -72,4 +99,5 @@ public class ProductsBasketsDAO {
 		
 		return proBasketList;
 	}
+	
 }
