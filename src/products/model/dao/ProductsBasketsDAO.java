@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import products.model.dto.Products;
 import products.model.dto.ProductsBasket;
 import util.DBUtill;
 
@@ -44,7 +43,6 @@ public class ProductsBasketsDAO {
 	/**
 		장바구니 DB데이터에서 DELETE해주기
 	 */
-
 	public int basketDelete(ProductsBasket productsBasket) {
 		Connection con = null;
 		PreparedStatement ps = null;

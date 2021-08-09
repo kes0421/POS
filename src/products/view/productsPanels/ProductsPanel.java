@@ -1,30 +1,29 @@
 package products.view.productsPanels;
 
 import java.awt.Color;
-import java.awt.GridLayout;
 import java.awt.Image;
 import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 
 import products.model.dao.ProductsListDAO;
 import products.model.dto.Products;
-import products.view.ckeckFrame.P_BtnAct;
+import products.view.proBasket.P_BtnAct;
 
 public class ProductsPanel extends JPanel{
+	
 	public ProductsListDAO list = new ProductsListDAO();
 	
 	// 선택한 타입 넣어놓음
 	public ArrayList<Products> selectType = new ArrayList<>();
 
-	// 제품 이름, 가격, 이미지주소 넣어놓음
+	// 제품 각각의 이름, 가격, 이미지주소 넣어놓음
 	public ArrayList<String> name = new ArrayList<>();
 	public ArrayList<Integer> price = new ArrayList<>();
 	public ArrayList<String> imgPath = new ArrayList<>();
-
+	
 	public ArrayList<ImageIcon> imgIcon = new ArrayList<>();
 	public ArrayList<String> text = new ArrayList<>();
 	public ArrayList<JButton> btns = new ArrayList<>();
@@ -32,10 +31,10 @@ public class ProductsPanel extends JPanel{
 	public ProductsPanel() {
 		// 상품들어갈 패널 콤보제외 
 		setBackground(Color.white);
-
 	}
 	
 	public void addBtn() {
+		
 		for(int i = 0; i < selectType.size(); ++i) {
 			name.add(selectType.get(i).getName());
 			price.add(selectType.get(i).getPrice());
@@ -51,10 +50,14 @@ public class ProductsPanel extends JPanel{
 			
 			btns.get(i).addActionListener(new P_BtnAct(i, selectType));
 		}
-		
-		
 	}
 	
+	/**
+		products들의 이름과 가격를 gui에 보여주기위해 html를 활용해 text를 만들었다.
+		@param name : 제품들 이름
+		@param price : 제품들 가격
+		@return : ArrayList<String>
+	 */
 	public ArrayList<String> p_text(ArrayList<String> name, ArrayList<Integer> price) {
 		ArrayList<String> result = new ArrayList<>();
 
@@ -64,7 +67,13 @@ public class ProductsPanel extends JPanel{
 
 		return result;
 	}
-
+	
+	/**
+		ImageIcon ArrayList에 img_path의 사진을 넣어준다.
+		img사이즈도 줄어줌
+	 	@param image_paths : 여러 이미지 path들이 들어가 있음
+		@return ArrayList<ImageIcon>
+	 */
 	public ArrayList<ImageIcon> makeImageIconArray(ArrayList<String> image_paths) {
 		ArrayList<ImageIcon> icons = new ArrayList<>();
 
@@ -77,7 +86,13 @@ public class ProductsPanel extends JPanel{
 
 		return icons;
 	}
-
+	
+	/**
+		img와 위에서 만든 name, price있는 text를 가지고 여러개의 번튼 만들기
+		@param icons : 각각의 제품 img들이 들어있다.
+		@param texts : 각각의 제품 name, price들이 들어있다.
+		@return ArrayList<JButton>
+	*/
 	public ArrayList<JButton> btn_list(ArrayList<ImageIcon> icons, ArrayList<String> texts){
 		ArrayList<JButton> btns = new ArrayList<>();
 		
@@ -89,6 +104,12 @@ public class ProductsPanel extends JPanel{
 		return btns;
 	}
 
+	/**
+	 	타입에 맞는 products들의 정보 가져와서 ArrayList에 담아주기
+	 	@param products ArrayList에 제품 정보 담기
+	 	@param typeName 선택된 상품 type
+	 	@return ArrayList<Products>
+	*/
 	public ArrayList<Products> typeOfproduct(ArrayList<Products> products, String typeName){
 		ArrayList<Products> array = new ArrayList<>();
 

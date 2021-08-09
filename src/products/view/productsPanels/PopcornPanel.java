@@ -2,8 +2,6 @@ package products.view.productsPanels;
 
 import java.awt.GridLayout;
 
-import javax.swing.JScrollPane;
-
 public class PopcornPanel extends ProductsPanel{
 
 	public PopcornPanel() {

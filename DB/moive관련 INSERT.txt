@@ -1,0 +1,107 @@
+-- movies INSERT
+INSERT INTO movies VALUES (m_code_seq.NEXTVAL,'葛啊叼酱', '15技 捞惑 包恩啊', '2021-07-28', '咀记', '121盒', './image/movie/mogadishu.jpg', './image/grade/fifteen.png');
+INSERT INTO movies VALUES (m_code_seq.NEXTVAL, '焊胶海捞厚2', '傈眉 包恩啊', '2021-07-21', '局聪皋捞记', '107盒', './image/movie/bossbaby2.jpg', './image/grade/all.png');
+INSERT INTO movies VALUES (m_code_seq.NEXTVAL, '喉发困档快', '12技 捞惑 包恩啊', '2021-07-07', '咀记,绢靛亥贸,SF', '134盒', './image/movie/blackwidow.jpg', './image/grade/.png');
+INSERT INTO movies VALUES (m_code_seq.NEXTVAL, '规过-犁瞒狼', '15技 捞惑 包恩啊', '2021-07-28', '固胶磐府,胶副矾', '109盒', './image/movie/method.jpg', './image/grade/fifteen.png');
+INSERT INTO movies VALUES (m_code_seq.NEXTVAL, '沥臂农风令', '12技 捞惑 包恩啊', '2021-07-28', '咀记,绢靛亥贸', '127盒', './image/movie/junglecruise.jpg', './image/grade/twelve.png');
+
+-- timetables INSERT
+-- 8岿 3老 康拳 INSERT
+INSERT INTO timetables VALUES('202108031040_4', '2021-08-03', '10:40', '12:51', '4包', '8摸', 1);
+INSERT INTO timetables VALUES('202108031310_4', '2021-08-03', '13:10', '15:21', '4包', '8摸', 1);
+INSERT INTO timetables VALUES('202108031535_4', '2021-08-03', '15:35', '17:46', '4包', '8摸', 1);
+INSERT INTO timetables VALUES('202108031800_4', '2021-08-03', '18:00', '20:11', '4包', '8摸', 1);
+INSERT INTO timetables VALUES('202108030950_4', '2021-08-03', '09:50', '12:01', '1包', '6摸', 1);
+INSERT INTO timetables VALUES('202108031215_4', '2021-08-03', '12:15', '14:26', '1包', '6摸', 1);
+INSERT INTO timetables VALUES('202108031445_4', '2021-08-03', '14:45', '16:56', '1包', '6摸', 1);
+INSERT INTO timetables VALUES('202108031715_4', '2021-08-03', '17:15', '19:26', '1包', '6摸', 1);
+INSERT INTO timetables VALUES('202108031945_4', '2021-08-03', '19:45', '21:56', '1包', '6摸', 1);
+INSERT INTO timetables VALUES('202108030900_2', '2021-08-03', '09:00', '11:11', '2包', '6摸', 1);
+INSERT INTO timetables VALUES('202108031130_2', '2021-08-03', '11:30', '13:41', '2包', '6摸', 1);
+INSERT INTO timetables VALUES('202108031400_2', '2021-08-03', '14:00', '16:11', '2包', '6摸', 1);
+INSERT INTO timetables VALUES('202108031630_2', '2021-08-03', '16:30', '18:41', '2包', '6摸', 1);
+INSERT INTO timetables VALUES('202108031900_2', '2021-08-03', '19:00', '21:11', '2包', '6摸', 1);
+INSERT INTO timetables VALUES('202108031830_6', '2021-08-03', '18:30', '20:41', '6包', '10摸', 1);
+
+INSERT INTO timetables VALUES('202108030920_3', '2021-08-03', '09:20', '11:17', '3包', '8摸', 2);
+INSERT INTO timetables VALUES('202108031135_3', '2021-08-03', '11:35', '13:32', '3包', '8摸', 2);
+INSERT INTO timetables VALUES('202108031350_3', '2021-08-03', '13:50', '15:47', '3包', '8摸', 2);
+
+INSERT INTO timetables VALUES('202108031602_3', '2021-08-03', '16:05', '18:29', '3包', '8摸', 3);
+INSERT INTO timetables VALUES('202108031850_3', '2021-08-03', '18:50', '21:14', '3包', '8摸', 3);
+INSERT INTO timetables VALUES('202108031130_3', '2021-08-03', '11:30', '13:54', '3包', '8摸', 3);
+
+INSERT INTO timetables VALUES('202108031930_5', '2021-08-03', '19:30', '21:29', '5包', '10摸', 4);
+INSERT INTO timetables VALUES('202108030910_6', '2021-08-03', '09:10', '11:09', '6包', '10摸', 4);
+INSERT INTO timetables VALUES('202108031125_6', '2021-08-03', '11:25', '13:24', '6包', '10摸', 4);
+INSERT INTO timetables VALUES('202108031345_6', '2021-08-03', '13:45', '15:44', '6包', '10摸', 4);
+INSERT INTO timetables VALUES('202108031610_6', '2021-08-03', '16:10', '18:09', '6包', '10摸', 4);
+
+INSERT INTO timetables VALUES('202108030900_6', '2021-08-03', '09:00', '11:17', '6包', '10摸', 5);
+INSERT INTO timetables VALUES('202108031410_5', '2021-08-03', '14:10', '16:27', '5包', '10摸', 5);
+INSERT INTO timetables VALUES('202108031650_5', '2021-08-03', '16:50', '19:07', '5包', '10摸', 5);
+
+-- 8岿 4老 康拳 INSERT
+INSERT INTO timetables VALUES('202108041000_4', '2021-08-04', '10:00', '12:11',  '4包', '8摸', 1);
+INSERT INTO timetables VALUES('202108041440_4', '2021-08-04', '14:40', '16:51',  '4包', '8摸', 1);
+INSERT INTO timetables VALUES('202108041710_4', '2021-08-04', '17:10', '19:21',  '4包', '6摸', 1);
+INSERT INTO timetables VALUES('202108041030_2', '2021-08-04', '10:30', '12:41',  '2包', '6摸', 1);
+INSERT INTO timetables VALUES('202108041300_2', '2021-08-04', '13:00', '15:11',  '2包', '6摸', 1);
+INSERT INTO timetables VALUES('202108041540_2', '2021-08-04', '15:40', '17:51',  '2包', '6摸', 1);
+INSERT INTO timetables VALUES('202108041830_2', '2021-08-04', '18:30', '20:41',  '2包', '6摸', 1);
+INSERT INTO timetables VALUES('202108041220_3', '2021-08-04', '12:20', '14:31', '3包', '8摸', 1);
+INSERT INTO timetables VALUES('202108041500_3', '2021-08-04', '15:00', '17:11', '3包', '8摸', 1);
+INSERT INTO timetables VALUES('202108041800_3', '2021-08-04', '18:00', '20:11', '3包', '8摸', 1);
+INSERT INTO timetables VALUES('202108040910_6', '2021-08-04', '09:10', '11:21', '6包', '10摸', 1);
+INSERT INTO timetables VALUES('202108041135_6', '2021-08-04', '11:35', '13:46', '6包', '10摸', 1);
+INSERT INTO timetables VALUES('202108041400_6', '2021-08-04', '14:00', '16:11', '6包', '10摸', 1);
+INSERT INTO timetables VALUES('202108041640_6', '2021-08-04', '16:40', '18:51', '6包', '10摸', 1);
+INSERT INTO timetables VALUES('202108041920_6', '2021-08-04', '19:20', '21:31', '6包', '10摸', 1);
+
+INSERT INTO timetables VALUES('202108040950_3', '2021-08-04', '09:50', '11:47',  '3包', '8摸', 2);
+INSERT INTO timetables VALUES('202108041345_5', '2021-08-04', '13:45', '15:42',  '5包', '10摸', 2);
+
+INSERT INTO timetables VALUES('202108041600_5', '2021-08-04', '16:00', '18:24',  '5包', '10摸', 3);
+
+INSERT INTO timetables VALUES('202108041130_5', '2021-08-04', '11:30', '13:29',  '5包', '10摸', 4);
+
+INSERT INTO timetables VALUES('202108040900_5', '2021-08-04', '09:00', '11:17',  '5包', '10摸', 5);
+
+-- 8岿 5老 康拳 INSERT
+INSERT INTO timetables VALUES('202108051000_4', '2021-08-05', '10:00', '12:11', '4包', '8摸', 1);
+INSERT INTO timetables VALUES('202108051230_4', '2021-08-05', '12:30', '14:41',  '4包', '8摸', 1);
+INSERT INTO timetables VALUES('202108051710_4', '2021-08-05', '17:10', '19:21', '4包', '8摸', 1);
+INSERT INTO timetables VALUES('202108050920_1', '2021-08-05', '09:20', '11:31', '1包', '6摸', 1);
+INSERT INTO timetables VALUES('202108051145_1', '2021-08-05', '11:45', '13:56', '1包', '6摸', 1);
+INSERT INTO timetables VALUES('202108051410_1', '2021-08-05', '14:10', '16:21', '1包', '6摸', 1);
+INSERT INTO timetables VALUES('202108051640_1', '2021-08-05', '16:40', '18:51', '1包', '6摸', 1);
+INSERT INTO timetables VALUES('202108051920_1', '2021-08-05', '19:20', '21:31', '1包', '6摸', 1);
+INSERT INTO timetables VALUES('202108051040_2', '2021-08-05', '10:40', '12:51', '2包', '6摸', 1);
+INSERT INTO timetables VALUES('202108051310_2', '2021-08-05', '13:10', '15:21', '2包', '6摸', 1);
+INSERT INTO timetables VALUES('202108051550_2', '2021-08-05', '15:50', '18:01', '2包', '6摸', 1);
+INSERT INTO timetables VALUES('202108051840_2', '2021-08-05', '18:40', '20:51', '2包', '6摸', 1);
+INSERT INTO timetables VALUES('202108051500_5', '2021-08-05', '15:00', '17:11', '5包', '10摸', 1);
+INSERT INTO timetables VALUES('202108051750_5', '2021-08-05', '17:50', '20:01', '5包', '10摸', 1);
+
+INSERT INTO timetables VALUES('202108051130_6', '2021-08-05', '11:30', '13:27', '6包', '10摸', 2);
+INSERT INTO timetables VALUES('202108051345_6', '2021-08-05', '13:45', '15:42', '6包', '10摸', 2);
+
+INSERT INTO timetables VALUES('202108051600_6', '2021-08-05', '16:00', '18:24', '6包', '10摸', 3);
+
+INSERT INTO timetables VALUES('202108050950_5', '2021-08-05', '09:50', '11:49', '5包', '10摸', 4);
+
+INSERT INTO timetables VALUES('202108050900_6', '2021-08-05', '09:00', '11:17', '6包', '10摸', 5);
+
+-- seats INSERT
+INSERT INTO seats VALUES(s_code_seq.NEXTVAL, 'A01', '老馆籍', 12000, '202108031040_4');
+INSERT INTO seats VALUES(s_code_seq.NEXTVAL, 'B01', '老馆籍', 12000, '202108031040_4');
+INSERT INTO seats VALUES(s_code_seq.NEXTVAL, 'C01', '老馆籍', 12000, '202108031040_4');
+INSERT INTO seats VALUES(s_code_seq.NEXTVAL, 'D01', '老馆籍', 12000, '202108031040_4');
+
+-- 犬牢 select
+select * from movies;
+SELECT * FROM MOVIES;
+SELECT * FROM timetables;
+select * from seats;
+
+commit;

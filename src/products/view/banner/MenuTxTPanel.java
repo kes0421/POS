@@ -1,4 +1,4 @@
-package products.view;
+package products.view.banner;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -10,7 +10,7 @@ public class MenuTxTPanel extends JPanel{
 
 	public MenuTxTPanel() {
 		// 메뉴바 위에 라벨붙힐 패널 
-		setBackground(Color.YELLOW);
+		setBackground(new Color(255,254,230));
 		setBounds(0, 114, 700, 29);
 		setLayout(null);
 		setVisible(true);

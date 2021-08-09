@@ -1,8 +1,9 @@
-package products.view;
+package products.view.bottom;
 
 import java.awt.Color;
 import java.awt.Font;
 
+import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTable;
@@ -12,12 +13,12 @@ public class OriF extends JFrame{
 
 	public OriF() {
 		
-		setBackground(Color.LIGHT_GRAY);
 		setBounds(228, 200, 400, 460);
 		setLayout(null);
 		setDefaultCloseOperation(HIDE_ON_CLOSE);
 		setVisible(true);
-
+		getContentPane().setBackground(new Color(255,254,230));
+		
 		JLabel title = new JLabel("원산지 표시판");
 		title.setFont(new Font("Lao MN", Font.BOLD, 15));
 		title.setBounds(147, 18, 109, 26);
@@ -37,7 +38,6 @@ public class OriF extends JFrame{
 				{"통찡어","오징어[원양]"},
 				{"스트링치즈","치즈[미국산]"},
 				{"프레즐","프레즐[미국산]"}
-				
 		};
 
 		JTable table = new JTable(data, columnNames);
@@ -48,6 +48,10 @@ public class OriF extends JFrame{
 		table.setShowGrid(true);
 		table.setFont(new Font("돋움", Font.PLAIN, 20));
 
+		// table 테두리에 lightGray색 넣어줌
+		table.setGridColor(Color.lightGray);
+		table.setBorder(BorderFactory.createLineBorder(table.getGridColor()));
+		
 		table.setBounds(38, 72, 330, 299);
 		add(table);
 

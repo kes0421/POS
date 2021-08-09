@@ -1,11 +1,11 @@
-package products.view.ckeckFrame;
+package products.view.proBasket;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import css.RoundedButton;
 import products.model.dao.ProductsBasketsDAO;
 import products.model.dto.ProductsBasket;
-import products.view.detail.Detail_P2_C;
 
 import javax.swing.JButton;
 import java.awt.Color;
@@ -22,7 +22,7 @@ public class ChkFrame extends JFrame{
 	public ChkFrame(String img_path, String name, int price) {
 		setBounds(100, 100, 500, 200);
 		setDefaultCloseOperation(HIDE_ON_CLOSE);
-		setBackground(Color.white);
+		getContentPane().setBackground(Color.white);
 		getContentPane().setLayout(null);
 		setVisible(true);
 
@@ -63,7 +63,7 @@ public class ChkFrame extends JFrame{
 		p_price.setBounds(355, 97, 61, 16);
 		getContentPane().add(p_price);
 		
-		JButton plusBtn = new JButton("+");
+		JButton plusBtn = new RoundedButton("+");
 		plusBtn.setForeground(Color.BLUE);
 		plusBtn.setBackground(Color.WHITE);
 		plusBtn.setBounds(300, 49, 42, 29);
@@ -80,22 +80,19 @@ public class ChkFrame extends JFrame{
 				quan_count.setText(quantity + "");
 				p_price.setText(resultPri+"");
 			}
-			
 		});
 		getContentPane().add(plusBtn);
 		
-		JButton minusBtn = new JButton("-");
+		JButton minusBtn = new RoundedButton("-");
 		minusBtn.setForeground(Color.RED);
 		minusBtn.setBounds(373, 49, 42, 29);
 		minusBtn.addActionListener(new ActionListener() {
-			
 			
 			int pri = Integer.parseInt(p_price.getText());
 		
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				int resultPri = 0;
-				
 				int quantity = Integer.parseInt(quan_count.getText());
 				
 				if (quantity > 0) {
@@ -106,29 +103,24 @@ public class ChkFrame extends JFrame{
 				quan_count.setText(quantity + "");
 				p_price.setText(resultPri + "");
 			}
-			
 		});
 		getContentPane().add(minusBtn);
 		
-		JButton chkBtn = new JButton("확 인");
+		JButton chkBtn = new RoundedButton("확인");
 		chkBtn.setForeground(Color.BLUE);
 		chkBtn.setBounds(315, 137, 90, 29);
 		chkBtn.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// 장바구니 DB에 상품이름 가격 수량 넣어야함
-				//basketList.add(new ProductsBasket(p_name.getText(), img_path, p_price.getText(), quan_count.getText()));
-				
 				new ProductsBasketsDAO().basketInsert(new ProductsBasket(p_name.getText(), img_path, p_price.getText(), quan_count.getText()));
-				
 				
 				setVisible(false);
 			}
-			
 		});
 		getContentPane().add(chkBtn);
 
-		JButton cancleBtn = new JButton("취 소");
+		JButton cancleBtn = new RoundedButton("취소");
 		cancleBtn.setForeground(Color.RED);
 		cancleBtn.setBounds(404, 137, 90, 29);
 		cancleBtn.addActionListener(new ActionListener() {
@@ -139,6 +131,5 @@ public class ChkFrame extends JFrame{
 		});
 		getContentPane().add(cancleBtn);
 	}
-	
 	
 }

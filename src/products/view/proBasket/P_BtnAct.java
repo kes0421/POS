@@ -1,4 +1,4 @@
-package products.view.ckeckFrame;
+package products.view.proBasket;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,6 +9,7 @@ import products.model.dto.Products;
 public class P_BtnAct implements ActionListener{
 	int i;
 	ArrayList<Products> selectType;
+	
 	public P_BtnAct(int i, ArrayList<Products> selectType) {
 		this.i = i;
 		this.selectType = selectType;

@@ -11,7 +11,6 @@ public class SnackPanel extends ProductsPanel{
 		selectType = typeOfproduct(list.pList(), "½º³¼´ÜÇ°");
 		
 		addBtn();
-		
 	}
 
 }

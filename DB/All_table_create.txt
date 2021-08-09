@@ -1,0 +1,57 @@
+-- 영화 table Create (시퀀스 필요 o)
+CREATE TABLE movies (
+    m_code    NUMBER(3) PRIMARY KEY,
+    m_name         VARCHAR2(50) NOT NULL,
+    m_grade        VARCHAR2(30) NOT NULL,
+    m_openingdate  DATE NOT NULL,
+    m_genre        VARCHAR2(50) NOT NULL,
+    m_runningtime  VARCHAR2(10) NOT NULL,
+    m_poster_img   VARCHAR2(100) NOT NULL,
+    m_grade_img    VARCHAR2(100) NOT NULL
+);
+
+-- 상영시간표 tabel Create (시퀀스 필요X)
+CREATE TABLE timetables (
+    t_code   VARCHAR2(30) PRIMARY KEY,
+    t_date   DATE NOT NULL,
+    t_start  VARCHAR2(30) NOT NULL,
+    t_end    VARCHAR2(30) NOT NULL,
+    t_name   VARCHAR2(20) NOT NULL,
+    t_floor  VARCHAR2(10) NOT NULL,
+    m_code   NUMBER(3) NOT NULL CONSTRAINT m_code_fk REFERENCES movies(m_code )
+);
+
+-- 좌석 table Create (시퀀스 필요 X)
+CREATE TABLE seats (
+    s_code    NUMBER(3)    PRIMARY KEY,
+    s_name    VARCHAR2(10) NOT NULL,
+    s_grade   VARCHAR2(10) NOT NULL,
+    s_price   NUMBER(6) NOT NULL,
+    t_code   VARCHAR2(30) CONSTRAINT t_code_fk REFERENCES timetables(t_code)
+);
+
+-- products 테이블 CREATE
+CREATE TABLE products (
+    p_code          NUMBER(2) PRIMARY KEY,
+    p_name          VARCHAR2(40) NOT NULL,
+    p_price         NUMBER(5) NOT NULL,
+    p_img_path      VARCHAR2(100),
+    p_type          VARCHAR2(20) NOT NULL
+);
+
+-- productsbaskets 테이블 CREATE
+CREATE TABLE productsbaskets (
+    pb_name varchar2(40) not null,
+    pb_img_path varchar2(100) not null,
+    pb_price varchar2(10) not null,
+    pb_quantity varchar(10) not null
+);
+
+-- products 시퀀스 CREATE
+create sequence p_code_seq start with 1 increment by 1 maxvalue 99 nocycle;
+
+-- movie 시퀀스 Create
+create sequence m_code_seq start with 1 increment by 1 maxvalue 99 nocycle;
+
+-- seats 시퀀스 Create
+create sequence s_code_seq start with 1 increment by 1 maxvalue 999 nocycle;

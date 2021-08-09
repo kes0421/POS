@@ -1,4 +1,4 @@
-package products.view;
+package products.view.bottom;
 
 import java.awt.Color;
 import java.awt.Image;
@@ -19,21 +19,21 @@ public class BtmBarPanel extends JPanel {
 
 	public BtmBarPanel() {
 		// 하단 메뉴바 패널 
-		setBackground(Color.LIGHT_GRAY);
+		setBackground(Color.lightGray);
 		setBounds(1, 635, 699, 29);
 		setLayout(null);
 		setVisible(true);
+		
+		SetImgSize btnSize = new SetImgSize();
 
 		// 하단메뉴 패널 구성요소 
-		makeImageIcon("./img/mainFrame/홈버튼.png");
-
-		JButton homeBtn = new JButton("Home");
+		JButton homeBtn = new JButton();
 		homeBtn.setBackground(Color.LIGHT_GRAY);
 		homeBtn.setBounds(0, 0, 40, 30);
-		homeBtn.setIcon(makeImageIcon("./img/mainFrame/홈버튼.png"));
+		btnSize.setImageSize("./img/mainFrame/홈버튼_블랙.png",homeBtn);
 		add(homeBtn);
 
-		JButton originBtn = new JButton("원산지");
+		JButton originBtn = new JButton();
 		originBtn.setBackground(Color.LIGHT_GRAY);
 		originBtn.setBounds(643, 0, 40, 30);
 		originBtn.setIcon(makeImageIcon("./img/mainFrame/원산지.png"));
@@ -47,13 +47,13 @@ public class BtmBarPanel extends JPanel {
 			}
 		});
 
-		JButton jangbaguniBtn = new JButton("장바구니");
-		jangbaguniBtn.setBackground(Color.LIGHT_GRAY);
-		jangbaguniBtn.setBounds(593, 0, 40, 30);
-		jangbaguniBtn.setIcon(makeImageIcon("./img/mainFrame/장바구니.png"));
-		add(jangbaguniBtn);
+		JButton basketBtn = new JButton();
+		basketBtn.setBackground(Color.LIGHT_GRAY);
+		basketBtn.setBounds(593, 0, 45, 30);
+		basketBtn.setIcon(makeImageIcon("./img/mainFrame/장바구니.png"));
+		add(basketBtn);
 		
-		jangbaguniBtn.addActionListener(new ActionListener() {
+		basketBtn.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -72,6 +72,7 @@ public class BtmBarPanel extends JPanel {
 			image = null;
 		}
 
-		return new ImageIcon(image.getScaledInstance(46, 30, Image.SCALE_SMOOTH));
+		return new ImageIcon(image.getScaledInstance(45, 30, Image.SCALE_SMOOTH));
 	}
+	
 }

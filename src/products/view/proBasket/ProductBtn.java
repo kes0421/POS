@@ -1,4 +1,4 @@
-package products.view.ckeckFrame;
+package products.view.proBasket;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

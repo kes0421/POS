@@ -6,11 +6,14 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 
+import products.view.banner.AdPanel;
+import products.view.banner.MenuTxTPanel;
+import products.view.bottom.BtmBarPanel;
 import products.view.productsPanels.BeveragePanel;
+import products.view.productsPanels.ComboDetailPanel;
 import products.view.productsPanels.ComboPanel;
 import products.view.productsPanels.MenuBarPanel;
 import products.view.productsPanels.PopcornPanel;
-import products.view.productsPanels.ProductsPanel;
 import products.view.productsPanels.SnackPanel;
 
 public class MainFrame extends JFrame{
@@ -38,7 +41,6 @@ public class MainFrame extends JFrame{
 		MenuTxTPanel txt_p = new MenuTxTPanel();
 		bar_p = new MenuBarPanel();
 		BtmBarPanel btm_p = new BtmBarPanel();
-		ProductsPanel pro_p = new ProductsPanel();
 		
 		ComboDetailPanel com_p = new ComboDetailPanel();
 		

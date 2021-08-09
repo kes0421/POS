@@ -1,4 +1,4 @@
-package products.view;
+package products.view.banner;
 
 import java.awt.Image;
 import java.awt.event.ActionEvent;
@@ -17,7 +17,7 @@ public class ImageSlide extends JLabel{
 		this.image_list = image_list;
 		setBounds(0,0,700,116);
 		setImageSize(image_list.length - 1);
-		tm = new Timer(3000, new ActionListener() {
+		tm = new Timer(5000, new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -35,8 +35,7 @@ public class ImageSlide extends JLabel{
 	public void setImageSize(int i) {
 		ImageIcon icon = new ImageIcon(image_list[i]);
 		Image img = icon.getImage();
-		Image newImg = img.getScaledInstance(this.getWidth(),
-				this.getHeight(), Image.SCALE_SMOOTH);
+		Image newImg = img.getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_SMOOTH);
 		ImageIcon newImc = new ImageIcon(newImg);
 		this.setIcon(newImc);
 	}

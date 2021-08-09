@@ -1,0 +1,51 @@
+-- 팝콘 INSERT
+INSERT INTO products VALUES (p_code_seq.nextval, '팝콘(중)', 4500, './img/popcorn/팝콘(중).png', '팝콘단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '팝콘(대)', 5000, './img/popcorn/팝콘(대).png', '팝콘단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '달콤팝콘(중)', 5500, './img/popcorn/달콤팝콘(중).png', '팝콘단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '달콤팝콘(대)', 6000, './img/popcorn/달콤팝콘(대).png', '팝콘단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '양파팝콘(중)', 5500, './img/popcorn/양파팝콘(중).png', '팝콘단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '양파팝콘(대)', 6000, './img/popcorn/양파팝콘(대).png', '팝콘단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '치즈팝콘(중)', 5500, './img/popcorn/치즈팝콘(중).png', '팝콘단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '치즈팝콘(대)', 6000, './img/popcorn/치즈팝콘(대).png', '팝콘단품');
+
+-- 음료 INSERT
+INSERT INTO products VALUES (p_code_seq.nextval, '핑크레몬 에이드(중)', 4500, './img/beverage/핑크레몬 에이드.png', '음료단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '핑크레몬 에이드(대)', 5000, './img/beverage/핑크레몬 에이드.png', '음료단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '스프라이트(중)', 2500, './img/beverage/스프라이트.png', '음료단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '스프라이트(대)', 3000, './img/beverage/스프라이트.png', '음료단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '오렌지환타(중)', 2500, './img/beverage/오렌지환타.png', '음료단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '오렌지환타(대)', 3000, './img/beverage/오렌지환타.png', '음료단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '오렌지에이드(중)', 4000, './img/beverage/오렌지 에이드.png', '음료단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '오렌지에이드(대)', 4500, './img/beverage/오렌지 에이드.png', '음료단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '콜라(중)', 2500, './img/beverage/콜라.png', '음료단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '콜라(대)', 3000, './img/beverage/콜라.png', '음료단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '포도환타(중)', 2500, './img/beverage/포도환타.png', '음료단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '포도환타(대)', 3000, './img/beverage/포도환타.png', '음료단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '아이스티', 4000, './img/beverage/아이스티.png', '음료단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '삼다수', 1700, './img/beverage/삼다수.png', '음료단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '아메리카노', 3500, './img/beverage/아메리카노.png', '음료단품');
+
+-- 스낵 INSERT
+INSERT INTO products VALUES (p_code_seq.nextval, '맛 밤', 3000, './img/snack/맛 밤.png', '스낵단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '스쿨푸드 스팸계란말이', 4500, './img/snack/스쿨푸드 스팸계란말이.png', '스낵단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '오징어완제', 3500, './img/snack/오징어완제.png', '스낵단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '죠스튀김범벅', 4500, './img/snack/죠스튀김범벅.png', '스낵단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '즉석구이오징어(몸통)', 5000, './img/snack/즉석구이오징어(몸통).png', '스낵단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '즉석구이오징어(왕다리)', 5000, './img/snack/즉석구이오징어(왕다리).png', '스낵단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '치즈 볼', 4500, './img/snack/치즈 볼.png', '스낵단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '칠리치즈나쵸', 4500, './img/snack/칠리치즈나쵸.png', '스낵단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '칠리치즈핫도그', 4500, './img/snack/칠리치즈핫도그.png', '스낵단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '맛감자', 2000, './img/snack/맛감자.png', '스낵단품');
+INSERT INTO products VALUES (p_code_seq.nextval, '소떡소떡', 2500, './img/snack/소떡소떡.png', '스낵단품');
+
+-- 콤보 INSERT
+INSERT INTO products VALUES (p_code_seq.nextval, 'CGV 콤보', 9000, './img/combo/CGV 콤보.png', '콤보');
+INSERT INTO products VALUES (p_code_seq.nextval, '빅에이드 콤보', 11000, './img/combo/빅에이드 콤보.png', '콤보');
+INSERT INTO products VALUES (p_code_seq.nextval, '즉석구이 콤보', 11000, './img/combo/즉석구이 콤보.png', '콤보');
+INSERT INTO products VALUES (p_code_seq.nextval, '칠리치즈나쵸 콤보', 11000, './img/combo/칠리치즈나쵸 콤보.png', '콤보');
+INSERT INTO products VALUES (p_code_seq.nextval, '미니언즈 콤보', 16000, './img/combo/미니언즈 콤보.png', '콤보');
+INSERT INTO products VALUES (p_code_seq.nextval, '핫도그 콤보', 10500, './img/combo/핫도그 콤보.png', '콤보');
+
+select * from products;
+
+commit;

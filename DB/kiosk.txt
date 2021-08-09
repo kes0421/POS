@@ -1,0 +1,18 @@
+-- 지울때 순서대로 지워야함
+drop table products;
+drop SEQUENCE p_code_seq;
+
+drop table productsbaskets;
+
+drop table SEATS;
+drop SEQUENCE s_code_seq;
+
+drop table timetables;
+
+drop table MOVIES;
+drop SEQUENCE m_code_seq;
+
+-- 쓰레기통 비우기
+PURGE RECYCLEBIN;
+
+commit;

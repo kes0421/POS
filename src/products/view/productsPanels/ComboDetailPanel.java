@@ -1,4 +1,4 @@
-package products.view;
+package products.view.productsPanels;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
