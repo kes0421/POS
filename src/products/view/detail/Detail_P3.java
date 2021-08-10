@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -11,8 +12,14 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import css.RoundedButton;
+import products.model.dao.ProductsBasketsDAO;
+import products.model.dao.ProductsSalesDAO;
+import products.model.dto.ProductsBasket;
+import products.model.dto.ProductsSales;
 
 public class Detail_P3 extends JPanel{
+	
+	ProductsBasketsDAO proBasketDAO = new ProductsBasketsDAO();
 	
 	JLabel label2;
 	
@@ -46,9 +53,28 @@ public class Detail_P3 extends JPanel{
 		});
 		add(preBtn);
 
-		JButton nextBtn = new RoundedButton("다 음");
-		nextBtn.setForeground(new Color(0, 0, 255));
-		nextBtn.setBounds(325, 62, 117, 56);
-		add(nextBtn);
+		JButton payBtn = new RoundedButton("결 제");
+		payBtn.setForeground(new Color(0, 0, 255));
+		payBtn.setBounds(325, 62, 117, 56);
+		payBtn.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				ArrayList<ProductsBasket> basketList = proBasketDAO.basketList();
+				
+				if(basketList.size() == 0) {
+					new NoPayFrame();
+				}
+				// 장바구니 DB DELETE 해주기
+				new ProductsBasketsDAO().basketAllDelete();
+				
+				// 상품 매출 테이블에 INSERT 해주기
+				for(int i = 0; i < basketList.size(); ++i) {
+					new ProductsSalesDAO().salseInsert(new ProductsSales(basketList.get(i).getName(), basketList.get(i).getPrice(), basketList.get(i).getQuantity()));
+				}
+			}
+		});
+		
+		add(payBtn);
 	}
 }

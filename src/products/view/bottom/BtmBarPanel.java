@@ -19,7 +19,7 @@ public class BtmBarPanel extends JPanel {
 
 	public BtmBarPanel() {
 		// 하단 메뉴바 패널 
-		setBackground(Color.lightGray);
+		setBackground(new Color(255,254,230));
 		setBounds(1, 635, 699, 29);
 		setLayout(null);
 		setVisible(true);
@@ -28,13 +28,13 @@ public class BtmBarPanel extends JPanel {
 
 		// 하단메뉴 패널 구성요소 
 		JButton homeBtn = new JButton();
-		homeBtn.setBackground(Color.LIGHT_GRAY);
+		homeBtn.setBackground(new Color(255,254,230));
 		homeBtn.setBounds(0, 0, 40, 30);
 		btnSize.setImageSize("./img/mainFrame/홈버튼_블랙.png",homeBtn);
 		add(homeBtn);
 
 		JButton originBtn = new JButton();
-		originBtn.setBackground(Color.LIGHT_GRAY);
+		originBtn.setBackground(new Color(255,254,230));
 		originBtn.setBounds(643, 0, 40, 30);
 		originBtn.setIcon(makeImageIcon("./img/mainFrame/원산지.png"));
 		add(originBtn);
@@ -48,7 +48,7 @@ public class BtmBarPanel extends JPanel {
 		});
 
 		JButton basketBtn = new JButton();
-		basketBtn.setBackground(Color.LIGHT_GRAY);
+		basketBtn.setBackground(new Color(255,254,230));
 		basketBtn.setBounds(593, 0, 45, 30);
 		basketBtn.setIcon(makeImageIcon("./img/mainFrame/장바구니.png"));
 		add(basketBtn);

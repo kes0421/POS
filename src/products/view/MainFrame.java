@@ -82,7 +82,6 @@ public class MainFrame extends JFrame{
 		add(btm_p);
 	}
 	
-	
 	/**
 	 	menuBar버튼 누를때 팝콘, 스낵, 음료로 바꿔주기
 	*/

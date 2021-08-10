@@ -1,5 +1,6 @@
 package products.view.detail;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import javax.swing.JFrame;
@@ -50,10 +51,11 @@ public class DetailFrame extends JFrame{
 		
 		int allPrice = 0;
 		for(int i = 0; i < prices.size(); ++i) {
+			DecimalFormat formatter = new DecimalFormat("###,###");
 			
 			allPrice += prices.get(i);
 			
-			panel3.label2.setText(allPrice + "¿ø");
+			panel3.label2.setText(formatter.format(allPrice) + "¿ø");
 		}
 		
 		getContentPane().add(panel1);

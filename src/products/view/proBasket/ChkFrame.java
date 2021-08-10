@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class ChkFrame extends JFrame{
 
-	public ArrayList<ProductsBasket> basketList = new ArrayList<>();;
+	public ArrayList<ProductsBasket> basketList = new ArrayList<>();
 	
 	public ChkFrame() {}
 	

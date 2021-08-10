@@ -32,12 +32,26 @@ public class Detail_P2_C extends JPanel {
 	      
 	      add(img,"West");
 	      
+	      JPanel centerPanel = new JPanel();
+	      centerPanel.setBackground(Color.white);
+	      centerPanel.setLayout(null);
+	      
 	      JLabel proName = new JLabel(name);
+	      proName.setFont(new Font("Lao MN", Font.BOLD | Font.ITALIC, 15));
+	      proName.setForeground(Color.black);
+	      proName.setBounds(20, 30, 200, 30);
+
 	      JLabel proPrice = new JLabel(price + "¿ø");
+	      proPrice.setBounds(220, 30, 78, 31);
+	      
 	      JLabel proQuan = new JLabel(quantity + "°³");
+	      proQuan.setBounds(342, 35, 32, 16);
+	      
+	      centerPanel.add(proName);
+	      centerPanel.add(proPrice);
+	      centerPanel.add(proQuan);
 	     
-	      JLabel proAll = new JLabel(proName.getText()+"       "+proPrice.getText()+"       "+proQuan.getText());
-	      add(proAll,"Center");
+	      add(centerPanel,"Center");
 	      
 	      JButton deleteBtn = new RoundedButton("Delete");
 	      deleteBtn.setForeground(new Color(255, 0, 0));

@@ -2,6 +2,7 @@ package products.view.productsPanels;
 
 import java.awt.Color;
 import java.awt.Image;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
@@ -12,13 +13,15 @@ import products.model.dao.ProductsListDAO;
 import products.model.dto.Products;
 import products.view.proBasket.P_BtnAct;
 
+import java.awt.event.*;
+
 public class ProductsPanel extends JPanel{
 	
 	public ProductsListDAO list = new ProductsListDAO();
 	
 	// 선택한 타입 넣어놓음
 	public ArrayList<Products> selectType = new ArrayList<>();
-
+	
 	// 제품 각각의 이름, 가격, 이미지주소 넣어놓음
 	public ArrayList<String> name = new ArrayList<>();
 	public ArrayList<Integer> price = new ArrayList<>();
@@ -49,6 +52,10 @@ public class ProductsPanel extends JPanel{
 			add(btns.get(i));	
 			
 			btns.get(i).addActionListener(new P_BtnAct(i, selectType));
+			
+			MyMouseListener listener = new MyMouseListener();
+			
+			btns.get(i).addMouseListener(listener);
 		}
 	}
 	
@@ -62,9 +69,10 @@ public class ProductsPanel extends JPanel{
 		ArrayList<String> result = new ArrayList<>();
 
 		for (int i = 0; i < name.size(); ++i) {
-			result.add("<HTML>" + name.get(i) + "<br>" + price.get(i) + "</HTML>");
+			DecimalFormat formatter = new DecimalFormat("###,###");
+			
+			result.add("<HTML>" + name.get(i) + "<br>" + formatter.format(price.get(i)) + "원</HTML>");
 		}
-
 		return result;
 	}
 	
@@ -83,7 +91,6 @@ public class ProductsPanel extends JPanel{
 			
 			icons.add(new ImageIcon(resizeIcon));
 		}
-
 		return icons;
 	}
 	
@@ -100,7 +107,6 @@ public class ProductsPanel extends JPanel{
 			btns.add(new JButton(texts.get(i),icons.get(i)));
 			btns.get(i).setBackground(Color.white);
 		}
-		
 		return btns;
 	}
 
@@ -118,8 +124,22 @@ public class ProductsPanel extends JPanel{
 				array.add(products.get(i));
 			}
 		}
-
 		return array;
+	}
+}
+
+class MyMouseListener extends MouseAdapter{
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		JButton b = (JButton)e.getSource();
+		b.setBackground(new Color(254,255,96));
+	}
+	
+	@Override
+	public void mouseExited(MouseEvent e) {
+		JButton b = (JButton)e.getSource();
+		b.setBackground(Color.white);
 	}
 	
 }

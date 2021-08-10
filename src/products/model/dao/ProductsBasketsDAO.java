@@ -12,7 +12,7 @@ import util.DBUtill;
 public class ProductsBasketsDAO {
 
 	/**
-	 	장바구니 DB에 데이터 insert해주기
+	 	장바구니 DB에 데이터 INSERT
 	*/
 	public int basketInsert(ProductsBasket productsBasket){
 		Connection con = null;
@@ -36,7 +36,6 @@ public class ProductsBasketsDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
 		return result;
 	}
 	
@@ -62,7 +61,6 @@ public class ProductsBasketsDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
 		return result;
 	}
 	
@@ -94,8 +92,30 @@ public class ProductsBasketsDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
 		return proBasketList;
+	}
+	
+	/**
+		장바구니 페이지에서 다음(결제)누르면 장바구니 DELETE해주기
+	*/
+	public int basketAllDelete() {
+		Connection con = null;
+		PreparedStatement ps = null;
+		int result = 0;
+		
+		try {
+			con = DBUtill.getConnection();
+			ps = con.prepareStatement("Delete from productsbaskets");
+			
+			result = ps.executeUpdate();
+			
+			con.close();
+			ps.close();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return result;
 	}
 	
 }
