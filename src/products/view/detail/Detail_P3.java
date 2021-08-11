@@ -48,7 +48,7 @@ public class Detail_P3 extends JPanel{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				frame.setVisible(false);
+				frame.dispose();
 			}
 		});
 		add(preBtn);

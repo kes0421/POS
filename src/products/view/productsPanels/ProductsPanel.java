@@ -128,6 +128,9 @@ public class ProductsPanel extends JPanel{
 	}
 }
 
+/**
+	버튼에 마우스 올릴때마다 색 바꿔주기
+*/
 class MyMouseListener extends MouseAdapter{
 
 	@Override

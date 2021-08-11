@@ -47,6 +47,23 @@ CREATE TABLE productsbaskets (
     pb_quantity varchar(10) not null
 );
 
+-- productsSales 테이블 CREATE
+CREATE TABLE productsSales(
+    ps_code varchar2(10) primary key,
+    ps_name varchar2(40) NOT NULL,
+    ps_price number(5) NOT NULL,
+    ps_quantity number(2) NOT NULL,
+    ps_date varchar2(10) NOT NULL
+);
+
+-- productsInventory 테이블 CREATE
+CREATE TABLE productsInventory(
+    pi_code varchar2(50) primary key,
+    pi_name varchar2(50) NOT NULL,
+    pi_quantity number(5) NOT NULL,
+    pi_price number(8) NOT NULL
+);
+
 -- products 시퀀스 CREATE
 create sequence p_code_seq start with 1 increment by 1 maxvalue 99 nocycle;
 
@@ -55,3 +72,6 @@ create sequence m_code_seq start with 1 increment by 1 maxvalue 99 nocycle;
 
 -- seats 시퀀스 Create
 create sequence s_code_seq start with 1 increment by 1 maxvalue 999 nocycle;
+
+-- productsSales 시퀀스 Create
+CREATE sequence ps_code_Seq start with 1 increment by 1 maxvalue 999 nocycle;

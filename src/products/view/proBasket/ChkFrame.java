@@ -115,7 +115,7 @@ public class ChkFrame extends JFrame{
 				// 장바구니 DB에 상품이름 가격 수량 넣어야함
 				new ProductsBasketsDAO().basketInsert(new ProductsBasket(p_name.getText(), img_path, p_price.getText(), quan_count.getText()));
 				
-				setVisible(false);
+				dispose();
 			}
 		});
 		getContentPane().add(chkBtn);
@@ -126,7 +126,7 @@ public class ChkFrame extends JFrame{
 		cancleBtn.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				setVisible(false);
+				dispose();
 			}
 		});
 		getContentPane().add(cancleBtn);

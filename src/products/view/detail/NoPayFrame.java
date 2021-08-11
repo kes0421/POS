@@ -35,7 +35,7 @@ public class NoPayFrame extends JFrame{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				setVisible(false);
+				dispose();
 			}
 		});
 		

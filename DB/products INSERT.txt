@@ -46,6 +46,46 @@ INSERT INTO products VALUES (p_code_seq.nextval, '칠리치즈나쵸 콤보', 11000, './
 INSERT INTO products VALUES (p_code_seq.nextval, '미니언즈 콤보', 16000, './img/combo/미니언즈 콤보.png', '콤보');
 INSERT INTO products VALUES (p_code_seq.nextval, '핫도그 콤보', 10500, './img/combo/핫도그 콤보.png', '콤보');
 
+-- 상품 재고 INSERT
+INSERT INTO productsinventory VALUES ('맛밤_20210803','맛밤',100,1000);
+INSERT INTO productsinventory VALUES ('스쿨푸드 스팸계란말이_20210803','스쿨푸드 스팸계란말이',100,1500);
+INSERT INTO productsinventory VALUES ('오징어완제_20210803','오징어완제',100,1500);
+INSERT INTO productsinventory VALUES ('죠스튀김범벅_20210803','죠스튀김범벅',100,2500);
+INSERT INTO productsinventory VALUES ('즉석구이오징어(몸통)_20210803','즉석구이오징어(몸통)',100,3500);
+INSERT INTO productsinventory VALUES ('즉석구이오징어(왕다리)_20210803','즉석구이오징어(왕다리)',100,3500);
+INSERT INTO productsinventory VALUES ('치즈 볼_20210803','치즈 볼',100,2500);
+INSERT INTO productsinventory VALUES ('칠리치즈나쵸_20210803','칠리치즈나쵸',100,3000);
+INSERT INTO productsinventory VALUES ('칠리치즈핫도그_20210803','칠리치즈핫도그',100,3000);
+INSERT INTO productsinventory VALUES ('맛감자_20210803','맛감자',100,1000);
+INSERT INTO productsinventory VALUES ('소떡소떡_20210803','소떡소떡',100,1500);
+INSERT INTO productsinventory VALUES ('CGV 콤보_20210803','CGV 콤보',100,4500);
+INSERT INTO productsinventory VALUES ('빅에이드 콤보_20210803','빅에이드 콤보',100,6500);
+INSERT INTO productsinventory VALUES ('즉석구이 콤보_20210803','즉석구이 콤보',100,7500);
+INSERT INTO productsinventory VALUES ('칠리치즈나쵸 콤보_20210803','칠리치즈나쵸 콤보',100,7000);
+INSERT INTO productsinventory VALUES ('미니언즈 콤보_20210803','미니언즈 콤보',100,10000);
+INSERT INTO productsinventory VALUES ('핫도그 콤보_20210803','핫도그 콤보',100,7000);
+
+INSERT INTO productsinventory VALUES ('맛밤_20210805','맛밤',50,1000);
+INSERT INTO productsinventory VALUES ('스쿨푸드 스팸계란말이_20210805','스쿨푸드 스팸계란말이',50,1500);
+INSERT INTO productsinventory VALUES ('오징어완제_20210805','오징어완제',50,1500);
+INSERT INTO productsinventory VALUES ('죠스튀김범벅_20210805','죠스튀김범벅',50,2500);
+INSERT INTO productsinventory VALUES ('즉석구이오징어(몸통)_20210805','즉석구이오징어(몸통)',50,3500);
+INSERT INTO productsinventory VALUES ('즉석구이오징어(왕다리)_20210805','즉석구이오징어(왕다리)',50,3500);
+INSERT INTO productsinventory VALUES ('치즈 볼_20210805','치즈 볼',50,2500);
+INSERT INTO productsinventory VALUES ('칠리치즈나쵸_20210805','칠리치즈나쵸',50,3000);
+INSERT INTO productsinventory VALUES ('칠리치즈핫도그_20210805','칠리치즈핫도그',50,3000);
+INSERT INTO productsinventory VALUES ('맛감자_20210805','맛감자',50,1000);
+INSERT INTO productsinventory VALUES ('소떡소떡_20210805','소떡소떡',50,1500);
+INSERT INTO productsinventory VALUES ('CGV 콤보_20210805','CGV 콤보',50,4500);
+INSERT INTO productsinventory VALUES ('빅에이드 콤보_20210805','빅에이드 콤보',50,6500);
+INSERT INTO productsinventory VALUES ('즉석구이 콤보_20210805','즉석구이 콤보',50,7500);
+INSERT INTO productsinventory VALUES ('칠리치즈나쵸 콤보_20210805','칠리치즈나쵸 콤보',50,7000);
+INSERT INTO productsinventory VALUES ('미니언즈 콤보_20210805','미니언즈 콤보',50,10000);
+INSERT INTO productsinventory VALUES ('핫도그 콤보_20210805','핫도그 콤보',50,7000);
+
+-- 매출 테이블에 넣음 시퀀스 p붙여놓은것
+INSERT INTO PRODUCTSSALES VALUES ('p' || PS_CODE_SEQ.nextval , '맛밤',3000,1,'08-05');
+
 select * from products;
 
 commit;

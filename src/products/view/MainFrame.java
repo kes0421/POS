@@ -10,7 +10,6 @@ import products.view.banner.AdPanel;
 import products.view.banner.MenuTxTPanel;
 import products.view.bottom.BtmBarPanel;
 import products.view.productsPanels.BeveragePanel;
-import products.view.productsPanels.ComboDetailPanel;
 import products.view.productsPanels.ComboPanel;
 import products.view.productsPanels.MenuBarPanel;
 import products.view.productsPanels.PopcornPanel;
@@ -41,8 +40,6 @@ public class MainFrame extends JFrame{
 		MenuTxTPanel txt_p = new MenuTxTPanel();
 		bar_p = new MenuBarPanel();
 		BtmBarPanel btm_p = new BtmBarPanel();
-		
-		ComboDetailPanel com_p = new ComboDetailPanel();
 		
 		pp = new PopcornPanel();
 		sp = new SnackPanel();
