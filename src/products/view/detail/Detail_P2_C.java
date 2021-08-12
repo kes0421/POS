@@ -47,16 +47,17 @@ public class Detail_P2_C extends JPanel {
 	      JLabel proQuan = new JLabel(quantity + "°³");
 	      proQuan.setBounds(342, 35, 32, 16);
 	      
+	      JButton deleteBtn = new RoundedButton("Delete");
+	      deleteBtn.setBounds(410, 30, 50, 50);
+	      deleteBtn.setForeground(new Color(255, 0, 0));
+	      deleteBtn.setBackground(new Color(255, 30, 255));
+	      
 	      centerPanel.add(proName);
 	      centerPanel.add(proPrice);
 	      centerPanel.add(proQuan);
+	      centerPanel.add(deleteBtn);
 	     
 	      add(centerPanel,"Center");
-	      
-	      JButton deleteBtn = new RoundedButton("Delete");
-	      deleteBtn.setForeground(new Color(255, 0, 0));
-	      deleteBtn.setBackground(new Color(255, 255, 255));
-	      add(deleteBtn,"East");
 	      
 	      deleteBtn.addActionListener(new ActionListener() {
 			

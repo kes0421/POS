@@ -52,25 +52,25 @@ public class MainFrame extends JFrame{
 		scroll1 = new JScrollPane(cp);
 		add(scroll1);
 		
-		scroll1.setBounds(0, 210, 700, 425);
+		scroll1.setBounds(0, 192, 700, 443);
 		scroll1.setVisible(true);
 		
 		scroll2 = new JScrollPane(pp);
 		add(scroll2);
 		
-		scroll2.setBounds(0, 210, 700, 425);
+		scroll2.setBounds(0, 192, 700, 443);
 		scroll2.setVisible(false);
 		
 		scroll3 = new JScrollPane(sp);
 		add(scroll3);
 		
-		scroll3.setBounds(0, 210, 700, 425);
+		scroll3.setBounds(0, 192, 700, 443);
 		scroll3.setVisible(false);
 		
 		scroll4 = new JScrollPane(bp);
 		add(scroll4);
 		
-		scroll4.setBounds(0, 210, 700, 425);
+		scroll4.setBounds(0, 192, 700, 443);
 		scroll4.setVisible(false);
 		
 		add(bar_p);
@@ -91,7 +91,6 @@ public class MainFrame extends JFrame{
 				scroll2.setVisible(false);
 				scroll3.setVisible(false);
 				scroll4.setVisible(false);
-				
 		
 				scroll1.setVisible(true);
 			}

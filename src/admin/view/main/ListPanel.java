@@ -9,6 +9,5 @@ public class ListPanel extends JPanel{
 	public ListPanel() {
 		
 		setLayout(new GridLayout(0,1));
-		
 	}
 }

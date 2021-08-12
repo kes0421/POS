@@ -11,6 +11,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import admin.model.dao.ProductsInventoryDAO;
+import admin.model.dto.ProductsInventory;
 import css.RoundedButton;
 import products.model.dao.ProductsBasketsDAO;
 import products.model.dao.ProductsSalesDAO;
@@ -20,6 +22,7 @@ import products.model.dto.ProductsSales;
 public class Detail_P3 extends JPanel{
 	
 	ProductsBasketsDAO proBasketDAO = new ProductsBasketsDAO();
+	ProductsInventoryDAO proInventoryDAO = new ProductsInventoryDAO(); 
 	
 	JLabel label2;
 	
@@ -61,6 +64,8 @@ public class Detail_P3 extends JPanel{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				ArrayList<ProductsBasket> basketList = proBasketDAO.basketList();
+				ArrayList<String> pName = new ArrayList<>();
+				ArrayList<String> piCodeList = new ArrayList<>();
 				
 				if(basketList.size() == 0) {
 					new NoPayFrame();
@@ -70,7 +75,26 @@ public class Detail_P3 extends JPanel{
 				
 				// 상품 매출 테이블에 INSERT 해주기
 				for(int i = 0; i < basketList.size(); ++i) {
-					new ProductsSalesDAO().salseInsert(new ProductsSales(basketList.get(i).getName(), basketList.get(i).getPrice(), basketList.get(i).getQuantity()));
+					new ProductsSalesDAO().salseInsert(new ProductsSales(
+																basketList.get(i).getName(),
+																basketList.get(i).getPrice(),
+																basketList.get(i).getQuantity()
+																));
+				}
+				
+				// 장바구니 List에서 name들 ArrayList에 넣어주기
+				for(int i = 0; i < basketList.size(); ++i) {
+					pName.add(basketList.get(i).getName());
+				}
+				
+				// 결제하기 버튼 누른 후 재고테이블에서 재고 마이너스 해주는 반복문
+				for(int i = 0; i< pName.size(); ++i) {
+					// 재고테이블에서 마이너스 할 날짜 SELECT 해주기
+					piCodeList = new ProductsInventoryDAO().minDateSelect(pName.get(i));
+					int quantity = Integer.parseInt(basketList.get(i).getQuantity());
+					
+					// 고객이 산 물건을 재고 테이블에서 마이너스 해주기
+					new ProductsInventoryDAO().inventoryQuantityUpdate(pName.get(i), quantity, piCodeList.get(0));
 				}
 			}
 		});

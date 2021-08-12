@@ -66,7 +66,8 @@ public class TopPanel extends JPanel{
 		btn1.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ArrayList<ProductsInventory> piList = new ProductsInventoryDAO().productsSearchSelect(textField.getText());
+				ArrayList<ProductsInventory> piList;
+				piList = new ProductsInventoryDAO().productsSearchSelect(textField.getText());
 				frame.dispose();
 				new MainFrame(piList).setVisible(true);
 			}

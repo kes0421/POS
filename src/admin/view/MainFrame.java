@@ -1,8 +1,11 @@
 package admin.view;
 
+import java.awt.Font;
 import java.util.ArrayList;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
 import admin.model.dao.ProductsInventoryDAO;
@@ -52,7 +55,6 @@ public class MainFrame extends JFrame{
 		
 		BtmPanel btmP = new BtmPanel(this);
 		add(btmP);
-		
 	}
 	
 	// 검색후 mainFrame
@@ -70,27 +72,39 @@ public class MainFrame extends JFrame{
 		ArrayList<List_C_Panel> panelC = new ArrayList<>();
 		ListPanel listP = new ListPanel();
 		
-		for(int i = 0; i < piList.size(); ++i) {
-			panelC.add(new List_C_Panel(
-					piList.get(i).getCode(),
-					piList.get(i).getName(),
-					piList.get(i).getQuantity(),
-					piList.get(i).getPrice(),
-					this
-					));
+		if(piList.size() == 0) {
+			JPanel noData = new JPanel();
+			JLabel msg = new JLabel("검색한 결과는 없습니다. 다시 검색해 주세요.");
+			msg.setFont(new Font("Lucida Grande", Font.BOLD, 20));
+			noData.add(msg);
+			scroll = new JScrollPane(noData);
+			add(scroll);
 			
-			listP.add(panelC.get(i));
+			scroll.setBounds(0, 170, 1000, 455);
+			scroll.setVisible(true);
+			
+		} else {
+			for(int i = 0; i < piList.size(); ++i) {
+				panelC.add(new List_C_Panel(
+						piList.get(i).getCode(),
+						piList.get(i).getName(),
+						piList.get(i).getQuantity(),
+						piList.get(i).getPrice(),
+						this
+						));
+				
+				listP.add(panelC.get(i));
+			}
+			
+			scroll = new JScrollPane(listP);
+			add(scroll);
+			
+			scroll.setBounds(0, 170, 1000, 455);
+			scroll.setVisible(true);
 		}
-		
-		scroll = new JScrollPane(listP);
-		add(scroll);
-		
-		scroll.setBounds(0, 170, 1000, 455);
-		scroll.setVisible(true);
 		
 		BtmPanel btmP = new BtmPanel(this);
 		add(btmP);
-		
 	}
 	
 	public static void main(String[] args) {

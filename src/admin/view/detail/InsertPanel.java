@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -29,6 +31,8 @@ public class InsertPanel extends JPanel{
 		setBackground(new Color(160,255,154));
 		setLayout(null);
 		
+		NumCheck numCheck;
+		
 		JLabel label1 = makeLabel("품목코드 :",35);
 		code = makeTxtField(40);
 		
@@ -38,8 +42,18 @@ public class InsertPanel extends JPanel{
 		JLabel label3 = makeLabel("수량(ea) :",185);
 		quantity = makeTxtField(190);
 		
+		numCheck = new NumCheck();
+		quantity.addKeyListener(numCheck);
+		add(numCheck.msg);
+		numCheck.msg.setBounds(110, 220, 285, 30);
+		
 		JLabel label4 = makeLabel("금액(ea) :",260);
 		price = makeTxtField(265);
+
+		numCheck = new NumCheck();
+		price.addKeyListener(numCheck);
+		add(numCheck.msg);
+		numCheck.msg.setBounds(110, 290, 285, 30);
 		
 		add(label1);
 		add(code);
@@ -82,7 +96,6 @@ public class InsertPanel extends JPanel{
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
 			}
-			
 		});
 		
 		add(btn2);

@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import admin.model.dto.ProductsInventory;
 import util.DBUtill;
@@ -134,7 +135,7 @@ public class ProductsInventoryDAO {
 		
 		ArrayList<ProductsInventory> piList = new ArrayList<>();
 	
-		String sql = "SELECT * FROM PRODUCTSINVENTORY where pi_name like ? order by pi_name";
+		String sql = "SELECT * FROM productsinventory where pi_name like ? order by pi_name";
 	
 		try{
 			
@@ -153,11 +154,74 @@ public class ProductsInventoryDAO {
 						));
 			}
 			
+			con.close();
+			ps.close();
+			rs.close();
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
 		return piList;
+	}
+	
+	/**
+		장바구니 frame에서 결제를 누르면 어떤 재고를 마이너스 해줄지 SELECT 해줌
+	*/
+	public ArrayList<String> minDateSelect(String name){
+		Connection con = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		
+		ArrayList<String> piCode = new ArrayList<>();
+	
+		String sql = "SELECT Min(substr(pi_Code,?)) pi_code FROM productsinventory where pi_name = ?";
+	
+		try{
+			con = DBUtill.getConnection();
+			ps = con.prepareStatement(sql);
+
+			ps.setInt(1, (name.length()+2));
+			ps.setString(2, name);
+			rs = ps.executeQuery();
+			
+			while (rs.next()) {
+				piCode.add(rs.getString("pi_code"));
+			}
+
+			con.close();
+			ps.close();
+			rs.close();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return piCode;
+	}
+	
+	/**
+		마이너스 할 이름과 날짜로 재고 테이블에 수량만큼 UPDATE 해줌
+	*/
+	public int inventoryQuantityUpdate(String name, int quantity, String date) {
+		Connection con = null;
+		PreparedStatement ps =  null;
+		int result = 0;
+		
+		String sql = "UPDATE productsinventory SET pi_quantity = pi_quantity-? WHERE pi_name = ? AND pi_code LIKE ?";
+		try {
+			con = DBUtill.getConnection();
+			ps = con.prepareStatement(sql);
+			
+			ps.setInt(1, quantity);
+			ps.setString(2, name);
+			ps.setString(3, "%" + date);
+			result = ps.executeUpdate();
+	
+			con.close();
+			ps.close();
+			
+		} catch (SQLException e) {
+		}
+		return result;
 	}
 	
 }

@@ -28,6 +28,8 @@ public class UpdatePanel extends JPanel{
 		setBackground(new Color(160,255,154));
 		setLayout(null);
 		
+		NumCheck numCheck;
+		
 		JLabel label1 = makeLabel("품목코드 :",35);
 		code = makeTxtField(40);
 		code.setText(piCode);
@@ -39,10 +41,22 @@ public class UpdatePanel extends JPanel{
 		
 		JLabel label3 = makeLabel("수량(ea) :",185);
 		quantity = makeTxtField(190);
+		
+		numCheck = new NumCheck();
+		quantity.addKeyListener(numCheck);
+		add(numCheck.msg);
+		numCheck.msg.setBounds(110, 220, 285, 30);
+		
 		quantity.setText(piQuantity+"");
 		
 		JLabel label4 = makeLabel("금액(ea) :",260);
 		price = makeTxtField(265);
+		
+		numCheck = new NumCheck();
+		price.addKeyListener(numCheck);
+		add(numCheck.msg);
+		numCheck.msg.setBounds(110, 290, 285, 30);
+		
 		price.setText(piPrice+"");
 		
 		add(label1);

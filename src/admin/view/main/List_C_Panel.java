@@ -77,8 +77,6 @@ public class List_C_Panel extends JPanel{
 		
 		add(centerPanel,"Center");
 		add(delBtn,"East");
-		
-		
 	}
 	
 	private JLabel makeLabel(int x, int y, int width, int height) {
