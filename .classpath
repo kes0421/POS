@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
@@ -11,3 +12,18 @@
 	<classpathentry kind="lib" path="C:/Users/1103-26/Desktop/sqldeveloper/jdbc/lib/ojdbc8.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/woongbin/Desktop/VN/HikariCP-3.4.5 (1).jar"/>
+	<classpathentry kind="lib" path="/Users/woongbin/Desktop/VN/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="lib" path="/Users/woongbin/Desktop/SQLDeveloper.app/Contents/Resources/sqldeveloper/jdbc/lib/ojdbc8.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
+>>>>>>> branch 'main' of https://github.com/kes0421/POS.git
