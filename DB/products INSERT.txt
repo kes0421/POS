@@ -83,6 +83,31 @@ INSERT INTO productsinventory VALUES ('칠리치즈나쵸 콤보_20210805','칠리치즈나쵸
 INSERT INTO productsinventory VALUES ('미니언즈 콤보_20210805','미니언즈 콤보',50,10000);
 INSERT INTO productsinventory VALUES ('핫도그 콤보_20210805','핫도그 콤보',50,7000);
 
+INSERT INTO productsinventory VALUES ('팝콘(중)_20210805','팝콘(중)',50,1000);
+INSERT INTO productsinventory VALUES ('팝콘(대)_20210805','팝콘(대)',50,1500);
+INSERT INTO productsinventory VALUES ('달콤팝콘(중)_20210805','달콤팝콘(중)',50,1500);
+INSERT INTO productsinventory VALUES ('달콤팝콘(대)_20210805','달콤팝콘(대)',50,2500);
+INSERT INTO productsinventory VALUES ('양파팝콘(중)_20210805','양파팝콘(중)',50,3500);
+INSERT INTO productsinventory VALUES ('양파팝콘(대)_20210805','양파팝콘(대)',50,3500);
+INSERT INTO productsinventory VALUES ('치즈팝콘(중)_20210805','치즈팝콘(중)',50,2500);
+INSERT INTO productsinventory VALUES ('치즈팝콘(대)_20210805','치즈팝콘(대)',50,3000);
+
+INSERT INTO productsinventory VALUES ('핑크레몬 에이드(중)_20210805','핑크레몬 에이드(중)',50,3000);
+INSERT INTO productsinventory VALUES ('핑크레몬 에이드(대)_20210805','핑크레몬 에이드(대)',50,1000);
+INSERT INTO productsinventory VALUES ('스프라이트(중)_20210805','스프라이트(중)',50,1500);
+INSERT INTO productsinventory VALUES ('스프라이트(대)_20210805','스프라이트(대)',50,4500);
+INSERT INTO productsinventory VALUES ('오렌지환타(중)_20210805','오렌지환타(중)',50,6500);
+INSERT INTO productsinventory VALUES ('오렌지환타(대)_20210805','오렌지환타(대)',50,7500);
+INSERT INTO productsinventory VALUES ('오렌지에이드(중)_20210805','오렌지에이드(중)',50,7000);
+INSERT INTO productsinventory VALUES ('오렌지에이드(대)_20210805','오렌지에이드(대)',50,10000);
+INSERT INTO productsinventory VALUES ('콜라(중)_20210805','콜라(중)',50,7000);
+INSERT INTO productsinventory VALUES ('콜라(대)_20210805','콜라(대)',50,1500);
+INSERT INTO productsinventory VALUES ('포도환타(중)_20210805','포도환타(중)',50,1500);
+INSERT INTO productsinventory VALUES ('포도환타(대)_20210805','포도환타(대)',50,1500);
+INSERT INTO productsinventory VALUES ('아이스티_20210805','아이스티',50,1500);
+INSERT INTO productsinventory VALUES ('삼다수_20210805','삼다수',50,1500);
+INSERT INTO productsinventory VALUES ('아메리카노_20210805','아메리카노',50,1500);
+
 -- 매출 테이블에 넣음 시퀀스 p붙여놓은것
 INSERT INTO PRODUCTSSALES VALUES ('p' || PS_CODE_SEQ.nextval , '맛밤',3000,1,'08-05');
 
