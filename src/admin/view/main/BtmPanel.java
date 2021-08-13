@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 import admin.view.detail.InsertFrame;
+import pos.main.MainFrame;
 
 public class BtmPanel extends JPanel{
 	
@@ -26,7 +27,7 @@ public class BtmPanel extends JPanel{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
-				// »® «¡∑π¿” ∂ÁæÓ¡‡æﬂ «‘ 
+				new MainFrame().setVisible(true);
 			}
 		});
 		

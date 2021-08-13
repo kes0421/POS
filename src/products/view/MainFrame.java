@@ -39,7 +39,7 @@ public class MainFrame extends JFrame{
 		AdPanel ad_p = new AdPanel();
 		MenuTxTPanel txt_p = new MenuTxTPanel();
 		bar_p = new MenuBarPanel();
-		BtmBarPanel btm_p = new BtmBarPanel();
+		BtmBarPanel btm_p = new BtmBarPanel(this);
 		
 		pp = new PopcornPanel();
 		sp = new SnackPanel();

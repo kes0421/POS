@@ -11,13 +11,15 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import pos.main.MainFrame;
 import products.view.detail.DetailFrame;
 
 public class BtmBarPanel extends JPanel {
 
-	public BtmBarPanel() {
+	public BtmBarPanel(JFrame frame) {
 		// 하단 메뉴바 패널 
 		setBackground(new Color(255,254,230));
 		setBounds(1, 635, 699, 29);
@@ -32,6 +34,15 @@ public class BtmBarPanel extends JPanel {
 		homeBtn.setBounds(0, 0, 40, 30);
 		btnSize.setImageSize("./img/mainFrame/홈버튼_블랙.png",homeBtn);
 		add(homeBtn);
+		
+		homeBtn.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new MainFrame().setVisible(true);
+				frame.dispose();
+			}
+		});
 
 		JButton originBtn = new JButton();
 		originBtn.setBackground(new Color(255,254,230));
