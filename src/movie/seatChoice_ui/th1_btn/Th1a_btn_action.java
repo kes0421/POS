@@ -20,7 +20,6 @@ public class Th1a_btn_action implements ActionListener {
    public Th1a_btn_action(Th1a_btn btn) {
 
       this.btn = btn;
-
    }
 
    @Override
