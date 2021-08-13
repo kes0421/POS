@@ -6,8 +6,8 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/SpringEdu/lib/HikariCP-3.4.5.jar"/>
-	<classpathentry kind="lib" path="C:/SpringEdu/lib/slf4j-api-1.7.25.jar"/>
-	<classpathentry kind="lib" path="C:/SpringEdu/programFiles/sqldeveloper-20.4.1.407.0006-x64/sqldeveloper/jdbc/lib/ojdbc8.jar"/>
+	<classpathentry kind="lib" path="D:/2021 5월 스프링클라우드 취업반/lib/HikariCP-3.4.5.jar"/>
+	<classpathentry kind="lib" path="D:/2021 5월 스프링클라우드 취업반/lib/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/1103-26/Desktop/sqldeveloper/jdbc/lib/ojdbc8.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
