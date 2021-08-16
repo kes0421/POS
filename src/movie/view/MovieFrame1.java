@@ -12,7 +12,7 @@ import movie.selectmovie.SelectMovieMain;
 public class MovieFrame1 extends JFrame{
 	
 	public MovieFrame1() {	
-		setBounds(100, 100, 700, 700);
+		setBounds(0, 0, 700, 700);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
 

@@ -10,8 +10,7 @@ public class CgvFrame extends JFrame {
 	
 	public void setDefaultOptions() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setLocation(new Point(100, 100));
-		setSize(new Dimension(700, 700));
+		setBounds(0,0,700,700);
 		setVisible(true);
 	}
 }

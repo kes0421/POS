@@ -19,7 +19,6 @@ public class BtmbarPanel extends JPanel{
 		setBounds(0, 620, 700, 52);
 		setLayout(null);
 		
-		
 		JButton goBackBtn = new JButton("<-");
 		goBackBtn.setFont(new Font("Monaco", Font.BOLD, 13));
 		goBackBtn.setBounds(6, 6, 65, 40);
@@ -27,7 +26,6 @@ public class BtmbarPanel extends JPanel{
 		
 		JButton homeBtn = new JButton("Home");
 		homeBtn.setBounds(598, 6, 96, 40);
-//		homeBtn.setIcon(homebtn("./image/HomeButtonlmage2.jpg"));
 		add(homeBtn);
 	}
 	

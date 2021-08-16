@@ -4,8 +4,10 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import css.RoundedButton;
+import movie.view.BtmbarPanel;
 import products.model.dao.ProductsBasketsDAO;
 import products.model.dto.ProductsBasket;
+import products.view.bottom.BtmBarPanel;
 
 import javax.swing.JButton;
 import java.awt.Color;
@@ -16,8 +18,6 @@ import java.util.ArrayList;
 public class ChkFrame extends JFrame{
 
 	public ArrayList<ProductsBasket> basketList = new ArrayList<>();
-	
-	public ChkFrame() {}
 	
 	public ChkFrame(String img_path, String name, int price) {
 		setBounds(100, 100, 500, 200);
@@ -113,9 +113,19 @@ public class ChkFrame extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// 장바구니 DB에 상품이름 가격 수량 넣어야함
-				new ProductsBasketsDAO().basketInsert(new ProductsBasket(p_name.getText(), img_path, p_price.getText(), quan_count.getText()));
-				
-				dispose();
+				if(!(quan_count.getText().equals("0"))) {
+					new ProductsBasketsDAO().basketInsert(new ProductsBasket(p_name.getText(), img_path, p_price.getText(), quan_count.getText()));
+					
+					if(new ProductsBasketsDAO().basketList().size() == 0) {
+						new BtmBarPanel().basketBtn.setBackground(Color.cyan);
+					}else{
+						new BtmBarPanel().basketBtn.setBackground(new Color(255,254,230));
+					}
+					dispose();
+				}else {
+					dispose();
+				}
+
 			}
 		});
 		getContentPane().add(chkBtn);

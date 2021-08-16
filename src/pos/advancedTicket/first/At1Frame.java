@@ -20,7 +20,7 @@ public class At1Frame extends JFrame{
 	
 	public At1Frame() {
 		super("At1Frame");
-		setBounds(100, 100, 700, 700);
+		setBounds(0, 0, 700, 700);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
 		at1F1 = new At1Panel1(this);

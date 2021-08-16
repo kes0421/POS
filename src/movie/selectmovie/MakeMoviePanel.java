@@ -58,7 +58,7 @@ public class MakeMoviePanel {
 			panelHeight+=170;
 		}
 		ArrayList<JButton> timeButtons = new ArrayList<>();
-		buttonList = new ArrayList();
+		buttonList = new ArrayList<>();
 		int timeWidth = 140;
 		int timeHeight = 50;
 		int count = 0;
@@ -76,14 +76,13 @@ public class MakeMoviePanel {
 					 String date = sf.format(timeTables.get(j).getT_date());
 					 dbDate = sf.parse(date);					 
 				} catch (ParseException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 
 				if(movies.get(i).getM_code() == timeTables.get(j).getM_code() && today.equals(dbDate)) {
 					timeButtons.add(new JButton());
 					timeButtons.get(count).setBounds(timeWidth, timeHeight, 100, 30);
-					timeButtons.get(count).setFont(new Font("ï¿½ï¿½ï¿½ï¿½",Font.BOLD,13));
+					timeButtons.get(count).setFont(new Font("±¼¸²",Font.BOLD,13));
 					timeButtons.get(count).setForeground(Color.white);
 					timeButtons.get(count).setBorderPainted(false);
 					timeButtons.get(count).setContentAreaFilled(false);
@@ -116,8 +115,6 @@ public class MakeMoviePanel {
 			space = 0;
 			count = 0;
 			buttonList.add(timeButtons);
-			//System.out.println(buttonList.get(i).size());
-
 		}	
 		return mainPanel;
 	}

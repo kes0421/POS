@@ -13,7 +13,6 @@ import javax.swing.JPanel;
 
 import movie.CgvFrame;
 import movie.model.Seats;
-import movie.model.Timetables;
 import movie.peopleCheck_ui.ErrorFrame;
 import movie.peopleCheck_ui.PeopleCheck;
 import movie.seatChoice_ui.th1_btn.Th1a_btn;
@@ -30,6 +29,7 @@ import movie.seatChoice_ui.th1_btn.Th1k_btn;
 import movie.seatChoice_ui.th1_btn.Th1l_btn;
 import movie.seatChoice_ui.th1_btn.Th1m_btn;
 import movie.selectmovie.DBList;
+import movie.selectmovie.SelectMovieMain;
 
 public class SeatChoice_1 extends CgvFrame {
    
@@ -157,7 +157,6 @@ public class SeatChoice_1 extends CgvFrame {
       sold_out_label.setFont(new Font("µ¸¿ò", Font.PLAIN, 15));
       sold_out_label.setForeground(Color.white);
       
-      
       light_zone.setBounds(570, 250, 20, 20);
       light_zone.setBackground(new Color(0xFFB266));
       light_zone.setBorder(BorderFactory.createLineBorder(new Color(0x202020)));
@@ -165,7 +164,6 @@ public class SeatChoice_1 extends CgvFrame {
       light_zone_label.setBounds(600, 250, 90, 20);
       light_zone_label.setFont(new Font("µ¸¿ò", Font.PLAIN, 15));
       light_zone_label.setForeground(Color.white);
-      
       
       normal.setBounds(570, 280, 20, 20);
       normal.setBackground(new Color(0x404040));
@@ -175,7 +173,6 @@ public class SeatChoice_1 extends CgvFrame {
       normal_label.setFont(new Font("µ¸¿ò", Font.PLAIN, 15));
       normal_label.setForeground(Color.white);
       
-      
       disable.setBounds(570, 310, 20, 20);
       disable.setBackground(new Color(0x4C9900));
       disable.setBorder(BorderFactory.createLineBorder(new Color(0x202020)));
@@ -183,7 +180,6 @@ public class SeatChoice_1 extends CgvFrame {
       disable_label.setBounds(600, 310, 90, 20);
       disable_label.setFont(new Font("µ¸¿ò", Font.PLAIN, 15));
       disable_label.setForeground(Color.white);
-      
       
       sweetBox.setBounds(570, 340, 20, 20);
       sweetBox.setBackground(new Color(0xFF66B2));
@@ -222,7 +218,6 @@ public class SeatChoice_1 extends CgvFrame {
          }
       });
       
-      
       add(select);
       add(sold_out);
       add(light_zone);
@@ -253,8 +248,6 @@ public class SeatChoice_1 extends CgvFrame {
          btns11.add(new JButton());
          btns12.add(new JButton());
          btns13.add(new JButton());
-         
-         
 
       }
 
@@ -348,10 +341,6 @@ public class SeatChoice_1 extends CgvFrame {
             add(th1m_btn.get(i));
          }
          
-         
-         
-         
-         
       }
       
       th1a_btn_soldout = new boolean[15];
@@ -367,7 +356,6 @@ public class SeatChoice_1 extends CgvFrame {
       th1k_btn_soldout = new boolean[15];
       th1l_btn_soldout = new boolean[15];
       th1m_btn_soldout = new boolean[15];
-      
       
       
       for(int i = 0; i < seats.size(); i++) {
@@ -446,8 +434,6 @@ public class SeatChoice_1 extends CgvFrame {
          }
       }
 
-
-
       ad.setBounds(0, 0, 700, 100);
       ad.setBackground(Color.white);
       price.setBounds(0, 100, 700, 40);
@@ -457,14 +443,12 @@ public class SeatChoice_1 extends CgvFrame {
       price_label.setFont(new Font("°íµñ", Font.BOLD | Font.PLAIN, 20));
       price_label.setForeground(Color.white);
 
-      
       price.add(price_label);
       
       label.setText("S C R E E N");
       label.setFont(new Font("µ¸¿ò" , Font.BOLD, 20));
       label.setForeground(Color.WHITE);
       label.setBounds(250, 140, 700, 50);
-
       
       seat_a.setText("A");
       seat_a.setBounds(30, 200, 30, 30);
@@ -541,10 +525,9 @@ public class SeatChoice_1 extends CgvFrame {
          @Override
          public void actionPerformed(ActionEvent e) {
             dispose();
-            PeopleCheck people = new PeopleCheck();
-            people.setDefaultOptions();
-            people.getContentPane().setBackground(new Color(0x202020));
-
+            
+            SelectMovieMain.frame.setDefaultOptions();
+            
             for(int i = 0; i < th1a_btn_selected.length; i++) {
                if(th1a_btn_selected[i]) 
                {
@@ -604,11 +587,6 @@ public class SeatChoice_1 extends CgvFrame {
          }
       });
 
-
-
-
-
-
       add(ad);
       add(price);
       add(label);
@@ -628,7 +606,6 @@ public class SeatChoice_1 extends CgvFrame {
       add(seat_l);
       add(seat_m);
       
-      
       add(label2);
    }
 
@@ -636,7 +613,6 @@ public class SeatChoice_1 extends CgvFrame {
       SeatChoice_1 frame = new SeatChoice_1();
       frame.setDefaultOptions();
       frame.getContentPane().setBackground(new Color(0x202020));
-
 
    }
 

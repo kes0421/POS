@@ -15,10 +15,15 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import pos.main.MainFrame;
+import products.model.dao.ProductsBasketsDAO;
 import products.view.detail.DetailFrame;
 
 public class BtmBarPanel extends JPanel {
 
+	public JButton basketBtn = new JButton();
+	
+	public BtmBarPanel() {}
+	
 	public BtmBarPanel(JFrame frame) {
 		// 하단 메뉴바 패널 
 		setBackground(new Color(255,254,230));
@@ -58,11 +63,14 @@ public class BtmBarPanel extends JPanel {
 			}
 		});
 
-		JButton basketBtn = new JButton();
 		basketBtn.setBackground(new Color(255,254,230));
 		basketBtn.setBounds(593, 0, 45, 30);
 		basketBtn.setIcon(makeImageIcon("./img/mainFrame/장바구니.png"));
 		add(basketBtn);
+		
+		if(new ProductsBasketsDAO().basketList().size() == 0) {
+			basketBtn.setBackground(Color.cyan);
+		}
 		
 		basketBtn.addActionListener(new ActionListener() {
 			

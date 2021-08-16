@@ -35,9 +35,3 @@ public class SelectMovieMain extends CgvFrame {
 		frame.setDefaultOptions();
 	}
 }
-
-
-
-
-
-

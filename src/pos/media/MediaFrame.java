@@ -9,7 +9,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-
 import pos.main.MainFrame;
 
 public class MediaFrame extends JFrame implements MouseListener{

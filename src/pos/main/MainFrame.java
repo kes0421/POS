@@ -8,7 +8,7 @@ public class MainFrame extends JFrame{
 
 	public MainFrame() {
 		super("MainFrame");
-		setBounds(100, 100, 700, 700);
+		setBounds(0, 0, 700, 700);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
 		setBackground(Color.WHITE);
