@@ -125,7 +125,6 @@ public class ChkFrame extends JFrame{
 				}else {
 					dispose();
 				}
-
 			}
 		});
 		getContentPane().add(chkBtn);
