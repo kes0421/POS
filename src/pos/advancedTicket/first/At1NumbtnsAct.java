@@ -34,7 +34,7 @@ public class At1NumbtnsAct implements ActionListener{
 	        }
 
 	        if(at1L3.getText().length() == 14) {
-	            JOptionPane.showMessageDialog(new At1Frame(), "11자리를 넘게 입력하셨습니다.");
+	            JOptionPane.showMessageDialog(null, "11자리를 넘게 입력하셨습니다.");
 	            at1L3.setText(at1L3.getText().substring(0, at1L3.getText().length() -1));
 	        }
 	    }

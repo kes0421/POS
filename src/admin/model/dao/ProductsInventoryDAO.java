@@ -19,7 +19,7 @@ public class ProductsInventoryDAO {
 		
 		ArrayList<ProductsInventory> piList = new ArrayList<>();
 		
-		String sql = "SELECT * FROM PRODUCTSINVENTORY";
+		String sql = "SELECT * FROM productsInventory order by pi_name";
 		
 		try(
 				Connection conn = DBUtill.getConnection();
@@ -40,6 +40,75 @@ public class ProductsInventoryDAO {
 			e.printStackTrace();
 		}
 		
+		return piList;
+	}
+	
+	/**
+		목록을 눌렀을때 그 타입의 오름차순 List
+	*/
+	public ArrayList<ProductsInventory> typeOfOrderBy(String type){
+
+		ArrayList<ProductsInventory> piList = new ArrayList<>();
+		String sql = "SELECT * FROM productsInventory" + type;
+		
+		try(
+				Connection conn = DBUtill.getConnection();
+				PreparedStatement pstmt = conn.prepareStatement(sql);
+				ResultSet rs = pstmt.executeQuery();
+		){
+			while (rs.next()) {
+				piList.add(new ProductsInventory(
+						rs.getString("pi_code"),
+						rs.getString("pi_name"),
+						rs.getInt("pi_quantity"),
+						rs.getInt("pi_price")
+						));
+			}
+			
+		} catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return piList;
+		
+	}
+	
+	/**
+		상품 검색했을 때 SELECT
+	*/
+	public ArrayList<ProductsInventory> productsSearchSelect(String name){
+		Connection con = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		
+		ArrayList<ProductsInventory> piList = new ArrayList<>();
+	
+		String sql = "SELECT * FROM productsinventory where pi_name like ? order by pi_name";
+	
+		try{
+			
+			con = DBUtill.getConnection();
+			ps = con.prepareStatement(sql);
+	
+			ps.setString(1, "%" + name + "%");
+			rs = ps.executeQuery();
+			
+			while (rs.next()) {
+				piList.add(new ProductsInventory(
+						rs.getString("pi_code"),
+						rs.getString("pi_name"),
+						rs.getInt("pi_quantity"),
+						rs.getInt("pi_price")
+						));
+			}
+			
+			con.close();
+			ps.close();
+			rs.close();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 		return piList;
 	}
 	
@@ -123,45 +192,6 @@ public class ProductsInventoryDAO {
 			e.printStackTrace();
 		}
 		return result;
-	}
-	
-	/**
-		상품 검색했을 때 SELECT
-	*/
-	public ArrayList<ProductsInventory> productsSearchSelect(String name){
-		Connection con = null;
-		PreparedStatement ps = null;
-		ResultSet rs = null;
-		
-		ArrayList<ProductsInventory> piList = new ArrayList<>();
-	
-		String sql = "SELECT * FROM productsinventory where pi_name like ? order by pi_name";
-	
-		try{
-			
-			con = DBUtill.getConnection();
-			ps = con.prepareStatement(sql);
-
-			ps.setString(1, "%" + name + "%");
-			rs = ps.executeQuery();
-			
-			while (rs.next()) {
-				piList.add(new ProductsInventory(
-						rs.getString("pi_code"),
-						rs.getString("pi_name"),
-						rs.getInt("pi_quantity"),
-						rs.getInt("pi_price")
-						));
-			}
-			
-			con.close();
-			ps.close();
-			rs.close();
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return piList;
 	}
 	
 	/**

@@ -44,5 +44,4 @@ public class BarPanel extends JPanel{
 		return label;
 	}
 	
-	
 }

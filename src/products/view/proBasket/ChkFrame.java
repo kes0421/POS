@@ -116,15 +116,16 @@ public class ChkFrame extends JFrame{
 				if(!(quan_count.getText().equals("0"))) {
 					new ProductsBasketsDAO().basketInsert(new ProductsBasket(p_name.getText(), img_path, p_price.getText(), quan_count.getText()));
 					
-					if(new ProductsBasketsDAO().basketList().size() == 0) {
-						new BtmBarPanel().basketBtn.setBackground(Color.cyan);
-					}else{
-						new BtmBarPanel().basketBtn.setBackground(new Color(255,254,230));
-					}
-					dispose();
 				}else {
 					dispose();
 				}
+				
+				if(new ProductsBasketsDAO().basketList().size() == 0) {
+					new BtmBarPanel().basketBtn.setBackground(Color.cyan);
+				}else{
+					new BtmBarPanel().basketBtn.setBackground(new Color(255,254,230));
+				}
+				dispose();
 			}
 		});
 		getContentPane().add(chkBtn);

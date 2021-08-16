@@ -15,7 +15,6 @@ import javax.swing.border.LineBorder;
 import admin.model.dao.ProductsInventoryDAO;
 import admin.model.dto.ProductsInventory;
 import admin.view.MainFrame;
-import admin.view.detail.InsertFrame;
 import admin.view.detail.UpdateFrame;
 
 public class List_C_Panel extends JPanel{

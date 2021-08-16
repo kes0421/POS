@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import admin.model.dao.ProductsInventoryDAO;
@@ -68,7 +69,7 @@ public class Detail_P3 extends JPanel{
 				ArrayList<String> piCodeList = new ArrayList<>();
 				
 				if(basketList.size() == 0) {
-					new NoPayFrame();
+					JOptionPane.showMessageDialog(frame, "결제할 상품이 없습니다.");
 				}
 				// 장바구니 DB DELETE 해주기
 				new ProductsBasketsDAO().basketAllDelete();
