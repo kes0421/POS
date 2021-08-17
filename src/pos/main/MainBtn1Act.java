@@ -6,7 +6,6 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 
 import movie.view.MovieFrame1;
-import pos.advancedTicket.first.At1Frame;
 
 public class MainBtn1Act implements ActionListener{
 	String text;

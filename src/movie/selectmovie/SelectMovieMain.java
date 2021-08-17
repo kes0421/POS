@@ -9,7 +9,9 @@ import javax.swing.JPanel;
 import movie.CgvFrame;
 
 public class SelectMovieMain extends CgvFrame {
+	
 	public static SelectMovieMain frame;
+	
 	public SelectMovieMain() {
 		super();	
 		
@@ -26,9 +28,7 @@ public class SelectMovieMain extends CgvFrame {
 		for(int i=0; i < movieInfo.size(); i++) {
 			getContentPane().add(movieInfo.get(i));
 		}
-			
 	}
-	
 	
 	public static void main(String[] args) {
 		frame = new SelectMovieMain();

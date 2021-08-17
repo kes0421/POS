@@ -12,9 +12,9 @@ import movie.model.Timetables;
 import util.DBUtill;
 
 public class DBList {
-	public ArrayList moviesList(){
+	public ArrayList<Movies> moviesList(){
 		String sql = "SELECT * FROM movies ORDER BY m_code";
-		ArrayList<Movies> movies = new ArrayList();
+		ArrayList<Movies> movies = new ArrayList<>();
 		try (
 			Connection conn = DBUtill.getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -34,17 +34,15 @@ public class DBList {
 				));
 			}
 			
-			System.out.println();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return movies; 
 	}
 	
-	public ArrayList timeTablesList(){
+	public ArrayList<Timetables> timeTablesList(){
 		String sql = "SELECT * FROM timetables ORDER BY t_code";
-		ArrayList<Timetables> timetables = new ArrayList();
+		ArrayList<Timetables> timetables = new ArrayList<>();
 		try (
 			Connection conn = DBUtill.getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -63,17 +61,15 @@ public class DBList {
 				));
 			}
 			
-			System.out.println();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return timetables; 
 	}
 	
-	public ArrayList seatsList(){
+	public ArrayList<Seats> seatsList(){
 		String sql = "SELECT * FROM seats ORDER BY s_code";
-		ArrayList<Seats> seats = new ArrayList();
+		ArrayList<Seats> seats = new ArrayList<>();
 		try (
 			Connection conn = DBUtill.getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -90,12 +86,9 @@ public class DBList {
 				));
 			}
 			
-			System.out.println();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return seats; 
 	}
 }
-

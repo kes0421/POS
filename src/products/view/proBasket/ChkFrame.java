@@ -4,7 +4,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import css.RoundedButton;
-import movie.view.BtmbarPanel;
 import products.model.dao.ProductsBasketsDAO;
 import products.model.dto.ProductsBasket;
 import products.view.bottom.BtmBarPanel;
@@ -17,6 +16,8 @@ import java.util.ArrayList;
 
 public class ChkFrame extends JFrame{
 
+	BtmBarPanel panel;
+	
 	public ArrayList<ProductsBasket> basketList = new ArrayList<>();
 	
 	public ChkFrame(String img_path, String name, int price) {
@@ -109,13 +110,13 @@ public class ChkFrame extends JFrame{
 		JButton chkBtn = new RoundedButton("확인");
 		chkBtn.setForeground(Color.BLUE);
 		chkBtn.setBounds(315, 137, 90, 29);
+		
 		chkBtn.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// 장바구니 DB에 상품이름 가격 수량 넣어야함
 				if(!(quan_count.getText().equals("0"))) {
 					new ProductsBasketsDAO().basketInsert(new ProductsBasket(p_name.getText(), img_path, p_price.getText(), quan_count.getText()));
-					
 				}else {
 					dispose();
 				}
