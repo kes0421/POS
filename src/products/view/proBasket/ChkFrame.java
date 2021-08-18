@@ -142,5 +142,4 @@ public class ChkFrame extends JFrame{
 		});
 		getContentPane().add(cancleBtn);
 	}
-	
 }
