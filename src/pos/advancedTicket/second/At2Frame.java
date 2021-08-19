@@ -16,6 +16,9 @@ public class At2Frame extends JFrame{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
 		getContentPane().setBackground(Color.black);
+		setResizable(false);
+		setLocationRelativeTo(null);
+		
 		at2P1 = new At2Panel1(this);
 		at2P2 = new At2Panel2(this);
 		

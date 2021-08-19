@@ -7,10 +7,12 @@ import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import products.model.dao.ProductsListDAO;
 import products.model.dto.Products;
+import products.view.MainFrame;
 import products.view.proBasket.P_BtnAct;
 
 import java.awt.event.*;
@@ -36,7 +38,7 @@ public class ProductsPanel extends JPanel{
 		setBackground(Color.white);
 	}
 	
-	public void addBtn() {
+	public void addBtn(MainFrame mF) {
 		
 		for(int i = 0; i < selectType.size(); ++i) {
 			name.add(selectType.get(i).getName());
@@ -51,12 +53,14 @@ public class ProductsPanel extends JPanel{
 		for(int i = 0; i < btns.size(); ++i) {
 			add(btns.get(i));	
 			
-			btns.get(i).addActionListener(new P_BtnAct(i, selectType));
+			btns.get(i).addActionListener(new P_BtnAct(i, selectType, mF));
 			
 			MyMouseListener listener = new MyMouseListener();
 			
 			btns.get(i).addMouseListener(listener);
 		}
+		
+		
 	}
 	
 	/**

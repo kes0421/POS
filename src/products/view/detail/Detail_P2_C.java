@@ -15,15 +15,17 @@ import javax.swing.border.LineBorder;
 import css.RoundedButton;
 import products.model.dao.ProductsBasketsDAO;
 import products.model.dto.ProductsBasket;
+import products.view.MainFrame;
 import products.view.proBasket.ChkImg;
 
 public class Detail_P2_C extends JPanel {
 	   
 	   ProductsBasketsDAO pbDAO = new ProductsBasketsDAO();
-
-	   public Detail_P2_C(String img_path, String name, String price, String quantity, JFrame frame) {
+	   MainFrame mF;
+	   
+	   public Detail_P2_C(String img_path, String name, String price, String quantity, JFrame frame, JFrame mF) {
 	      LineBorder lineColor = new LineBorder(new Color(87,149,255));
-
+	      this.mF = (MainFrame)mF;
 	      setBackground(new Color(255, 255, 255));
 	      setLayout(new BorderLayout());
 	      setBorder(lineColor);
@@ -64,8 +66,8 @@ public class Detail_P2_C extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				new ProductsBasketsDAO().basketDelete(new ProductsBasket(proName.getText()));
-				frame.setVisible(false);
-				new DetailFrame();
+				frame.dispose();
+				new DetailFrame(mF);
 			}
 		});
 	   }

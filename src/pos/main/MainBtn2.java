@@ -11,10 +11,11 @@ public class MainBtn2 extends JButton{
 		super("¿¹¸ÅÆ¼ÄÏÃâ·Â");
 		setForeground(Color.white);
 		setBackground(Color.black);
-		setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 25));
+		setFont(new Font("±¼¸²", Font.BOLD, 25));
 		setBounds(253, 471, 192, 180);
 		LineBorder lb = new LineBorder(Color.LIGHT_GRAY, 5, true);
 		setBorder(lb);
 		addActionListener(new MainBtn2Act(getText(), mainF));
+		addMouseListener(new MainBtn2Act(getText(), mainF));
 	}
 }

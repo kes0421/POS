@@ -4,16 +4,19 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 public class At1NumbtnsAct implements ActionListener{
 	String text;
 	JLabel at1L3;
+	At1Frame at1Frame;
 	
-	public At1NumbtnsAct(String text, JLabel at1L3) {
+	public At1NumbtnsAct(String text, JLabel at1L3, JFrame at1Frame) {
 		this.text = text;
 		this.at1L3 = at1L3;
+		this.at1Frame = (At1Frame)at1Frame;
 	}
 	
 	  @Override
@@ -34,7 +37,7 @@ public class At1NumbtnsAct implements ActionListener{
 	        }
 
 	        if(at1L3.getText().length() == 14) {
-	            JOptionPane.showMessageDialog(null, "11자리를 넘게 입력하셨습니다.");
+	        	JOptionPane.showMessageDialog(at1Frame, "11자리를 넘게 입력하셨습니다.");
 	            at1L3.setText(at1L3.getText().substring(0, at1L3.getText().length() -1));
 	        }
 	    }

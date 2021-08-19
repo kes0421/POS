@@ -9,7 +9,7 @@ import javax.swing.border.LineBorder;
 
 public class MainBtn3 extends JButton{
 	
-	public MainBtn3(JFrame mainP) {
+	public MainBtn3(JFrame mainF) {
 		super("ªÛ«∞");
 		setForeground(Color.white);
 		setBackground(Color.black);
@@ -17,6 +17,7 @@ public class MainBtn3 extends JButton{
 		setBounds(480, 471, 192, 180);
 		LineBorder lb = new LineBorder(Color.LIGHT_GRAY, 5, true);
 		setBorder(lb);
-		addActionListener(new MainBtn3Act(getText(), mainP));
+		addActionListener(new MainBtn3Act(getText(), mainF));
+	    addMouseListener(new MainBtn3Act(getText(), mainF));
 	}
 }

@@ -27,7 +27,7 @@ public class BtmPanel extends JPanel{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
-				new MainFrame().setVisible(true);
+				//new MainFrame().setVisible(true);
 			}
 		});
 		

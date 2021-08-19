@@ -18,16 +18,14 @@ public class At1Panel2 extends JPanel{
 		setLayout(new GridLayout(0, 3, 0, 0));
 		setBackground(Color.black);
 		for(int i = 0; i < 9; ++i) {
-			numBtnsList.add(new At1NumBtns("" + (i + 1), at1L3));
+			numBtnsList.add(new At1NumBtns("" + (i + 1), at1L3, at1F));
 			add(numBtnsList.get(i));
 		}
-		
-		
 		del = new At1DelBtn(at1L3);
 		next = new At1NextBtn(at1F, at1L3);
 		setBorder(null);
 		add(del);
-		add(new At1NumBtns("" + 0, at1L3));
+		add(new At1NumBtns("" + 0, at1L3, at1F));
 		add(next);
 	}
 }

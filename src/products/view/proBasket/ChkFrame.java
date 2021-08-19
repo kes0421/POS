@@ -2,29 +2,41 @@ package products.view.proBasket;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.border.LineBorder;
+import javax.swing.border.TitledBorder;
 
 import css.RoundedButton;
 import products.model.dao.ProductsBasketsDAO;
 import products.model.dto.ProductsBasket;
-import products.view.bottom.BtmBarPanel;
+import products.view.MainFrame;
+import util.DBUtill;
 
 import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class ChkFrame extends JFrame{
 
-	BtmBarPanel panel;
-	
 	public ArrayList<ProductsBasket> basketList = new ArrayList<>();
 	
-	public ChkFrame(String img_path, String name, int price) {
+	public ChkFrame() {}
+	MainFrame mF;
+	
+	public ChkFrame(String img_path, String name, int price, JFrame mF) {
+		super("ChkFrame");
+		this.mF = (MainFrame)mF;
 		setBounds(100, 100, 500, 200);
-		setDefaultCloseOperation(HIDE_ON_CLOSE);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		getContentPane().setBackground(Color.white);
 		getContentPane().setLayout(null);
+		setResizable(false);
+		
 		setVisible(true);
 
 		ChkImg img = new ChkImg(img_path,165,166);
@@ -110,22 +122,12 @@ public class ChkFrame extends JFrame{
 		JButton chkBtn = new RoundedButton("확인");
 		chkBtn.setForeground(Color.BLUE);
 		chkBtn.setBounds(315, 137, 90, 29);
-		
 		chkBtn.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// 장바구니 DB에 상품이름 가격 수량 넣어야함
-				if(!(quan_count.getText().equals("0"))) {
-					new ProductsBasketsDAO().basketInsert(new ProductsBasket(p_name.getText(), img_path, p_price.getText(), quan_count.getText()));
-				}else {
-					dispose();
-				}
-				
-				if(new ProductsBasketsDAO().basketList().size() == 0) {
-					new BtmBarPanel().basketBtn.setBackground(Color.cyan);
-				}else{
-					new BtmBarPanel().basketBtn.setBackground(new Color(255,254,230));
-				}
+				new ProductsBasketsDAO().basketInsert(new ProductsBasket(p_name.getText(), img_path, p_price.getText(), quan_count.getText()));
+				basketNum();
 				dispose();
 			}
 		});
@@ -141,5 +143,24 @@ public class ChkFrame extends JFrame{
 			}
 		});
 		getContentPane().add(cancleBtn);
+	}
+
+	public void basketNum(){
+		int count = 0;
+	
+		String sql = "Select pb_quantity from productsbaskets";
+			
+		try(
+			Connection conn = DBUtill.getConnection();
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			ResultSet rs = pstmt.executeQuery();	
+		){
+		while (rs.next()) {
+			count += rs.getInt("pb_quantity");
+		}				
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		mF.btm_p.basketBtn.setBorder(new TitledBorder(new LineBorder(Color.black), "" + count));
 	}
 }

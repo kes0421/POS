@@ -11,8 +11,8 @@ import products.model.dto.Products;
 import products.view.productsPanels.ProductsPanel;
 
 public class ProductBtn extends JFrame implements ActionListener{
-	
-	ProductsPanel proP = new ProductsPanel();
+//	
+//	ProductsPanel proP = new ProductsPanel();
 	JButton btn;
 	int i;
 	

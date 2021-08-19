@@ -11,19 +11,25 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
 import products.model.dao.ProductsBasketsDAO;
+import products.view.MainFrame;
 
 public class DetailFrame extends JFrame{
 	
 	ProductsBasketsDAO pbDAO = new ProductsBasketsDAO();
 	JScrollPane scroll;
+	MainFrame mF;
 	
-	public DetailFrame() {
-		
+	public DetailFrame(JFrame mF) {
+		super("DetailFrame");
+		this.mF = (MainFrame)mF;
 		setBounds(0,0,600,600);
-		setDefaultCloseOperation(HIDE_ON_CLOSE);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		getContentPane().setLayout(null);
-		setVisible(true);
+		setResizable(false);
+		setLocationRelativeTo(null);
 		
+		setVisible(true);
+
 		plusFrame();
 	}
 	
@@ -31,7 +37,7 @@ public class DetailFrame extends JFrame{
 		Detail_P1 panel1 = new Detail_P1();
 		Detail_P2 panel2 = new Detail_P2();
 		ArrayList<Detail_P2_C> panel2_1 = new ArrayList<>();
-		Detail_P3 panel3 = new Detail_P3(this);
+		Detail_P3 panel3 = new Detail_P3(this, mF);
 		ArrayList<Integer> prices = new ArrayList<>();
 		
 		if(pbDAO.basketList().size() == 0) {
@@ -54,7 +60,7 @@ public class DetailFrame extends JFrame{
 						pbDAO.basketList().get(i).getName(),
 						pbDAO.basketList().get(i).getPrice(),
 						pbDAO.basketList().get(i).getQuantity(),
-						this));
+						this, mF));
 				
 				panel2.add(panel2_1.get(i));
 				

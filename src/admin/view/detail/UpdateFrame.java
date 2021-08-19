@@ -8,7 +8,8 @@ public class UpdateFrame extends JFrame{
 		setBounds(300, 200, 460, 460);
 		setDefaultCloseOperation(HIDE_ON_CLOSE);
 		setLayout(null);
-		// 단독실행시에는 꺼주고, 메인에서 버튼으로 실행시에는 켜준
+		setResizable(false);
+		setLocationRelativeTo(null);
 		setVisible(true);
 		
 		TopPanel topP = new TopPanel();
@@ -19,5 +20,4 @@ public class UpdateFrame extends JFrame{
 		add(updateP);
 		
 	}
-	
 }

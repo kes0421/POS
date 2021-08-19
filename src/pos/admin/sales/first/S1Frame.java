@@ -6,6 +6,10 @@ import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Calendar;
 
 import javax.swing.DefaultComboBoxModel;
@@ -15,12 +19,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import util.DBUtill;
+
 public class S1Frame extends JFrame implements ActionListener{
 	//------------외형구현---------------
 	Calendar cal; //케린다
 	int year, month, date;
 	JPanel pane = new JPanel();
-	
+
 		//위에 버튼 추가
 		JButton btn1 = new JButton("◀");  //이전버튼
 		JButton btn2 = new JButton("▶"); //다음버튼
@@ -95,7 +101,9 @@ public class S1Frame extends JFrame implements ActionListener{
         setVisible(true);
         setSize(500, 500);
         setResizable(false);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        setResizable(false);
+		setLocationRelativeTo(null);
         
         //----------기능구현----------
         btn1.addActionListener(this);
@@ -156,12 +164,50 @@ public class S1Frame extends JFrame implements ActionListener{
 			}else if(Week==7){
 				lbl.setForeground(Color.BLUE);
 			}
-			datePane.add(new Dp(new JButton(), lbl));
+			datePane.add(new Dp(new JButton("" + getSales(month, day)), lbl));
 		}
 	}
-	//실헹메소드
-	public static void main(String[] args) {
-		new S1Frame();	
+	
+	public int getSales(int month, int day) {
+		String dd = "";
+		if(month >= 10) {
+			dd += month;
+		}else {
+			dd += "0" + month;
+		}
+		dd += "-";
+		
+		if(day >= 10) {
+			dd += day;
+		}else {
+			dd += "0" + day;
+		}
+		
+		
+		
+		String sql1 = "SELECT ms_price FROM movieSales WHERE ms_date = " + "'" + dd + "'";
+		String sql2 = "SELECT ps_price FROM productssales WHERE ps_date = " + "'" + dd + "'";
+		
+		int sales = 0;	//일별 매출
+		
+		try(
+			Connection conn = DBUtill.getConnection();	
+			PreparedStatement pstmt1 = conn.prepareStatement(sql1);
+			PreparedStatement pstmt2 = conn.prepareStatement(sql2);
+			ResultSet rs1 = pstmt1.executeQuery();
+			ResultSet rs2 = pstmt2.executeQuery();	
+		){
+			while(rs1.next()) {
+				sales += rs1.getInt("ms_price");
+			}
+			while(rs2.next()) {
+				sales += rs2.getInt("ps_price");
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return sales;
 	}
 }
 
@@ -176,6 +222,6 @@ class Dp extends JPanel{
 		this.l = l;
 		add(l);
 		add(btn);
-		btn.addActionListener(new S2BtnAct(l.getText()));
+		btn.addActionListener(new S1BtnAct(l.getText()));
 	}
 }

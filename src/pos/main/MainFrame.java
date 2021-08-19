@@ -12,6 +12,7 @@ public class MainFrame extends JFrame{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
 		setBackground(Color.WHITE);
+		setResizable(false);
 		
 		p = new MainPanel(this);
 		getContentPane().add(p);

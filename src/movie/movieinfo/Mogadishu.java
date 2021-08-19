@@ -11,6 +11,7 @@ import movie.model.Movies;
 import movie.model.Timetables;
 import movie.peopleCheck_ui.PeopleCheck;
 import movie.selectmovie.DBList;
+import movie.selectmovie.SelectMovieMain;
 
 public class Mogadishu implements ActionListener {
 	
@@ -18,7 +19,7 @@ public class Mogadishu implements ActionListener {
 	
 	ArrayList<Movies> movies = new DBList().moviesList();
 	ArrayList<Timetables> timeTables = new DBList().timeTablesList();
-	
+
 	
 	public Mogadishu(JButton btn) {
 		this.btn = btn;
@@ -31,6 +32,10 @@ public class Mogadishu implements ActionListener {
 				pri = i;
 			}
 		}
+		SelectMovieMain.movie_name = movies.get(0).getM_name();
+		SelectMovieMain.movie_start_time =  Integer.parseInt(timeTables.get(pri).getT_start().substring(0, 2));
+		SelectMovieMain.time_code = timeTables.get(0).getT_code();
+		
 		System.out.println(movies.get(0).getM_name());
 		System.out.println(movies.get(0).getM_genre());
 		System.out.println(movies.get(0).getM_grade());
@@ -51,19 +56,3 @@ public class Mogadishu implements ActionListener {
 		frame.setDefaultOptions();
 	}	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

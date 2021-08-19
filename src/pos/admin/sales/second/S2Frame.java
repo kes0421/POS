@@ -8,12 +8,15 @@ public class S2Frame extends JFrame{
 	
 	public S2Frame(String date) {
 		s2P1 = new S2Panel1(date);
-		s2P2 = new S2Panel2();
-		s2P3 = new S2Panel3();
+		s2P2 = new S2Panel2(date);
+		s2P3 = new S2Panel3(date);
 		setBounds(0, 0, 400, 400);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		getContentPane().setLayout(null);
+		setResizable(false);
+		setLocationRelativeTo(null);
 		setVisible(true);
+
 		getContentPane().add(s2P1);
 		getContentPane().add(s2P2);
 		getContentPane().add(s2P3);

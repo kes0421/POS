@@ -34,7 +34,7 @@ public class Th2a_btn_action implements ActionListener {
          frame.setDefaultOptions();
          JLabel label = new JLabel();
          label.setText("이미 예매된 자리입니다.");
-         label.setFont(new Font("돋움", Font.PLAIN|Font.BOLD, 30));
+         label.setFont(new Font("    ", Font.PLAIN|Font.BOLD, 30));
          label.setForeground(Color.white);
          label.setHorizontalAlignment(JLabel.CENTER);
          frame.add(label);
@@ -54,6 +54,8 @@ public class Th2a_btn_action implements ActionListener {
                btn.setBackground(new Color(0x4C9900));
             }
             SeatChoice_2.selected_cnt--;
+            SeatChoice_2.ticket_price -= SeatChoice_2.th2a_btn_price[index - 1];
+            SeatChoice_2.price_label.setText("일반: " + (PeopleCheck.adult_cnt + PeopleCheck.child_cnt + PeopleCheck.old_cnt) + "              " + "장애인: " + PeopleCheck.disable_cnt + "              " + "가격: " + SeatChoice_2.ticket_price);
          }
          else
          {
@@ -64,6 +66,8 @@ public class Th2a_btn_action implements ActionListener {
                   SeatChoice_2.th2a_btn_selected[index - 1] = true;
                   btn.setBackground(new Color(0xFF3333));
                   SeatChoice_2.selected_cnt++;
+                  SeatChoice_2.ticket_price += SeatChoice_2.th2a_btn_price[index - 1];
+                  SeatChoice_2.price_label.setText("일반: " + (PeopleCheck.adult_cnt + PeopleCheck.child_cnt + PeopleCheck.old_cnt) + "              " + "장애인: " + PeopleCheck.disable_cnt + "              " + "가격: " + SeatChoice_2.ticket_price);
                }
 
 
@@ -76,7 +80,7 @@ public class Th2a_btn_action implements ActionListener {
                      frame.setDefaultOptions();
                      JLabel label = new JLabel();
                      label.setText("장애인만 예매가능합니다.");
-                     label.setFont(new Font("돋움", Font.PLAIN|Font.BOLD, 30));
+                     label.setFont(new Font("    ", Font.PLAIN|Font.BOLD, 30));
                      label.setForeground(Color.white);
                      label.setHorizontalAlignment(JLabel.CENTER);
                      frame.add(label);
@@ -89,6 +93,8 @@ public class Th2a_btn_action implements ActionListener {
                         btn.setBackground(new Color(0xFF3333));
                         SeatChoice_2.disable_btn_cnt++;
                         SeatChoice_2.selected_cnt++;
+                        SeatChoice_2.ticket_price += SeatChoice_2.th2a_btn_price[index - 1];
+                        SeatChoice_2.price_label.setText("일반: " + (PeopleCheck.adult_cnt + PeopleCheck.child_cnt + PeopleCheck.old_cnt) + "              " + "장애인: " + PeopleCheck.disable_cnt + "              " + "가격: " + SeatChoice_2.ticket_price);
                      }
                      else
                      {
@@ -97,7 +103,7 @@ public class Th2a_btn_action implements ActionListener {
                         frame.setDefaultOptions();
                         JLabel label = new JLabel();
                         label.setText("장애인만 예매가능합니다.");
-                        label.setFont(new Font("돋움", Font.PLAIN|Font.BOLD, 30));
+                        label.setFont(new Font("    ", Font.PLAIN|Font.BOLD, 30));
                         label.setForeground(Color.white);
                         label.setHorizontalAlignment(JLabel.CENTER);
                         frame.add(label);
@@ -112,7 +118,7 @@ public class Th2a_btn_action implements ActionListener {
                frame.getContentPane().setBackground(new Color(0x404040));
                frame.setDefaultOptions();
                JLabel label = new JLabel();
-               label.setText("선택인원이 "+ SeatChoice_1.peoples + "명을 초과했습니다.");
+               label.setText("선택인원이 "+ SeatChoice_2.peoples + "명을 초과했습니다.");               label.setFont(new Font("    ", Font.PLAIN|Font.BOLD, 30));
                label.setFont(new Font("돋움", Font.PLAIN|Font.BOLD, 30));
                label.setForeground(Color.white);
                label.setHorizontalAlignment(JLabel.CENTER);

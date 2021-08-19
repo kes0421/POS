@@ -1,0 +1,127 @@
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '모가디슈',24000,2,'08-01');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '모가디슈',12000,1,'08-01');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '보스베이비2',60000,5,'08-01');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '블랙위도우',36000,3,'08-01');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '정글크루즈',24000,2,'08-01');
+    
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '모가디슈',48000,4,'08-02');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '방법-재차의',72000,6,'08-02');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '블랙위도우',24000,2,'08-02');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '모가디슈',12000,1,'08-02');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '정글크루즈',36000,3,'08-02');
+    
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '보스베이비2',24000,2,'08-03');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '모가디슈',48000,4,'08-03');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '정글크루즈',12000,1,'08-03');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '블랙위도우',36000,3,'08-03');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '모가디슈',24000,2,'08-03');
+    
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '방법-재차의',12000,1,'08-04');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '모가디슈',24000,2,'08-04');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '정글크루즈',48000,4,'08-04');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '정글크루즈',36000,3,'08-04');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '보스베이비2',72000,6,'08-04');
+    
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '블랙위도우',48000,4,'08-05');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '모가디슈',24000,2,'08-05');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '방법-재차의',12000,1,'08-05');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '정글크루즈',36000,3,'08-05');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '모가디슈',24000,2,'08-05');
+    
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '모가디슈',24000,2,'08-06');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '정글크루즈',48000,4,'08-06');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '보스베이비2',36000,3,'08-06');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '블랙위도우',24000,2,'08-06');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '정글크루즈',12000,1,'08-06');
+    
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '정글크루즈',24000,2,'08-07');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '블랙위도우',12000,1,'08-07');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '모가디슈',48000,4,'08-07');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '보스베이비2',72000,6,'08-07');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '정글크루즈',36000,3,'08-07');
+    
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '모가디슈',12000,1,'08-08');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '정글크루즈',36000,3,'08-08');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '블랙위도우',24000,2,'08-08');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '정글크루즈',12000,1,'08-08');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '보스베이비2',48000,4,'08-08');
+    
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '블랙위도우',24000,2,'08-09');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '모가디슈',48000,4,'08-09');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '보스베이비2',36000,3,'08-09');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '정글크루즈',24000,2,'08-09');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '모가디슈',48000,4,'08-09');
+    
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '방법-재차의',12000,1,'08-10');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '모가디슈',24000,2,'08-10');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '블랙위도우',48000,4,'08-10');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '방법-재차의',36000,3,'08-10');
+INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval , '보스베이비2',72000,6,'08-10');
+    
+insert into movieSales values ('m' || ms_code_seq.nextval, '모가디슈', 24000, 2, '08-11');
+insert into movieSales values ('m' || ms_code_seq.nextval, '모가디슈', 36000, 3, '08-11');
+insert into movieSales values ('m' || ms_code_seq.nextval, '보스베이비2', 60000, 5, '08-11');
+insert into movieSales values ('m' || ms_code_seq.nextval, '블랙위도우', 24000, 2, '08-11');
+insert into movieSales values ('m' || ms_code_seq.nextval, '모가디슈', 72000, 6, '08-11');
+
+insert into movieSales values ('m' || ms_code_seq.nextval, '모가디슈', 48000, 4, '08-12');
+insert into movieSales values ('m' || ms_code_seq.nextval, '모가디슈', 60000, 5, '08-12');
+insert into movieSales values ('m' || ms_code_seq.nextval, '보스베이비2', 120000, 10, '08-12');
+insert into movieSales values ('m' || ms_code_seq.nextval, '방법-재차의', 24000, 2, '08-12');
+insert into movieSales values ('m' || ms_code_seq.nextval, '정글크루즈', 72000, 6, '08-12');
+
+
+insert into movieSales values ('m' || ms_code_seq.nextval, '보스베이비2', 60000, 5, '08-13');
+insert into movieSales values ('m' || ms_code_seq.nextval, '모가디슈', 42000, 4, '08-13');
+insert into movieSales values ('m' || ms_code_seq.nextval, '모가디슈', 96000, 8, '08-13');
+insert into movieSales values ('m' || ms_code_seq.nextval, '정글크루즈', 36000, 3, '08-13');
+insert into movieSales values ('m' || ms_code_seq.nextval, '방법-재차의', 120000, 10, '08-13');
+
+
+insert into movieSales values ('m' || ms_code_seq.nextval, '모가디슈', 72000, 6, '08-14');
+insert into movieSales values ('m' || ms_code_seq.nextval, '정글크루즈', 60000, 5, '08-14');
+insert into movieSales values ('m' || ms_code_seq.nextval, '모가디슈', 108000, 9, '08-14');
+insert into movieSales values ('m' || ms_code_seq.nextval, '정글크루즈', 36000, 3, '08-14');
+insert into movieSales values ('m' || ms_code_seq.nextval, '방법-재차의', 120000, 10, '08-14');
+
+
+insert into movieSales values ('m' || ms_code_seq.nextval, '모가디슈', 72000, 6, '08-15');
+insert into movieSales values ('m' || ms_code_seq.nextval, '모가디슈', 60000, 5, '08-15');
+insert into movieSales values ('m' || ms_code_seq.nextval, '모가디슈', 108000, 9, '08-15');
+insert into movieSales values ('m' || ms_code_seq.nextval, '정글크루즈', 36000, 3, '08-15');
+insert into movieSales values ('m' || ms_code_seq.nextval, '보스베이비2', 60000, 5, '08-15');
+
+
+insert into movieSales values ('m' || ms_code_seq.nextval, '정글크루즈', 42000, 4, '08-16');
+insert into movieSales values ('m' || ms_code_seq.nextval, '모가디슈', 120000, 10, '08-16');
+insert into movieSales values ('m' || ms_code_seq.nextval, '모가디슈', 120000, 10, '08-16');
+insert into movieSales values ('m' || ms_code_seq.nextval, '방법-재차의', 48000, 4, '08-16');
+insert into movieSales values ('m' || ms_code_seq.nextval, '보스베이비2', 60000, 5, '08-16');
+
+
+insert into movieSales values ('m' || ms_code_seq.nextval, '방법-재차의', 60000, 5, '08-17');
+insert into movieSales values ('m' || ms_code_seq.nextval, '모가디슈', 72000, 6, '08-17');
+insert into movieSales values ('m' || ms_code_seq.nextval, '모가디슈', 24000, 2, '08-17');
+insert into movieSales values ('m' || ms_code_seq.nextval, '정글크루즈', 48000, 4, '08-17');
+insert into movieSales values ('m' || ms_code_seq.nextval, '보스베이비2', 48000, 4, '08-17');
+
+
+insert into movieSales values ('m' || ms_code_seq.nextval, '모가디슈', 72000, 6, '08-18');
+insert into movieSales values ('m' || ms_code_seq.nextval, '모가디슈', 72000, 6, '08-18');
+insert into movieSales values ('m' || ms_code_seq.nextval, '모가디슈', 36000, 3, '08-18');
+insert into movieSales values ('m' || ms_code_seq.nextval, '정글크루즈', 48000, 4, '08-18');
+insert into movieSales values ('m' || ms_code_seq.nextval, '방법-재차의', 60000, 5, '08-18');
+
+insert into movieSales values ('m' || ms_code_seq.nextval, '모가디슈', 96000, 8, '08-19');
+insert into movieSales values ('m' || ms_code_seq.nextval, '모가디슈', 60000, 5, '08-19');
+insert into movieSales values ('m' || ms_code_seq.nextval, '정글크루즈', 48000, 4, '08-19');
+insert into movieSales values ('m' || ms_code_seq.nextval, '정글크루즈', 48000, 4, '08-19');
+insert into movieSales values ('m' || ms_code_seq.nextval, '보스베이비2', 60000, 5, '08-19');
+
+insert into movieSales values ('m' || ms_code_seq.nextval, '보스베이비2', 72000, 6, '08-20');
+insert into movieSales values ('m' || ms_code_seq.nextval, '모가디슈', 72000, 6, '08-20');
+insert into movieSales values ('m' || ms_code_seq.nextval, '모가디슈', 36000, 3, '08-20');
+insert into movieSales values ('m' || ms_code_seq.nextval, '정글크루즈', 48000, 4, '08-20');
+insert into movieSales values ('m' || ms_code_seq.nextval, '방법-재차의', 60000, 5, '08-20');
+
+commit;

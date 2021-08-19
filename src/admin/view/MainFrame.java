@@ -22,9 +22,11 @@ public class MainFrame extends JFrame{
 	JScrollPane scroll;
 	
 	public MainFrame() {
-		setBounds(100, 100, 1010, 700);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setBounds(0, 0, 1010, 700);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		getContentPane().setLayout(null);
+		setResizable(false);
+		setLocationRelativeTo(null);
 		
 		TopPanel topP = new TopPanel(this);
 		add(topP);
@@ -105,10 +107,5 @@ public class MainFrame extends JFrame{
 		
 		BtmPanel btmP = new BtmPanel(this);
 		add(btmP);
-	}
-	
-	public static void main(String[] args) {
-		MainFrame main = new MainFrame();
-		main.setVisible(true);
 	}
 }

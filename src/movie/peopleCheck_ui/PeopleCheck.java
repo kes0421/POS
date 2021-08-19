@@ -40,6 +40,13 @@ public class PeopleCheck extends PeopleCheck_frame {
 	public static PeopleCheck frame;
 	public static int th_num_check;
 	
+	public static SeatChoice_1 seat1;
+    public static SeatChoice_2 seat2;
+    public static SeatChoice_3 seat3;
+    public static SeatChoice_4 seat4;
+    public static SeatChoice_5 seat5;
+    public static SeatChoice_6 seat6;
+    
 	public static String time;
 
 	public PeopleCheck() {
@@ -172,42 +179,42 @@ public class PeopleCheck extends PeopleCheck_frame {
 
 				case 1:
 					dispose();
-					SeatChoice_1 seat1 = new SeatChoice_1();
+					seat1 = new SeatChoice_1();
 					seat1.setDefaultOptions();
 					seat1.getContentPane().setBackground(new Color(0x202020));
 					break;
 				
 				case 2:
 					dispose();
-					SeatChoice_2 seat2 = new SeatChoice_2();
+					seat2 = new SeatChoice_2();
 					seat2.setDefaultOptions();
 					seat2.getContentPane().setBackground(new Color(0x202020));
 					break;
 				
 				case 3:
 					dispose();
-					SeatChoice_3 seat3 = new SeatChoice_3();
+					seat3 = new SeatChoice_3();
 					seat3.setDefaultOptions();
 					seat3.getContentPane().setBackground(new Color(0x202020));
 					break;
 				
 				case 4:
 					dispose();
-					SeatChoice_4 seat4 = new SeatChoice_4();
+					seat4 = new SeatChoice_4();
 					seat4.setDefaultOptions();
 					seat4.getContentPane().setBackground(new Color(0x202020));
 					break;
 				
 				case 5:
 					dispose();
-					SeatChoice_5 seat5 = new SeatChoice_5();
+					seat5 = new SeatChoice_5();
 					seat5.setDefaultOptions();
 					seat5.getContentPane().setBackground(new Color(0x202020));
 					break;
 				
 				case 6:
 					dispose();
-					SeatChoice_6 seat6 = new SeatChoice_6();
+					seat6 = new SeatChoice_6();
 					seat6.setDefaultOptions();
 					seat6.getContentPane().setBackground(new Color(0x202020));
 					break;
@@ -228,10 +235,10 @@ public class PeopleCheck extends PeopleCheck_frame {
 		add(line3);
 		add(label);
 	}
-
-	public static void main(String[] args) {
-		frame = new PeopleCheck();
-		frame.getContentPane().setBackground(new Color(0x404040));
-		frame.setDefaultOptions();
-	}
+//
+//	public static void main(String[] args) {
+//		frame = new PeopleCheck();
+//		frame.getContentPane().setBackground(new Color(0x404040));
+//		frame.setDefaultOptions();
+//	}
 }

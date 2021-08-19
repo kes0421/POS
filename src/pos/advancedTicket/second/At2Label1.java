@@ -10,12 +10,12 @@ public class At2Label1 extends JLabel{
 
 	public At2Label1() {
 		super();
-		setBounds(0, 50, 200, 150);
+		setBounds(20, 70, 100, 100);
 		setImageSize();
 	}
 	
 	private void setImageSize() {
-		ImageIcon icon = new ImageIcon("./img/At2Page/337.png");
+		ImageIcon icon = new ImageIcon("./img/At2Page/check.png");
 		Image img = icon.getImage();
 		Image newImg = img.getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_SMOOTH);
 		ImageIcon newImc = new ImageIcon(newImg);

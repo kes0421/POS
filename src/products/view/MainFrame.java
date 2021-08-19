@@ -26,11 +26,14 @@ public class MainFrame extends JFrame{
 	JScrollPane scroll2;
 	JScrollPane scroll3;
 	JScrollPane scroll4;
+	public BtmBarPanel btm_p;
 	
 	public MainFrame() {
+		super("MainFrame");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setBounds(0, 0, 700, 700);
 		setLayout(null);
+		setResizable(false);
 		
 		plusFrame();
 	}
@@ -39,12 +42,12 @@ public class MainFrame extends JFrame{
 		AdPanel ad_p = new AdPanel();
 		MenuTxTPanel txt_p = new MenuTxTPanel();
 		bar_p = new MenuBarPanel();
-		BtmBarPanel btm_p = new BtmBarPanel(this);
+		btm_p = new BtmBarPanel(this);
 		
-		pp = new PopcornPanel();
-		sp = new SnackPanel();
-		bp = new BeveragePanel();
-		cp = new ComboPanel();
+		pp = new PopcornPanel(this);
+		sp = new SnackPanel(this);
+		bp = new BeveragePanel(this);
+		cp = new ComboPanel(this);
 		
 		add(ad_p);
 		add(txt_p);

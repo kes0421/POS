@@ -11,6 +11,7 @@ import movie.model.Movies;
 import movie.model.Timetables;
 import movie.peopleCheck_ui.PeopleCheck;
 import movie.selectmovie.DBList;
+import movie.selectmovie.SelectMovieMain;
 
 public class BlackWidow implements ActionListener {
 	
@@ -18,6 +19,7 @@ public class BlackWidow implements ActionListener {
 	
 	ArrayList<Movies> movies = new DBList().moviesList();
 	ArrayList<Timetables> timeTables = new DBList().timeTablesList();
+	
 	
 	public BlackWidow(JButton btn) {
 		this.btn = btn;
@@ -30,10 +32,15 @@ public class BlackWidow implements ActionListener {
 				pri = i;
 			}
 		}
+		
+		SelectMovieMain.movie_name = movies.get(2).getM_name();
+		SelectMovieMain.movie_start_time =  Integer.parseInt(timeTables.get(pri).getT_start().substring(0, 2));
+		SelectMovieMain.time_code = timeTables.get(2).getT_code();
+		
 		System.out.println(movies.get(2).getM_name());
 		System.out.println(movies.get(2).getM_genre());
 		System.out.println(movies.get(2).getM_grade());
-		System.out.println(timeTables.get(pri).getT_name());
+		System.out.println(timeTables.get(pri).getT_name().getClass().getName());
 		System.out.println(timeTables.get(pri).getT_start());
 		System.out.println(timeTables.get(pri).getT_end());
 		System.out.println();
@@ -51,19 +58,3 @@ public class BlackWidow implements ActionListener {
 		
 	}	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

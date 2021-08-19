@@ -12,9 +12,9 @@ import movie.model.Timetables;
 import util.DBUtill;
 
 public class DBList {
-	public ArrayList<Movies> moviesList(){
+	public ArrayList moviesList(){
 		String sql = "SELECT * FROM movies ORDER BY m_code";
-		ArrayList<Movies> movies = new ArrayList<>();
+		ArrayList<Movies> movies = new ArrayList();
 		try (
 			Connection conn = DBUtill.getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -40,9 +40,9 @@ public class DBList {
 		return movies; 
 	}
 	
-	public ArrayList<Timetables> timeTablesList(){
+	public ArrayList timeTablesList(){
 		String sql = "SELECT * FROM timetables ORDER BY t_code";
-		ArrayList<Timetables> timetables = new ArrayList<>();
+		ArrayList<Timetables> timetables = new ArrayList();
 		try (
 			Connection conn = DBUtill.getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -67,9 +67,9 @@ public class DBList {
 		return timetables; 
 	}
 	
-	public ArrayList<Seats> seatsList(){
+	public ArrayList seatsList(){
 		String sql = "SELECT * FROM seats ORDER BY s_code";
-		ArrayList<Seats> seats = new ArrayList<>();
+		ArrayList<Seats> seats = new ArrayList();
 		try (
 			Connection conn = DBUtill.getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(sql);

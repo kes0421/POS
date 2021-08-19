@@ -22,6 +22,7 @@ public class AdBtn1 extends JButton{
 		setBounds(30, 100, 150, 150);
 		setImageSize();
 		addActionListener(new AdBtn1Act(mainF));
+		addMouseListener(new AdBtn1Act(mainF));
 	}
 	
 	private void setImageSize() {

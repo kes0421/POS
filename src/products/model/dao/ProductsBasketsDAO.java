@@ -1,12 +1,17 @@
 package products.model.dao;
 
+import java.awt.Color;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import javax.swing.border.LineBorder;
+import javax.swing.border.TitledBorder;
+
 import products.model.dto.ProductsBasket;
+import products.view.MainFrame;
 import util.DBUtill;
 
 public class ProductsBasketsDAO {
@@ -14,6 +19,15 @@ public class ProductsBasketsDAO {
 	/**
 	 	장바구니 DB에 데이터 INSERT
 	*/
+	MainFrame mainF;
+	public ProductsBasketsDAO() {
+	}
+	
+	public ProductsBasketsDAO(MainFrame mainF) {
+		this.mainF = mainF;
+		
+	}
+	
 	public int basketInsert(ProductsBasket productsBasket){
 		Connection con = null;
 		PreparedStatement ps = null;
@@ -118,4 +132,24 @@ public class ProductsBasketsDAO {
 		return result;
 	}
 	
+	// 장바구니 버튼에 숫자 표시
+	public void basketNum(){
+		int count = 0;
+	
+		String sql = "Select * from productsbaskets";
+			
+		try(
+			Connection conn = DBUtill.getConnection();
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			ResultSet rs = pstmt.executeQuery();	
+		){
+		while (rs.next()) {
+			count++;
+		}				
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		// 장바구니 위에 숫자 표시
+		mainF.btm_p.setBorder(new TitledBorder(new LineBorder(Color.black), "" + count));
+	}
 }

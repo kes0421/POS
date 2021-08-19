@@ -15,7 +15,7 @@ public class OriF extends JFrame{
 		
 		setBounds(228, 200, 400, 460);
 		setLayout(null);
-		setDefaultCloseOperation(HIDE_ON_CLOSE);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setVisible(true);
 		getContentPane().setBackground(new Color(255,254,230));
 		

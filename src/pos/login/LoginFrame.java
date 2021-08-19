@@ -1,11 +1,11 @@
 package pos.login;
 
+import java.awt.Color;
 import java.awt.TextField;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JTextField;
 
 public class LoginFrame extends JFrame{
 	JLabel lL1, lL2;
@@ -13,8 +13,12 @@ public class LoginFrame extends JFrame{
 	JButton lBtn1;
 	public LoginFrame() {
 		setBounds(0, 0, 300, 300);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		getContentPane().setLayout(null);
+		getContentPane().setBackground(new Color(244,232,232));
+		setResizable(false);
+		setLocationRelativeTo(null);
+		
 		lL1 = new LLabel1();
 		lL2 = new LLabel2();
 		lT1 = new LText1();

@@ -13,7 +13,6 @@ import javax.swing.JPanel;
 
 import movie.CgvFrame;
 import movie.model.Seats;
-import movie.peopleCheck_ui.ErrorFrame;
 import movie.peopleCheck_ui.PeopleCheck;
 import movie.seatChoice_ui.th6_btn.Th6a_btn;
 import movie.seatChoice_ui.th6_btn.Th6b_btn;
@@ -26,8 +25,11 @@ import movie.seatChoice_ui.th6_btn.Th6h_btn;
 import movie.seatChoice_ui.th6_btn.Th6i_btn;
 import movie.seatChoice_ui.th6_btn.Th6j_btn;
 import movie.seatChoice_ui.th6_btn.Th6k_btn;
+import movie.seatChoice_ui.th_payment_btn.Th6_payment_btn;
 import movie.selectmovie.DBList;
+import movie.selectmovie.DateSelectButton;
 import movie.selectmovie.SelectMovieMain;
+import pos.advancedTicket.third.At3Frame;
 
 public class SeatChoice_6 extends CgvFrame {
 
@@ -54,12 +56,40 @@ public class SeatChoice_6 extends CgvFrame {
    public static boolean[] th6i_btn_soldout;
    public static boolean[] th6j_btn_soldout;
    public static boolean[] th6k_btn_soldout;
+   
+   public static int[] th6a_btn_price;
+   public static int[] th6b_btn_price;
+   public static int[] th6c_btn_price;
+   public static int[] th6d_btn_price;
+   public static int[] th6e_btn_price;
+   public static int[] th6f_btn_price;
+   public static int[] th6g_btn_price;
+   public static int[] th6h_btn_price;
+   public static int[] th6i_btn_price;
+   public static int[] th6j_btn_price;
+   public static int[] th6k_btn_price;
+   
+   public static String[] th6a_btn_name;
+   public static String[] th6b_btn_name;
+   public static String[] th6c_btn_name;
+   public static String[] th6d_btn_name;
+   public static String[] th6e_btn_name;
+   public static String[] th6f_btn_name;
+   public static String[] th6g_btn_name;
+   public static String[] th6h_btn_name;
+   public static String[] th6i_btn_name;
+   public static String[] th6j_btn_name;
+   public static String[] th6k_btn_name;
+
 
    public static int selected_cnt;
    public static int peoples;
    public static int disable_btn_cnt;
+   public static int ticket_price;
+   public static JLabel price_label;
    
    static ArrayList<Seats> seats = new DBList().seatsList();
+
 
    public SeatChoice_6() {
       JPanel ad = new JPanel();
@@ -103,7 +133,7 @@ public class SeatChoice_6 extends CgvFrame {
       ArrayList<JButton> th6j_btn = new ArrayList<>();
       ArrayList<JButton> th6k_btn = new ArrayList<>();
 
-      JButton back = new JButton("°Á");
+      JButton back = new JButton("‚Üê");
 
       JButton select = new JButton("");
       JLabel select_label = new JLabel();
@@ -123,86 +153,66 @@ public class SeatChoice_6 extends CgvFrame {
       JButton sweetBox = new JButton("");
       JLabel sweetBox_label = new JLabel();
 
-      JButton complete = new JButton("∞·¡¶«“∑°ø‰");
-
+      selected_cnt = 0;
       peoples = PeopleCheck.adult_cnt + PeopleCheck.child_cnt + PeopleCheck.disable_cnt + PeopleCheck.old_cnt;
 
       select.setBounds(570, 160, 20, 20);
       select.setBackground(new Color(0xFF3333));
       select.setBorder(BorderFactory.createLineBorder(new Color(0x202020)));
-      select_label.setText("º±≈√");
+      select_label.setText("ÏÑ†ÌÉù");
       select_label.setBounds(600, 160, 90, 20);
-      select_label.setFont(new Font("µ∏øÚ", Font.PLAIN, 15));
+      select_label.setFont(new Font("    ", Font.PLAIN, 15));
       select_label.setForeground(Color.white);
 
       sold_out.setBounds(570, 190, 20, 20);
       sold_out.setBackground(new Color(0xC0C0C0));
       sold_out.setBorder(BorderFactory.createLineBorder(new Color(0x202020)));
-      sold_out_label.setText("øπ∏≈øœ∑·");
+      sold_out_label.setText("ÏòàÎß§ÏôÑÎ£å");
       sold_out_label.setBounds(600, 190, 90, 20);
-      sold_out_label.setFont(new Font("µ∏øÚ", Font.PLAIN, 15));
+      sold_out_label.setFont(new Font("    ", Font.PLAIN, 15));
       sold_out_label.setForeground(Color.white);
+
 
       light_zone.setBounds(570, 250, 20, 20);
       light_zone.setBackground(new Color(0xFFB266));
       light_zone.setBorder(BorderFactory.createLineBorder(new Color(0x202020)));
       light_zone_label.setText("Light Zone");
       light_zone_label.setBounds(600, 250, 90, 20);
-      light_zone_label.setFont(new Font("µ∏øÚ", Font.PLAIN, 15));
+      light_zone_label.setFont(new Font("    ", Font.PLAIN, 15));
       light_zone_label.setForeground(Color.white);
+
 
       normal.setBounds(570, 280, 20, 20);
       normal.setBackground(new Color(0x404040));
       normal.setBorder(BorderFactory.createLineBorder(new Color(0x202020)));
-      normal_label.setText("¿œπ›ºÆ");
+      normal_label.setText("ÏùºÎ∞òÏÑù");
       normal_label.setBounds(600, 280, 90, 20);
-      normal_label.setFont(new Font("µ∏øÚ", Font.PLAIN, 15));
+      normal_label.setFont(new Font("    ", Font.PLAIN, 15));
       normal_label.setForeground(Color.white);
+
 
       disable.setBounds(570, 310, 20, 20);
       disable.setBackground(new Color(0x4C9900));
       disable.setBorder(BorderFactory.createLineBorder(new Color(0x202020)));
-      disable_label.setText("¿Âæ÷¿ŒºÆ");
+      disable_label.setText("Ïû•Ïï†Ïù∏ÏÑù");
       disable_label.setBounds(600, 310, 90, 20);
-      disable_label.setFont(new Font("µ∏øÚ", Font.PLAIN, 15));
+      disable_label.setFont(new Font("    ", Font.PLAIN, 15));
       disable_label.setForeground(Color.white);
+
 
       sweetBox.setBounds(570, 340, 20, 20);
       sweetBox.setBackground(new Color(0xFF66B2));
       sweetBox.setBorder(BorderFactory.createLineBorder(new Color(0x202020)));
       sweetBox_label.setText("SWEETBOX");
       sweetBox_label.setBounds(600, 340, 90, 20);
-      sweetBox_label.setFont(new Font("µ∏øÚ", Font.PLAIN, 15));
+      sweetBox_label.setFont(new Font("    ", Font.PLAIN, 15));
       sweetBox_label.setForeground(Color.white);
 
 
-      complete.setBounds(200,600, 200, 40);
-      complete.setBackground(new Color(0xFF3333));
-      complete.setForeground(Color.white);
-      complete.setFont(new Font("µ∏øÚ", Font.BOLD, 20));
-      complete.setBorder(BorderFactory.createLineBorder(new Color(0x202020)));
-      complete.addActionListener(new ActionListener() {
-
-         @Override
-         public void actionPerformed(ActionEvent e) {
-            if(peoples == selected_cnt)
-            {
-
-            }
-            else
-            {
-               ErrorFrame frame = new ErrorFrame();
-               frame.getContentPane().setBackground(new Color(0x404040));
-               frame.setDefaultOptions();
-               JLabel label = new JLabel();
-               label.setText("º±≈√¿Œø¯¿Ã "+ peoples + "∏Ì∫∏¥Ÿ ¿˚Ω¿¥œ¥Ÿ.");
-               label.setFont(new Font("µ∏øÚ", Font.PLAIN|Font.BOLD, 30));
-               label.setForeground(Color.white);
-               frame.add(label);
-
-            }
-         }
-      });
+      JButton btn = new JButton();
+      Th6_payment_btn payment = new Th6_payment_btn(btn);
+      payment.setBounds(200,600, 200, 40);
+     
 
       add(select);
       add(sold_out);
@@ -210,7 +220,7 @@ public class SeatChoice_6 extends CgvFrame {
       add(normal);
       add(disable);
       add(sweetBox);
-      add(complete);
+      add(payment);
 
       add(select_label);
       add(sold_out_label);
@@ -232,6 +242,9 @@ public class SeatChoice_6 extends CgvFrame {
          btns9.add(new JButton());
          btns10.add(new JButton());
          btns11.add(new JButton());
+
+
+
       }
 
       int k = 31;
@@ -311,7 +324,9 @@ public class SeatChoice_6 extends CgvFrame {
             add(th6j_btn.get(i));
             th6k_btn.get(i).setBounds(50 + k * i, 500  , 30 ,30);
             add(th6k_btn.get(i));
+
          }
+
       }
       
       th6a_btn_soldout = new boolean[15];
@@ -325,6 +340,8 @@ public class SeatChoice_6 extends CgvFrame {
       th6i_btn_soldout = new boolean[15];
       th6j_btn_soldout = new boolean[15];
       th6k_btn_soldout = new boolean[15];
+      
+      
       
       for(int i = 0; i < seats.size(); i++) {
          if(PeopleCheck.time.equals(seats.get(i).getT_code()))
@@ -395,89 +412,257 @@ public class SeatChoice_6 extends CgvFrame {
 
 
       ad.setBounds(0, 0, 700, 100);
-      ad.setBackground(Color.white);
+      ad.setBackground(new Color(0x202020));
       price.setBounds(0, 100, 700, 40);
       price.setBackground(Color.black);
-      JLabel price_label = new JLabel();
-      price_label.setText("¿œπ›: " + (PeopleCheck.adult_cnt + PeopleCheck.child_cnt + PeopleCheck.old_cnt) + "              " + "¿Âæ÷¿Œ: " + PeopleCheck.disable_cnt);
-      price_label.setFont(new Font("∞ÌµÒ", Font.BOLD | Font.PLAIN, 20));
+      price_label = new JLabel();
+      price_label.setText(" œπ : " + (PeopleCheck.adult_cnt + PeopleCheck.child_cnt + PeopleCheck.old_cnt) + "              " + "     : " + PeopleCheck.disable_cnt + "              " + "Í∞ÄÍ≤©: " + ticket_price);
+      price_label.setFont(new Font("   ", Font.BOLD | Font.PLAIN, 20));
       price_label.setForeground(Color.white);
+      
+      th6a_btn_price = new int[15];
+      th6b_btn_price = new int[15];
+      th6c_btn_price = new int[15];
+      th6d_btn_price = new int[15];
+      th6e_btn_price = new int[15];
+      th6f_btn_price = new int[15];
+      th6g_btn_price = new int[15];
+      th6h_btn_price = new int[15];
+      th6i_btn_price = new int[15];
+      th6j_btn_price = new int[15];
+      th6k_btn_price = new int[15];
+      
+      if(DateSelectButton.day_of_week == 7 || DateSelectButton.day_of_week == 1)
+      {
+         for(int i = 0; i < 15; i++) {
+            if((i > 5 && i < 13) || i == 2 || i == 3) 
+            {
+               th6a_btn_price[i] = 12000;
+            }
+            if(i > 1 && i < 13) 
+            {
+               th6b_btn_price[i] = 12000;
+               th6c_btn_price[i] = 13000;
+               th6d_btn_price[i] = 13000;
+               th6e_btn_price[i] = 13000;
+               th6f_btn_price[i] = 13000;
+               th6g_btn_price[i] = 13000;
+               th6h_btn_price[i] = 13000;
+               th6i_btn_price[i] = 13000;
+               th6j_btn_price[i] = 13000;
+            }
+            if( i > 1 && i < 13)
+            {
+               th6k_btn_price[i] = 14000;
+
+            }
+
+            if (i == 0 || i == 1)
+            {
+                 th6i_btn_price[i] = 14000;
+               th6j_btn_price[i] = 14000;
+               th6k_btn_price[i] = 14000;
+            }
+            
+         }
+      }
+      else
+      {
+         if(SelectMovieMain.movie_start_time >= 6 && SelectMovieMain.movie_start_time <= 10 )
+         {
+              for(int i = 0; i < 15; i++) {
+                if((i > 5 && i < 13) || i == 2 || i == 3) 
+                {
+                   th6a_btn_price[i] = 9000;
+                }
+                if(i > 1 && i < 13) 
+                {
+                   th6b_btn_price[i] = 9000;
+                   th6c_btn_price[i] = 9000;
+                   th6d_btn_price[i] = 9000;
+                   th6e_btn_price[i] = 9000;
+                   th6f_btn_price[i] = 9000;
+                   th6g_btn_price[i] = 9000;
+                   th6h_btn_price[i] = 9000;
+                   th6i_btn_price[i] = 9000;
+                   th6j_btn_price[i] = 9000;
+                }
+                if( i > 1 && i < 13)
+                {
+                   th6k_btn_price[i] = 9000;
+
+                }
+
+                if (i == 0 || i == 1)
+                {
+                     th6i_btn_price[i] = 9000;
+                   th6j_btn_price[i] = 9000;
+                   th6k_btn_price[i] = 9000;
+                }
+                
+             }
+         }
+         else
+         {
+              for(int i = 0; i < 15; i++) {
+                if((i > 5 && i < 13) || i == 2 || i == 3) 
+                {
+                   th6a_btn_price[i] = 11000;
+                }
+                if(i > 1 && i < 13) 
+                {
+                   th6b_btn_price[i] = 11000;
+                   th6c_btn_price[i] = 12000;
+                   th6d_btn_price[i] = 12000;
+                   th6e_btn_price[i] = 12000;
+                   th6f_btn_price[i] = 12000;
+                   th6g_btn_price[i] = 12000;
+                   th6h_btn_price[i] = 12000;
+                   th6i_btn_price[i] = 12000;
+                   th6j_btn_price[i] = 12000;
+                }
+                if( i > 1 && i < 13)
+                {
+                   th6k_btn_price[i] = 13000;
+
+                }
+
+                if (i == 0 || i == 1)
+                {
+                     th6i_btn_price[i] = 13000;
+                   th6j_btn_price[i] = 13000;
+                   th6k_btn_price[i] = 13000;
+                }
+                
+             }
+         }
+      }
+      
+      th6a_btn_name = new String[15];
+      th6b_btn_name = new String[15];
+      th6c_btn_name = new String[15];
+      th6d_btn_name = new String[15];
+      th6e_btn_name = new String[15];
+      th6f_btn_name = new String[15];
+      th6g_btn_name = new String[15];
+      th6h_btn_name = new String[15];
+      th6i_btn_name = new String[15];
+      th6j_btn_name = new String[15];
+      th6k_btn_name = new String[15];
+      
+      for(int i = 0 ; i < 15; i++) {
+         if(i == 2 || i == 3)
+         {
+            th6a_btn_name[i] = "Ïû•Ïï†Ïù∏ÏÑù";
+         }
+         
+         if (i > 5 && i < 13)
+         {
+            th6a_btn_name[i] = "Light Zone";
+         }
+         
+         if(i > 1 && i < 13)
+         {
+             th6b_btn_name[i] = "Light Zone";
+             th6c_btn_name[i] = "ÏùºÎ∞òÏÑù";
+             th6d_btn_name[i] = "ÏùºÎ∞òÏÑù";
+             th6f_btn_name[i] = "ÏùºÎ∞òÏÑù";
+             th6g_btn_name[i] = "ÏùºÎ∞òÏÑù";
+             th6h_btn_name[i] = "ÏùºÎ∞òÏÑù";
+             th6i_btn_name[i] = "ÏùºÎ∞òÏÑù";
+             th6j_btn_name[i] = "ÏùºÎ∞òÏÑù";
+         }
+         
+         if (i == 0 || i == 1)
+         {
+            th6i_btn_name[i] = "SWEETBOX";
+            th6j_btn_name[i] = "SWEETBOX";
+            th6k_btn_name[i] = "SWEETBOX";
+            
+         }
+         
+        if( i > 1 && i < 12)
+        {
+           th6k_btn_name[i] = "SWEETBOX";
+        }
+         
+      }
 
       
       price.add(price_label);
       label.setText("S C R E E N");
-      label.setFont(new Font("µ∏øÚ" , Font.BOLD, 20));
+      label.setFont(new Font("    " , Font.BOLD, 20));
       label.setForeground(Color.WHITE);
       label.setBounds(250, 140, 700, 50);
 
 
       seat_a.setText("A");
       seat_a.setBounds(30, 200, 30, 30);
-      seat_a.setFont(new Font("µ∏øÚ", Font.BOLD, 20));
+      seat_a.setFont(new Font("    ", Font.BOLD, 20));
       seat_a.setForeground(Color.white);
 
       seat_b.setText("B");
       seat_b.setBounds(30, 230, 30, 30);
-      seat_b.setFont(new Font("µ∏øÚ", Font.BOLD, 20));
+      seat_b.setFont(new Font("    ", Font.BOLD, 20));
       seat_b.setForeground(Color.white);
 
       seat_c.setText("C");
       seat_c.setBounds(30, 260, 30, 30);
-      seat_c.setFont(new Font("µ∏øÚ", Font.BOLD, 20));
+      seat_c.setFont(new Font("    ", Font.BOLD, 20));
       seat_c.setForeground(Color.white);
 
       seat_d.setText("D");
       seat_d.setBounds(30, 290, 30, 30);
-      seat_d.setFont(new Font("µ∏øÚ", Font.BOLD, 20));
+      seat_d.setFont(new Font("    ", Font.BOLD, 20));
       seat_d.setForeground(Color.white);
 
       seat_e.setText("E");
       seat_e.setBounds(30, 320, 30, 30);
-      seat_e.setFont(new Font("µ∏øÚ", Font.BOLD, 20));
+      seat_e.setFont(new Font("    ", Font.BOLD, 20));
       seat_e.setForeground(Color.white);
 
       seat_f.setText("F");
       seat_f.setBounds(30, 350, 30, 30);
-      seat_f.setFont(new Font("µ∏øÚ", Font.BOLD, 20));
+      seat_f.setFont(new Font("    ", Font.BOLD, 20));
       seat_f.setForeground(Color.white);
 
       seat_g.setText("G");
       seat_g.setBounds(30, 380, 30, 30);
-      seat_g.setFont(new Font("µ∏øÚ", Font.BOLD, 20));
+      seat_g.setFont(new Font("    ", Font.BOLD, 20));
       seat_g.setForeground(Color.white);
 
       seat_h.setText("H");
       seat_h.setBounds(30, 410, 30, 30);
-      seat_h.setFont(new Font("µ∏øÚ", Font.BOLD, 20));
+      seat_h.setFont(new Font("    ", Font.BOLD, 20));
       seat_h.setForeground(Color.white);
 
       seat_i.setText("I");
       seat_i.setBounds(30, 440, 30, 30);
-      seat_i.setFont(new Font("µ∏øÚ", Font.BOLD, 20));
+      seat_i.setFont(new Font("    ", Font.BOLD, 20));
       seat_i.setForeground(Color.white);
 
       seat_j.setText("J");
       seat_j.setBounds(30, 470, 30, 30);
-      seat_j.setFont(new Font("µ∏øÚ", Font.BOLD, 20));
+      seat_j.setFont(new Font("    ", Font.BOLD, 20));
       seat_j.setForeground(Color.white);
 
       seat_k.setText("K");
       seat_k.setBounds(30, 500, 30, 30);
-      seat_k.setFont(new Font("µ∏øÚ", Font.BOLD, 20));
+      seat_k.setFont(new Font("    ", Font.BOLD, 20));
       seat_k.setForeground(Color.white);
 
 
       back.setBounds(10, 140, 50, 50);
       back.setForeground(Color.white);
       back.setBackground(new Color(0x606060));
-      back.setFont(new Font("µ∏øÚ", Font.BOLD, 45));
+      back.setFont(new Font("    ", Font.BOLD, 45));
       back.setBorder(BorderFactory.createLineBorder(new Color(0x404040)));
       back.addActionListener(new ActionListener() {
 
          @Override
          public void actionPerformed(ActionEvent e) {
             dispose();
-            SelectMovieMain.frame.setDefaultOptions();
+            movie.selectmovie.SelectMovieMain.frame.setDefaultOptions();
 
             for(int i = 0; i < th6a_btn_selected.length; i++) {
                if(th6a_btn_selected[i]) 
