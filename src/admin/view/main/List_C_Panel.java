@@ -83,7 +83,7 @@ public class List_C_Panel extends JPanel{
 		label.setBounds(x, y, width, height);
 		label.setHorizontalAlignment(JLabel.CENTER);
 		label.setVerticalAlignment(JLabel.CENTER);
-		label.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
+		label.setFont(new Font("»ﬁ∏’µ’±Ÿ«ÏµÂ∂Û¿Œ", Font.PLAIN, 15));
 
 		return label;
 	}

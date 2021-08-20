@@ -109,7 +109,7 @@ public class UpdatePanel extends JPanel{
 	private JLabel makeLabel(String name,int y) {
 		label = new JLabel(name);
 		label.setBounds(5, y, 90, 35);
-		label.setFont(new Font("Menlo", Font.BOLD, 17));
+		label.setFont(new Font("»ﬁ∏’µ’±Ÿ«ÏµÂ∂Û¿Œ", Font.PLAIN, 17));
 		
 		return label;
 	}

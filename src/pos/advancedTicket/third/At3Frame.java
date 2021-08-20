@@ -22,6 +22,7 @@ public class At3Frame extends JFrame{
 		getContentPane().setLayout(null);
 		getContentPane().add(at3P);
 		setVisible(true);
+		setResizable(false);
 		setCount();
 	}
 	

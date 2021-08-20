@@ -59,8 +59,6 @@ public class ProductsPanel extends JPanel{
 			
 			btns.get(i).addMouseListener(listener);
 		}
-		
-		
 	}
 	
 	/**

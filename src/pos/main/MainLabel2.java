@@ -16,7 +16,7 @@ public class MainLabel2 extends JLabel{
 
     public MainLabel2() {
         this.setHorizontalAlignment(SwingConstants.CENTER);
-        this.setFont(new Font("∏º¿∫∞ÌµÒ", Font.BOLD, 35));
+        this.setFont(new Font("»ﬁ∏’µ’±Ÿ«ÏµÂ∂Û¿Œ", Font.PLAIN, 35));
         this.setForeground(Color.WHITE);
         this.setBounds(0, 200, 672, 180);
 

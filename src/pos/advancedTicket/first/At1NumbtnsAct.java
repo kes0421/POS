@@ -25,14 +25,14 @@ public class At1NumbtnsAct implements ActionListener{
 
 	        if(at1L3.getText().equals("µﬁ¿⁄∏Æ(11¿⁄∏Æ)∏¶ ¿‘∑¬«ÿ¡÷ººø‰.")) {
 	            at1L3.setText("" + text);
-	            at1L3.setFont(new Font("±º∏≤", Font.BOLD, 40));
+	            at1L3.setFont(new Font("»ﬁ∏’µ’±Ÿ«ÏµÂ∂Û¿Œ", Font.PLAIN, 40));
 	        }else {
 	            if(len == 4 || len == 9) {
 	                at1L3.setText(at1L3.getText() + "-" + text);
-	                at1L3.setFont(new Font("±º∏≤", Font.BOLD, 40));
+	                at1L3.setFont(new Font("»ﬁ∏’µ’±Ÿ«ÏµÂ∂Û¿Œ", Font.PLAIN, 40));
 	            }else {
 	                at1L3.setText(at1L3.getText() + text);
-	                at1L3.setFont(new Font("±º∏≤", Font.BOLD, 40));
+	                at1L3.setFont(new Font("»ﬁ∏’µ’±Ÿ«ÏµÂ∂Û¿Œ", Font.PLAIN, 40));
 	            }
 	        }
 

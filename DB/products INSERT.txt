@@ -47,7 +47,7 @@ INSERT INTO products VALUES (p_code_seq.nextval, '¹Ì´Ï¾ðÁî ÄÞº¸', 16000, './img/
 INSERT INTO products VALUES (p_code_seq.nextval, 'ÇÖµµ±× ÄÞº¸', 10500, './img/combo/ÇÖµµ±× ÄÞº¸.png', 'ÄÞº¸');
 
 -- »óÇ° Àç°í INSERT
-INSERT INTO productsinventory VALUES ('¸À¹ã_20210803','¸À¹ã',100,1000);
+INSERT INTO productsinventory VALUES ('¸À ¹ã_20210803','¸À ¹ã',100,1000);
 INSERT INTO productsinventory VALUES ('½ºÄðÇªµå ½ºÆÔ°è¶õ¸»ÀÌ_20210803','½ºÄðÇªµå ½ºÆÔ°è¶õ¸»ÀÌ',100,1500);
 INSERT INTO productsinventory VALUES ('¿ÀÂ¡¾î¿ÏÁ¦_20210803','¿ÀÂ¡¾î¿ÏÁ¦',100,1500);
 INSERT INTO productsinventory VALUES ('ÁÒ½ºÆ¢±è¹ü¹÷_20210803','ÁÒ½ºÆ¢±è¹ü¹÷',100,2500);
@@ -65,7 +65,7 @@ INSERT INTO productsinventory VALUES ('Ä¥¸®Ä¡Áî³ªÃÝ ÄÞº¸_20210803','Ä¥¸®Ä¡Áî³ªÃÝ
 INSERT INTO productsinventory VALUES ('¹Ì´Ï¾ðÁî ÄÞº¸_20210803','¹Ì´Ï¾ðÁî ÄÞº¸',100,10000);
 INSERT INTO productsinventory VALUES ('ÇÖµµ±× ÄÞº¸_20210803','ÇÖµµ±× ÄÞº¸',100,7000);
 
-INSERT INTO productsinventory VALUES ('¸À¹ã_20210805','¸À¹ã',50,1000);
+INSERT INTO productsinventory VALUES ('¸À ¹ã_20210805','¸À ¹ã',50,1000);
 INSERT INTO productsinventory VALUES ('½ºÄðÇªµå ½ºÆÔ°è¶õ¸»ÀÌ_20210805','½ºÄðÇªµå ½ºÆÔ°è¶õ¸»ÀÌ',50,1500);
 INSERT INTO productsinventory VALUES ('¿ÀÂ¡¾î¿ÏÁ¦_20210805','¿ÀÂ¡¾î¿ÏÁ¦',50,1500);
 INSERT INTO productsinventory VALUES ('ÁÒ½ºÆ¢±è¹ü¹÷_20210805','ÁÒ½ºÆ¢±è¹ü¹÷',50,2500);
@@ -108,9 +108,15 @@ INSERT INTO productsinventory VALUES ('¾ÆÀÌ½ºÆ¼_20210805','¾ÆÀÌ½ºÆ¼',50,1500);
 INSERT INTO productsinventory VALUES ('»ï´Ù¼ö_20210805','»ï´Ù¼ö',50,1500);
 INSERT INTO productsinventory VALUES ('¾Æ¸Þ¸®Ä«³ë_20210805','¾Æ¸Þ¸®Ä«³ë',50,1500);
 
--- ¸ÅÃâ Å×ÀÌºí¿¡ ³ÖÀ½ ½ÃÄö½º pºÙ¿©³õÀº°Í
 INSERT INTO PRODUCTSSALES VALUES ('p' || PS_CODE_SEQ.nextval , '¸À¹ã',3000,1,'08-05');
 
+-- È®ÀÎ SELECT
 select * from products;
+select * from productsbaskets;
+SELECT * FROM productssales;
+SELECT * FROM productsinventory;
+
+delete from productsbaskets;
 
 commit;
+

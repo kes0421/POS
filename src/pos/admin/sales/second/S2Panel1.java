@@ -14,7 +14,7 @@ public class S2Panel1 extends JPanel{
 		setLayout(null);
 		l = new JLabel(date + "¿œ∏≈√‚");
 		l.setHorizontalAlignment(SwingConstants.CENTER);
-		l.setFont(new Font("±º∏≤", Font.PLAIN, 30));
+		l.setFont(new Font("»ﬁ∏’µ’±Ÿ«ÏµÂ∂Û¿Œ", Font.PLAIN, 30));
 		l.setBounds(12, 10, 338, 44);
 		add(l);
 	}

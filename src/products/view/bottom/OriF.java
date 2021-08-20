@@ -20,7 +20,7 @@ public class OriF extends JFrame{
 		getContentPane().setBackground(new Color(255,254,230));
 		
 		JLabel title = new JLabel("원산지 표시판");
-		title.setFont(new Font("Lao MN", Font.BOLD, 15));
+		title.setFont(new Font("휴먼둥근헤드라인", Font.PLAIN, 15));
 		title.setBounds(147, 18, 109, 26);
 		add(title);
 
@@ -46,7 +46,7 @@ public class OriF extends JFrame{
 		table.setEnabled(true);
 		table.setRowHeight(25);
 		table.setShowGrid(true);
-		table.setFont(new Font("돋움", Font.PLAIN, 20));
+		table.setFont(new Font("휴먼둥근헤드라인", Font.PLAIN, 20));
 
 		// table 테두리에 lightGray색 넣어줌
 		table.setGridColor(Color.lightGray);

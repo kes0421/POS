@@ -9,7 +9,8 @@ import javax.swing.JPanel;
 public class At2Frame extends JFrame{
 	JPanel at2P1, at2P2;
 	JLabel at2L6;
-	public At2Frame() {
+	
+	public At2Frame(String rNum) {
 		super("At2Frame");
 		at2L6 = new At2Label6();
 		setBounds(0, 0, 700, 700);
@@ -17,9 +18,8 @@ public class At2Frame extends JFrame{
 		getContentPane().setLayout(null);
 		getContentPane().setBackground(Color.black);
 		setResizable(false);
-		setLocationRelativeTo(null);
 		
-		at2P1 = new At2Panel1(this);
+		at2P1 = new At2Panel1(this, rNum);
 		at2P2 = new At2Panel2(this);
 		
 		getContentPane().add(at2P1);

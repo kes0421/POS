@@ -22,7 +22,7 @@ public class At1DelBtnAct implements ActionListener{
 		
 		if(at1L3.getText().length() == 0) {
 			at1L3.setText("뒷자리(11자리)를 입력해주세요.");
-			at1L3.setFont(new Font("굴림", Font.BOLD, 30));
+			at1L3.setFont(new Font("휴먼둥근헤드라인", Font.PLAIN, 30));
 		}
 	}
 }

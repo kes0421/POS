@@ -14,7 +14,6 @@ public class S2Frame extends JFrame{
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		getContentPane().setLayout(null);
 		setResizable(false);
-		setLocationRelativeTo(null);
 		setVisible(true);
 
 		getContentPane().add(s2P1);

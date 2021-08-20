@@ -13,7 +13,7 @@ public class At1NextBtn extends RoundedButton{
 	
 	public At1NextBtn(JFrame at1F, JLabel at1L3) {
 		super("Next");
-		setFont(new Font("±º∏≤", Font.BOLD, 40));
+		setFont(new Font("»ﬁ∏’µ’±Ÿ«ÏµÂ∂Û¿Œ", Font.PLAIN, 40));
 		setBorder(null);
 		setBackground(Color.gray);
 		setForeground(Color.white);

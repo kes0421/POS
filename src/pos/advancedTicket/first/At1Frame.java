@@ -15,7 +15,6 @@ public class At1Frame extends JFrame{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
 		setResizable(false);
-		setLocationRelativeTo(null);
 		
 		at1F1 = new At1Panel1(this);
 		getContentPane().add(at1F1);

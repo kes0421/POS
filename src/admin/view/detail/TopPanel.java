@@ -17,7 +17,7 @@ public class TopPanel extends JPanel{
 		
 		label1 = new JLabel("상품 추가하기");
 		label1.setForeground(Color.DARK_GRAY);
-		label1.setFont(new Font("Lucida Grande", Font.BOLD, 23));
+		label1.setFont(new Font("휴먼둥근헤드라인", Font.PLAIN, 23));
 		label1.setBounds(10, 5, 160, 50);
 		add(label1);
 	}

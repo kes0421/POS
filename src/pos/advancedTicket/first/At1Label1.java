@@ -11,7 +11,7 @@ public class At1Label1 extends JLabel{
 	public At1Label1() {
 		super("øπ∏≈π¯»£");
 		setHorizontalAlignment(SwingConstants.CENTER);
-		setFont(new Font("±º∏≤", Font.BOLD, 40));
+		setFont(new Font("»ﬁ∏’µ’±Ÿ«ÏµÂ∂Û¿Œ", Font.PLAIN, 40));
 		setForeground(Color.white);
 		setBounds(50, 25, 588, 106);
 	}

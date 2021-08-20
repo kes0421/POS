@@ -8,9 +8,8 @@ import javax.swing.JLabel;
 public class At2Label4 extends JLabel{
 	
 	public At2Label4() {
-		super("¿œπ› 1∏≈");
 		setBounds(170, 70, 111, 200);
 		setForeground(Color.white);
-		setFont(new Font("∏º¿∫ ∞ÌµÒ", Font.BOLD, 17));
+		setFont(new Font("»ﬁ∏’µ’±Ÿ«ÏµÂ∂Û¿Œ", Font.PLAIN, 17));
 	}
 }

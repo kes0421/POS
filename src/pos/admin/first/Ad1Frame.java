@@ -20,7 +20,6 @@ public class Ad1Frame extends JFrame{
 		getContentPane().setBackground(new Color(244,232,232));
 		setVisible(true);
 		setResizable(false);
-		setLocationRelativeTo(null);
 		
 		adBtn1 = new AdBtn1(this);
 		getContentPane().add(adBtn1);

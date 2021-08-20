@@ -11,10 +11,10 @@ public class AdLabel extends JLabel{
 		super(text);
 		if(text.equals("∏≈√‚ «ˆ»≤")) {
 			setBounds(60, 230, 100, 100);
-			setFont(new Font("∏º¿∫ ∞ÌµÒ", Font.BOLD, 20));
+			setFont(new Font("»ﬁ∏’µ’±Ÿ«ÏµÂ∂Û¿Œ", Font.PLAIN, 20));
 		}else if(text.equals("¿Á∞Ì «ˆ»≤")) {
 			setBounds(230, 230, 100, 100);
-			setFont(new Font("∏º¿∫ ∞ÌµÒ", Font.BOLD, 20));
+			setFont(new Font("»ﬁ∏’µ’±Ÿ«ÏµÂ∂Û¿Œ", Font.PLAIN, 20));
 		}
 		
 	}

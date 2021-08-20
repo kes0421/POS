@@ -13,7 +13,7 @@ public class At1DelBtn extends RoundedButton{
 	
 	public At1DelBtn(JLabel at1L3) {
 		super("DEL");
-		setFont(new Font("배달의민족 한나는 열한살", Font.BOLD, 40));
+		setFont(new Font("휴먼둥근헤드라인", Font.PLAIN, 40));
 		setBorder(null);
 		setBackground(Color.gray);
 		setForeground(Color.white);

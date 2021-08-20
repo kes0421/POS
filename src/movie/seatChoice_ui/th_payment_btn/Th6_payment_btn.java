@@ -17,7 +17,7 @@ public class Th6_payment_btn extends JButton {
       setForeground(Color.white);
       setFont(new Font("    ", Font.BOLD, 20));
       setBorder(BorderFactory.createLineBorder(new Color(0x202020)));
-      //addActionListener(new Th6_payment_btn_action(this));
+      addActionListener(new Th6_payment_btn_action(this));
    }
 
 }

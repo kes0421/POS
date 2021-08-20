@@ -9,7 +9,6 @@ public class UpdateFrame extends JFrame{
 		setDefaultCloseOperation(HIDE_ON_CLOSE);
 		setLayout(null);
 		setResizable(false);
-		setLocationRelativeTo(null);
 		setVisible(true);
 		
 		TopPanel topP = new TopPanel();

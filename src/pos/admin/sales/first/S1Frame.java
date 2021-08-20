@@ -103,7 +103,6 @@ public class S1Frame extends JFrame implements ActionListener{
         setResizable(false);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setResizable(false);
-		setLocationRelativeTo(null);
         
         //----------기능구현----------
         btn1.addActionListener(this);

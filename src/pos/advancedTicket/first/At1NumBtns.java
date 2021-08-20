@@ -14,7 +14,7 @@ public class At1NumBtns extends RoundedButton{
 	public At1NumBtns(String text, JLabel at1L3, JFrame at1F) {
 		super(text);
 		this.text = text;
-		setFont(new Font("±º∏≤", Font.BOLD, 40));
+		setFont(new Font("»ﬁ∏’µ’±Ÿ«ÏµÂ∂Û¿Œ", Font.PLAIN, 40));
 		addActionListener(new At1NumbtnsAct(getText(), at1L3, at1F));
 	}
 }

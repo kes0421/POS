@@ -39,7 +39,7 @@ public class BarPanel extends JPanel{
 		label.setBorder(BorderFactory.createLineBorder(Color.WHITE, 5));
 		label.setHorizontalAlignment(JLabel.CENTER);
 		label.setVerticalAlignment(JLabel.CENTER);
-		label.setFont(new Font("Lucida Grande", Font.BOLD, 20));
+		label.setFont(new Font("»ﬁ∏’µ’±Ÿ«ÏµÂ∂Û¿Œ", Font.PLAIN, 20));
 
 		return label;
 	}

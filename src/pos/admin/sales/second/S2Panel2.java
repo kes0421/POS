@@ -28,7 +28,7 @@ public class S2Panel2 extends JPanel{
 		l1 = new JLabel("영 화");
 		l2 = new JLabel("수량 : " + count);
 		l3 = new JLabel("가격 : " + sales);
-		l1.setFont(new Font("굴림", Font.PLAIN, 50));
+		l1.setFont(new Font("휴먼둥근헤드라인", Font.PLAIN, 50));
 		l1.setHorizontalAlignment(SwingConstants.CENTER);
 		l1.setBounds(12, 10, 140, 114);
 		

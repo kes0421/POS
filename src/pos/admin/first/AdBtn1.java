@@ -18,7 +18,7 @@ public class AdBtn1 extends JButton{
 		setBackground(Color.black);
 		LineBorder lb = new LineBorder(Color.black,5,true);
 		setBorder(lb);
-		setFont(new Font("±º∏≤√º", Font.BOLD, 20));
+		setFont(new Font("»ﬁ∏’µ’±Ÿ«ÏµÂ∂Û¿Œ", Font.PLAIN, 20));
 		setBounds(30, 100, 150, 150);
 		setImageSize();
 		addActionListener(new AdBtn1Act(mainF));

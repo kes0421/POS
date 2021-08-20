@@ -26,7 +26,6 @@ public class DetailFrame extends JFrame{
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		getContentPane().setLayout(null);
 		setResizable(false);
-		setLocationRelativeTo(null);
 		
 		setVisible(true);
 
@@ -44,7 +43,7 @@ public class DetailFrame extends JFrame{
 			JPanel noData = new JPanel();
 			noData.setBackground(new Color(255,254,230));
 			JLabel msg = new JLabel("장바구니에 상품이 담겨있지 않습니다.");
-			msg.setFont(new Font("Lucida Grande", Font.BOLD, 20));
+			msg.setFont(new Font("휴먼둥근헤드라인", Font.PLAIN, 20));
 			noData.add(msg);
 			scroll = new JScrollPane(noData);
 			add(scroll);

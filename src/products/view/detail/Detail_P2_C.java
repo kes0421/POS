@@ -39,7 +39,7 @@ public class Detail_P2_C extends JPanel {
 	      centerPanel.setLayout(null);
 	      
 	      JLabel proName = new JLabel(name);
-	      proName.setFont(new Font("Lao MN", Font.BOLD | Font.ITALIC, 15));
+	      proName.setFont(new Font("»ﬁ∏’µ’±Ÿ«ÏµÂ∂Û¿Œ", Font.PLAIN | Font.ITALIC, 15));
 	      proName.setForeground(Color.black);
 	      proName.setBounds(20, 30, 200, 30);
 

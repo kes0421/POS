@@ -29,7 +29,6 @@ public class MediaFrame extends JFrame implements MouseListener{
 		mediaL.addMouseListener(this);
 		add(mediaL);
 		setResizable(false);
-		setLocationRelativeTo(null);
 		setVisible(true);
 	}
 	

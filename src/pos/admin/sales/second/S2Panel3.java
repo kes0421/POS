@@ -28,7 +28,7 @@ public class S2Panel3 extends JPanel{
 		l2 = new JLabel("¼ö·® : " + count);
 		l3 = new JLabel("°¡°Ý : " + sales);
 		
-		l1.setFont(new Font("±¼¸²", Font.PLAIN, 50));
+		l1.setFont(new Font("ÈÞ¸ÕµÕ±ÙÇìµå¶óÀÎ", Font.PLAIN, 50));
 		l1.setHorizontalAlignment(SwingConstants.CENTER);
 		l1.setBounds(12, 10, 140, 114);
 		

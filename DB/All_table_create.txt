@@ -64,6 +64,18 @@ CREATE TABLE productsInventory(
     pi_price number(8) NOT NULL
 );
 
+-- 영화 매출 테이블 CREATE
+create table movieSales(
+    ms_code varchar2(10) primary key,
+    ms_name varchar2(40) NOT NULL,
+    ms_price number(5) NOT NULL,
+    ms_quantity number(2) NOT NULL,
+    ms_date varchar2(10) NOT NULL
+    );
+
+-- 영화 매출 코드 시퀀스 CREATE
+create sequence ms_code_Seq start with 1 increment by 1 maxvalue 999 nocycle;
+
 -- products 시퀀스 CREATE
 create sequence p_code_seq start with 1 increment by 1 maxvalue 99 nocycle;
 

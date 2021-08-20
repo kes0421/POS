@@ -17,7 +17,6 @@ public class LoginFrame extends JFrame{
 		getContentPane().setLayout(null);
 		getContentPane().setBackground(new Color(244,232,232));
 		setResizable(false);
-		setLocationRelativeTo(null);
 		
 		lL1 = new LLabel1();
 		lL2 = new LLabel2();

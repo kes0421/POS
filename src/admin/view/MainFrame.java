@@ -26,7 +26,6 @@ public class MainFrame extends JFrame{
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		getContentPane().setLayout(null);
 		setResizable(false);
-		setLocationRelativeTo(null);
 		
 		TopPanel topP = new TopPanel(this);
 		add(topP);
@@ -77,7 +76,7 @@ public class MainFrame extends JFrame{
 		if(piList.size() == 0) {
 			JPanel noData = new JPanel();
 			JLabel msg = new JLabel("검색한 결과는 없습니다. 다시 검색해 주세요.");
-			msg.setFont(new Font("Lucida Grande", Font.BOLD, 20));
+			msg.setFont(new Font("휴먼둥근헤드라인", Font.PLAIN, 20));
 			noData.add(msg);
 			scroll = new JScrollPane(noData);
 			add(scroll);

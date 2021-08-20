@@ -92,16 +92,65 @@ INSERT INTO timetables VALUES('202108050950_5', '2021-08-05', '09:50', '11:49', 
 
 INSERT INTO timetables VALUES('202108050900_6', '2021-08-05', '09:00', '11:17', '6包', '10摸', 5);
 
+-- 货肺 眠啊茄芭
+INSERT INTO timetables VALUES('202108191040_4', '2021-08-19', '10:40', '12:51', '4包', '8摸', 1);
+INSERT INTO timetables VALUES('202108191310_4', '2021-08-19', '13:10', '15:21', '4包', '8摸', 1);
+INSERT INTO timetables VALUES('202108191535_4', '2021-08-19', '15:35', '17:46', '4包', '8摸', 1);
+INSERT INTO timetables VALUES('202108191800_4', '2021-08-19', '18:00', '20:11', '4包', '8摸', 1);
+INSERT INTO timetables VALUES('202108190950_4', '2021-08-19', '09:50', '12:01', '1包', '6摸', 1);
+INSERT INTO timetables VALUES('202108191215_4', '2021-08-19', '12:15', '14:26', '1包', '6摸', 1);
+
+INSERT INTO timetables VALUES('202108190920_3', '2021-08-19', '09:20', '11:17', '3包', '8摸', 2);
+INSERT INTO timetables VALUES('202108191135_3', '2021-08-19', '11:35', '13:32', '3包', '8摸', 2);
+INSERT INTO timetables VALUES('202108191350_3', '2021-08-19', '13:50', '15:47', '3包', '8摸', 2);
+
+INSERT INTO timetables VALUES('202108191602_3', '2021-08-19', '16:05', '18:29', '3包', '8摸', 3);
+INSERT INTO timetables VALUES('202108191850_3', '2021-08-19', '18:50', '21:14', '3包', '8摸', 3);
+INSERT INTO timetables VALUES('202108191130_3', '2021-08-19', '11:30', '13:54', '3包', '8摸', 3);
+
+INSERT INTO timetables VALUES('202108191930_5', '2021-08-19', '19:30', '21:29', '5包', '10摸', 4);
+INSERT INTO timetables VALUES('202108190910_6', '2021-08-19', '09:10', '11:09', '6包', '10摸', 4);
+INSERT INTO timetables VALUES('202108191125_6', '2021-08-19', '11:25', '13:24', '6包', '10摸', 4);
+INSERT INTO timetables VALUES('202108191345_6', '2021-08-19', '13:45', '15:44', '6包', '10摸', 4);
+INSERT INTO timetables VALUES('202108191610_6', '2021-08-19', '16:10', '18:09', '6包', '10摸', 4);
+
+INSERT INTO timetables VALUES('202108190900_6', '2021-08-19', '09:00', '11:17', '6包', '10摸', 5);
+INSERT INTO timetables VALUES('202108191410_5', '2021-08-19', '14:10', '16:27', '5包', '10摸', 5);
+INSERT INTO timetables VALUES('202108191650_5', '2021-08-19', '16:50', '19:07', '5包', '10摸', 5);
+
+INSERT INTO timetables VALUES('202108201040_4', '2021-08-20', '10:40', '12:51', '4包', '8摸', 1);
+INSERT INTO timetables VALUES('202108201310_4', '2021-08-20', '13:10', '15:21', '4包', '8摸', 1);
+
+INSERT INTO timetables VALUES('202108200920_3', '2021-08-20', '09:20', '11:17', '3包', '8摸', 2);
+
+INSERT INTO timetables VALUES('202108201602_3', '2021-08-20', '16:05', '18:29', '3包', '8摸', 3);
+INSERT INTO timetables VALUES('202108201850_3', '2021-08-20', '18:50', '21:14', '3包', '8摸', 3);
+
+INSERT INTO timetables VALUES('202108201930_5', '2021-08-20', '19:30', '21:29', '5包', '10摸', 4);
+INSERT INTO timetables VALUES('202108200910_6', '2021-08-20', '09:10', '11:09', '6包', '10摸', 4);
+INSERT INTO timetables VALUES('202108201125_6', '2021-08-20', '11:25', '13:24', '6包', '10摸', 4);
+
+INSERT INTO timetables VALUES('202108200900_6', '2021-08-20', '09:00', '11:17', '6包', '10摸', 5);
+INSERT INTO timetables VALUES('202108201410_5', '2021-08-20', '14:10', '16:27', '5包', '10摸', 5);
+INSERT INTO timetables VALUES('202108201650_5', '2021-08-20', '16:50', '19:07', '5包', '10摸', 5);
+
 -- seats INSERT
 INSERT INTO seats VALUES(s_code_seq.NEXTVAL, 'A01', '老馆籍', 12000, '202108031040_4');
 INSERT INTO seats VALUES(s_code_seq.NEXTVAL, 'B01', '老馆籍', 12000, '202108031040_4');
 INSERT INTO seats VALUES(s_code_seq.NEXTVAL, 'C01', '老馆籍', 12000, '202108031040_4');
 INSERT INTO seats VALUES(s_code_seq.NEXTVAL, 'D01', '老馆籍', 12000, '202108031040_4');
 
+-- reservationNum INSERT
+INsert into reservationNum values('0000-0000-000', '葛啊叼酱', '1包', 2, './image/movie/mogadishu.jpg', '09:10', '11:00');
+INsert into reservationNum values('1111-1111-111', '焊胶海捞厚2', '2包', 4, './image/movie/bossbaby2.jpg', '11:30', '13:20');
+INsert into reservationNum values('2222-2222-222', '喉发困档快', '3包', 1, './image/movie/blackwidow.jpg', '16:10', '18:00');
+INsert into reservationNum values('3333-3333-333', '规过-犁瞒狼', '4包', 6, './image/movie/method.jpg', '20:10', '22:00');
+INsert into reservationNum values('4444-4444-444', '沥臂农风令', '5包', 3, './image/movie/junglecruise.jpg', '09:10', '11:00');
+
 -- 犬牢 select
-select * from movies;
 SELECT * FROM MOVIES;
 SELECT * FROM timetables;
 select * from seats;
+select * from reservationNum;
 
 commit;
