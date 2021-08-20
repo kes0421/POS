@@ -12,6 +12,7 @@ import javax.swing.JLabel;
 
 import movie.peopleCheck_ui.ErrorFrame;
 import movie.peopleCheck_ui.PeopleCheck;
+import movie.seatChoice_ui.SeatChoice_3;
 import movie.seatChoice_ui.SeatChoice_6;
 import movie.selectmovie.DateJList;
 import movie.selectmovie.SelectMovieMain;
@@ -67,7 +68,8 @@ public class Th6_payment_btn_action implements ActionListener {
                    ps.setString(1, seat_name);
                    ps.setString(2, SeatChoice_6.th6a_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_6.th6a_btn_price[i]);
-                   ps.setString(4, SelectMovieMain.time_code);   
+                   ps.setString(4, SelectMovieMain.time_code);
+                   ps.executeUpdate();
                 }
                 if(SeatChoice_6.th6b_btn_selected[i])
                 {
@@ -85,6 +87,7 @@ public class Th6_payment_btn_action implements ActionListener {
                    ps.setString(2, SeatChoice_6.th6b_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_6.th6b_btn_price[i]);
                    ps.setString(4, SelectMovieMain.time_code);   
+                   ps.executeUpdate();
                 }
                 if(SeatChoice_6.th6c_btn_selected[i])
                 {
@@ -102,6 +105,7 @@ public class Th6_payment_btn_action implements ActionListener {
                    ps.setString(2, SeatChoice_6.th6c_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_6.th6c_btn_price[i]);
                    ps.setString(4, SelectMovieMain.time_code);   
+                   ps.executeUpdate();
                 }
                 if(SeatChoice_6.th6d_btn_selected[i])
                 {
@@ -119,6 +123,7 @@ public class Th6_payment_btn_action implements ActionListener {
                    ps.setString(2, SeatChoice_6.th6d_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_6.th6d_btn_price[i]);
                    ps.setString(4, SelectMovieMain.time_code);   
+                   ps.executeUpdate();
                 }
                 if(SeatChoice_6.th6e_btn_selected[i])
                 {
@@ -136,6 +141,7 @@ public class Th6_payment_btn_action implements ActionListener {
                    ps.setString(2, SeatChoice_6.th6e_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_6.th6e_btn_price[i]);
                    ps.setString(4, SelectMovieMain.time_code);   
+                   ps.executeUpdate();
                 }
                 if(SeatChoice_6.th6f_btn_selected[i])
                 {
@@ -153,6 +159,7 @@ public class Th6_payment_btn_action implements ActionListener {
                    ps.setString(2, SeatChoice_6.th6f_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_6.th6f_btn_price[i]);
                    ps.setString(4, SelectMovieMain.time_code);   
+                   ps.executeUpdate();
                 }
                 if(SeatChoice_6.th6g_btn_selected[i])
                 {
@@ -170,6 +177,7 @@ public class Th6_payment_btn_action implements ActionListener {
                    ps.setString(2, SeatChoice_6.th6g_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_6.th6g_btn_price[i]);
                    ps.setString(4, SelectMovieMain.time_code);   
+                   ps.executeUpdate();
                 }
                 if(SeatChoice_6.th6h_btn_selected[i])
                 {
@@ -187,6 +195,7 @@ public class Th6_payment_btn_action implements ActionListener {
                    ps.setString(2, SeatChoice_6.th6h_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_6.th6h_btn_price[i]);
                    ps.setString(4, SelectMovieMain.time_code);   
+                   ps.executeUpdate();
                 }
                 if(SeatChoice_6.th6i_btn_selected[i])
                 {
@@ -204,6 +213,7 @@ public class Th6_payment_btn_action implements ActionListener {
                    ps.setString(2, SeatChoice_6.th6i_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_6.th6i_btn_price[i]);
                    ps.setString(4, SelectMovieMain.time_code);   
+                   ps.executeUpdate();
                 }
                 if(SeatChoice_6.th6j_btn_selected[i])
                 {
@@ -221,6 +231,7 @@ public class Th6_payment_btn_action implements ActionListener {
                    ps.setString(2, SeatChoice_6.th6j_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_6.th6j_btn_price[i]);
                    ps.setString(4, SelectMovieMain.time_code);   
+                   ps.executeUpdate();
                 }
                 if(SeatChoice_6.th6k_btn_selected[i])
                 {
@@ -238,16 +249,16 @@ public class Th6_payment_btn_action implements ActionListener {
                    ps.setString(2, SeatChoice_6.th6k_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_6.th6k_btn_price[i]);
                    ps.setString(4, SelectMovieMain.time_code);   
+                   ps.executeUpdate();
                 }
                 
              }
              
-             
-             
-             ps.executeUpdate();
+
              
              con.close();
              ps.close();
+             SeatChoice_6.soldout_update();
              
           } catch (SQLException e1) {
              e1.printStackTrace();

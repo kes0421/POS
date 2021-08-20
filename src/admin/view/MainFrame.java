@@ -60,9 +60,10 @@ public class MainFrame extends JFrame{
 	
 	// °Ë»öÈÄ mainFrame
 	public MainFrame(ArrayList<ProductsInventory> piList) {
-		setBounds(100, 100, 1010, 700);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setBounds(0, 0, 1010, 700);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		getContentPane().setLayout(null);
+		setResizable(false);
 		
 		TopPanel topP = new TopPanel(this);
 		add(topP);

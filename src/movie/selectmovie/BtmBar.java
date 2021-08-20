@@ -17,50 +17,50 @@ import javax.swing.JPanel;
 import movie.view.MovieFrame1;
 import pos.main.MainFrame;
 
-public class BtmBar extends JPanel {	
-	public BtmBar(JFrame frame) {
-		setBackground(Color.darkGray);
-		setLayout(null);
-		setVisible(true);
+public class BtmBar extends JPanel {   
+   public BtmBar(JFrame frame) {
+      setBackground(Color.darkGray);
+      setLayout(null);
+      setVisible(true);
 
-		JButton homeBtn = new JButton();
-		homeBtn.setBackground(new Color(255,254,230));
-		homeBtn.setBounds(643, 0, 45, 45);
-		homeBtn.setIcon(makeImageIcon("./img/At1Page/home_b.png"));
-		add(homeBtn);
-		
-		homeBtn.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				new MainFrame().setVisible(true);
-				frame.dispose();
-			}
-		});
+      JButton homeBtn = new JButton();
+      homeBtn.setBackground(Color.darkGray);
+      homeBtn.setBounds(643, 0, 45, 45);
+      homeBtn.setIcon(makeImageIcon("./img/At1Page/home_w.png"));
+      add(homeBtn);
+      
+      homeBtn.addActionListener(new ActionListener() {
+         @Override
+         public void actionPerformed(ActionEvent e) {
+            frame.dispose();
+            new MainFrame().setVisible(true);
+         }
+      });
 
-		JButton backBtn = new JButton("<-");
-		backBtn.setBackground(new Color(255,254,230));
-		backBtn.setBounds(0, 0, 40, 45);
-		//backBtn.setIcon(makeImageIcon("./"));
-		add(backBtn);
-		
-		backBtn.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				frame.dispose();
-				new MovieFrame1().setVisible(true);
-			}
-		});
-	}
+      JButton backBtn = new JButton();
+      backBtn.setBackground(Color.darkGray);
+      backBtn.setBounds(0, 0, 40, 45);
+      backBtn.setIcon(makeImageIcon("./img/At1Page/p_w.png"));
+      add(backBtn);
+      
+      backBtn.addActionListener(new ActionListener() {
+         
+         @Override
+         public void actionPerformed(ActionEvent e) {
+            frame.dispose();
+            new MovieFrame1().setVisible(true);
+         }
+      });
+   }
 
-	public static ImageIcon makeImageIcon(String path) {
-		BufferedImage image;
-		try {
-			image = ImageIO.read(new File(path));
-		} catch (IOException e) {
-			e.printStackTrace();
-			image = null;
-		}
-		return new ImageIcon(image.getScaledInstance(45, 50, Image.SCALE_SMOOTH));
-	}
+   public static ImageIcon makeImageIcon(String path) {
+      BufferedImage image;
+      try {
+         image = ImageIO.read(new File(path));
+      } catch (IOException e) {
+         e.printStackTrace();
+         image = null;
+      }
+      return new ImageIcon(image.getScaledInstance(45, 50, Image.SCALE_SMOOTH));
+   }
 }

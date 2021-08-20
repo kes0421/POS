@@ -23,6 +23,7 @@ public class Th1_payment_btn_action implements ActionListener {
 
 
    public Th1_payment_btn_action(Th1_payment_btn btn) {
+      
 
       this.btn = btn;
    }
@@ -39,6 +40,12 @@ public class Th1_payment_btn_action implements ActionListener {
           try {
              con = DBUtill.getConnection();
              ps = con.prepareStatement("INSERT INTO movieSales VALUES ('m' || MS_CODE_SEQ.nextval,?,?,?,?)");
+             
+             System.out.println(SelectMovieMain.movie_name);
+             System.out.println("" + SeatChoice_1.ticket_price);
+             System.out.println("" + SeatChoice_1.peoples);
+             System.out.println(DateJList.movie_date);
+             
              
              ps.setString(1, SelectMovieMain.movie_name);
              ps.setString(2,  "" + SeatChoice_1.ticket_price);
@@ -67,7 +74,8 @@ public class Th1_payment_btn_action implements ActionListener {
                    ps.setString(1, seat_name);
                    ps.setString(2, SeatChoice_1.th1a_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_1.th1a_btn_price[i]);
-                   ps.setString(4, SelectMovieMain.time_code);   
+                   ps.setString(4, SelectMovieMain.time_code);
+                   ps.executeUpdate();
                 }
                 if(SeatChoice_1.th1b_btn_selected[i])
                 {
@@ -84,7 +92,8 @@ public class Th1_payment_btn_action implements ActionListener {
                    ps.setString(1, seat_name);
                    ps.setString(2, SeatChoice_1.th1b_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_1.th1b_btn_price[i]);
-                   ps.setString(4, SelectMovieMain.time_code);   
+                   ps.setString(4, SelectMovieMain.time_code);
+                   ps.executeUpdate();
                 }
                 if(SeatChoice_1.th1c_btn_selected[i])
                 {
@@ -101,7 +110,8 @@ public class Th1_payment_btn_action implements ActionListener {
                    ps.setString(1, seat_name);
                    ps.setString(2, SeatChoice_1.th1c_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_1.th1c_btn_price[i]);
-                   ps.setString(4, SelectMovieMain.time_code);   
+                   ps.setString(4, SelectMovieMain.time_code);
+                   ps.executeUpdate();
                 }
                 if(SeatChoice_1.th1d_btn_selected[i])
                 {
@@ -118,7 +128,8 @@ public class Th1_payment_btn_action implements ActionListener {
                    ps.setString(1, seat_name);
                    ps.setString(2, SeatChoice_1.th1d_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_1.th1d_btn_price[i]);
-                   ps.setString(4, SelectMovieMain.time_code);   
+                   ps.setString(4, SelectMovieMain.time_code);
+                   ps.executeUpdate();
                 }
                 if(SeatChoice_1.th1e_btn_selected[i])
                 {
@@ -135,7 +146,8 @@ public class Th1_payment_btn_action implements ActionListener {
                    ps.setString(1, seat_name);
                    ps.setString(2, SeatChoice_1.th1e_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_1.th1e_btn_price[i]);
-                   ps.setString(4, SelectMovieMain.time_code);   
+                   ps.setString(4, SelectMovieMain.time_code);
+                   ps.executeUpdate();
                 }
                 if(SeatChoice_1.th1f_btn_selected[i])
                 {
@@ -152,7 +164,8 @@ public class Th1_payment_btn_action implements ActionListener {
                    ps.setString(1, seat_name);
                    ps.setString(2, SeatChoice_1.th1f_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_1.th1f_btn_price[i]);
-                   ps.setString(4, SelectMovieMain.time_code);   
+                   ps.setString(4, SelectMovieMain.time_code);
+                   ps.executeUpdate();
                 }
                 if(SeatChoice_1.th1g_btn_selected[i])
                 {
@@ -169,7 +182,8 @@ public class Th1_payment_btn_action implements ActionListener {
                    ps.setString(1, seat_name);
                    ps.setString(2, SeatChoice_1.th1g_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_1.th1g_btn_price[i]);
-                   ps.setString(4, SelectMovieMain.time_code);   
+                   ps.setString(4, SelectMovieMain.time_code);
+                   ps.executeUpdate();
                 }
                 if(SeatChoice_1.th1h_btn_selected[i])
                 {
@@ -186,7 +200,8 @@ public class Th1_payment_btn_action implements ActionListener {
                    ps.setString(1, seat_name);
                    ps.setString(2, SeatChoice_1.th1h_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_1.th1h_btn_price[i]);
-                   ps.setString(4, SelectMovieMain.time_code);   
+                   ps.setString(4, SelectMovieMain.time_code);
+                   ps.executeUpdate();
                 }
                 if(SeatChoice_1.th1i_btn_selected[i])
                 {
@@ -203,7 +218,8 @@ public class Th1_payment_btn_action implements ActionListener {
                    ps.setString(1, seat_name);
                    ps.setString(2, SeatChoice_1.th1i_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_1.th1i_btn_price[i]);
-                   ps.setString(4, SelectMovieMain.time_code);   
+                   ps.setString(4, SelectMovieMain.time_code);
+                   ps.executeUpdate();
                 }
                 if(SeatChoice_1.th1j_btn_selected[i])
                 {
@@ -221,6 +237,7 @@ public class Th1_payment_btn_action implements ActionListener {
                    ps.setString(2, SeatChoice_1.th1j_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_1.th1j_btn_price[i]);
                    ps.setString(4, SelectMovieMain.time_code);   
+                   ps.executeUpdate();
                 }
                 if(SeatChoice_1.th1k_btn_selected[i])
                 {
@@ -237,8 +254,10 @@ public class Th1_payment_btn_action implements ActionListener {
                    ps.setString(1, seat_name);
                    ps.setString(2, SeatChoice_1.th1k_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_1.th1k_btn_price[i]);
-                   ps.setString(4, SelectMovieMain.time_code);   
+                   ps.setString(4, SelectMovieMain.time_code);
+                   ps.executeUpdate();
                 }
+                
                 if(SeatChoice_1.th1l_btn_selected[i])
                 {
                    index = i + 1;
@@ -255,6 +274,7 @@ public class Th1_payment_btn_action implements ActionListener {
                    ps.setString(2, SeatChoice_1.th1l_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_1.th1l_btn_price[i]);
                    ps.setString(4, SelectMovieMain.time_code);   
+                   ps.executeUpdate();
                 }
                 if(SeatChoice_1.th1m_btn_selected[i])
                 {
@@ -272,16 +292,17 @@ public class Th1_payment_btn_action implements ActionListener {
                    ps.setString(2, SeatChoice_1.th1m_btn_name[i]);
                    ps.setString(3, "" + SeatChoice_1.th1m_btn_price[i]);
                    ps.setString(4, SelectMovieMain.time_code);   
+                   ps.executeUpdate();
                 }
                 
              }
              
              
              
-             ps.executeUpdate();
              
              con.close();
              ps.close();
+             SeatChoice_1.soldout_update();
              
           } catch (SQLException e1) {
              e1.printStackTrace();

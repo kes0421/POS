@@ -23,7 +23,8 @@ public class MainBtn1Act implements ActionListener, MouseListener{
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		new MovieFrame1().setVisible(true);
+		MovieFrame1.movieFrame = new MovieFrame1();
+        MovieFrame1.movieFrame.setVisible(true);
 		mainF.dispose();
 	}
 

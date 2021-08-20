@@ -34,6 +34,20 @@ import movie.selectmovie.SelectMovieMain;
 
 public class SeatChoice_3 extends CgvFrame {
 
+   public static ArrayList<JButton> th3a_btn = new ArrayList<>();
+   public static ArrayList<JButton> th3b_btn = new ArrayList<>();
+   public static ArrayList<JButton> th3c_btn = new ArrayList<>();
+   public static ArrayList<JButton> th3d_btn = new ArrayList<>();
+   public static ArrayList<JButton> th3e_btn = new ArrayList<>();
+   public static ArrayList<JButton> th3f_btn = new ArrayList<>();
+   public static ArrayList<JButton> th3g_btn = new ArrayList<>();
+   public static ArrayList<JButton> th3h_btn = new ArrayList<>();
+   public static ArrayList<JButton> th3i_btn = new ArrayList<>();
+   public static ArrayList<JButton> th3j_btn = new ArrayList<>();
+   public static ArrayList<JButton> th3k_btn = new ArrayList<>();
+   public static ArrayList<JButton> th3l_btn = new ArrayList<>();
+   public static ArrayList<JButton> th3m_btn = new ArrayList<>();
+
    public static boolean[] th3a_btn_selected = new boolean[16];
    public static boolean[] th3b_btn_selected = new boolean[16];
    public static boolean[] th3c_btn_selected = new boolean[16];
@@ -132,20 +146,6 @@ public class SeatChoice_3 extends CgvFrame {
       ArrayList<JButton> btns11 = new ArrayList<>();
       ArrayList<JButton> btns12 = new ArrayList<>();
       ArrayList<JButton> btns13 = new ArrayList<>();
-
-      ArrayList<JButton> th3a_btn = new ArrayList<>();
-      ArrayList<JButton> th3b_btn = new ArrayList<>();
-      ArrayList<JButton> th3c_btn = new ArrayList<>();
-      ArrayList<JButton> th3d_btn = new ArrayList<>();
-      ArrayList<JButton> th3e_btn = new ArrayList<>();
-      ArrayList<JButton> th3f_btn = new ArrayList<>();
-      ArrayList<JButton> th3g_btn = new ArrayList<>();
-      ArrayList<JButton> th3h_btn = new ArrayList<>();
-      ArrayList<JButton> th3i_btn = new ArrayList<>();
-      ArrayList<JButton> th3j_btn = new ArrayList<>();
-      ArrayList<JButton> th3k_btn = new ArrayList<>();
-      ArrayList<JButton> th3l_btn = new ArrayList<>();
-      ArrayList<JButton> th3m_btn = new ArrayList<>();
 
       JButton back = new JButton("←");
 
@@ -366,86 +366,7 @@ public class SeatChoice_3 extends CgvFrame {
       th3k_btn_soldout = new boolean[16];
       th3l_btn_soldout = new boolean[16];
       th3m_btn_soldout = new boolean[16];
-
-
-
-      for(int i = 0; i < seats.size(); i++) {
-         if(PeopleCheck.time.equals(seats.get(i).getT_code()))
-         {
-            int number = Integer.parseInt(seats.get(i).getS_name().substring(1, 3));
-            char seat_location = seats.get(i).getS_name().charAt(0);
-            switch(seat_location) {
-
-            case 'A':
-               th3a_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
-               th3a_btn_soldout[number -1] = true;
-               break;
-
-            case 'B':
-               th3b_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
-               th3b_btn_soldout[number -1] = true;
-               break;
-
-            case 'C':
-               th3c_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
-               th3c_btn_soldout[number -1] = true;
-               break;
-
-            case 'D':
-               th3d_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
-               th3d_btn_soldout[number -1] = true;
-               break;
-
-            case 'E':
-               th3e_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
-               th3e_btn_soldout[number -1] = true;
-               break;
-
-            case 'F':
-               th3f_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
-               th3f_btn_soldout[number -1] = true;
-               break;
-
-            case 'G':
-               th3g_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
-               th3g_btn_soldout[number -1] = true;
-               break;
-
-            case 'H':
-               th3h_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
-               th3h_btn_soldout[number -1] = true;
-               break;
-
-            case 'I':
-               th3i_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
-               th3i_btn_soldout[number -1] = true;
-               break;
-
-            case 'J':
-               th3j_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
-               th3j_btn_soldout[number -1] = true;
-               break;
-
-            case 'K':
-               th3k_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
-               th3k_btn_soldout[number -1] = true;
-               break;
-
-            case 'L':
-               th3l_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
-               th3l_btn_soldout[number -1] = true;
-               break;
-
-            case 'M':
-               th3m_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
-               th3m_btn_soldout[number -1] = true;
-               break;
-            }
-
-
-
-         }
-      }
+      soldout_update();
 
 
 
@@ -726,7 +647,16 @@ public class SeatChoice_3 extends CgvFrame {
          @Override
          public void actionPerformed(ActionEvent e) {
             dispose();
-            movie.selectmovie.SelectMovieMain.frame.setDefaultOptions();
+
+            if (PeopleCheck.state == 1)
+            {
+                movie.view.MovieFrame1.movieFrame.setVisible(true);
+            }
+            else if(PeopleCheck.state == 2) 
+            {
+                movie.selectmovie.SelectMovieMain.frame.setDefaultOptions();
+
+            }
 
             for(int i = 0; i < th3a_btn_selected.length; i++) {
                if(th3a_btn_selected[i]) 
@@ -807,6 +737,144 @@ public class SeatChoice_3 extends CgvFrame {
       add(seat_m);
 
       add(label2);
+   }
+
+   public static void soldout_update() {
+      for(int i = 0; i < th3a_btn_selected.length; i++) {
+         if(th3a_btn_selected[i]) 
+         {
+            th3a_btn.get(i).doClick();
+         }
+         if(th3b_btn_selected[i])
+         {
+            th3b_btn.get(i).doClick();
+         }
+         if(th3c_btn_selected[i]) 
+         {
+            th3c_btn.get(i).doClick();
+         }
+         if(th3d_btn_selected[i]) 
+         {
+            th3d_btn.get(i).doClick();
+         }
+         if(th3e_btn_selected[i]) 
+         {
+            th3e_btn.get(i).doClick();
+         }
+         if(th3f_btn_selected[i]) 
+         {
+            th3f_btn.get(i).doClick();
+         }
+         if(th3g_btn_selected[i]) 
+         {
+            th3g_btn.get(i).doClick();
+         }
+         if(th3h_btn_selected[i]) 
+         {
+            th3h_btn.get(i).doClick();
+         }
+         if(th3i_btn_selected[i]) 
+         {
+            th3i_btn.get(i).doClick();
+         }
+         if(th3j_btn_selected[i]) 
+         {
+            th3j_btn.get(i).doClick();
+         }
+         if(th3k_btn_selected[i])
+         {
+            th3k_btn.get(i).doClick();
+         }
+         if(th3l_btn_selected[i]) 
+         {
+            th3l_btn.get(i).doClick();
+         }
+         if(th3m_btn_selected[i])
+         {
+            th3m_btn.get(i).doClick();
+         }
+
+      }
+
+      seats = new DBList().seatsList();
+      for(int i = 0; i < seats.size(); i++) {
+         if(PeopleCheck.time.equals(seats.get(i).getT_code()))
+         {
+            int number = Integer.parseInt(seats.get(i).getS_name().substring(1, 3));
+            char seat_location = seats.get(i).getS_name().charAt(0);
+            switch(seat_location) {
+
+            case 'A':
+               th3a_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
+               th3a_btn_soldout[number -1] = true;
+               break;
+
+            case 'B':
+               th3b_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
+               th3b_btn_soldout[number -1] = true;
+               break;
+
+            case 'C':
+               th3c_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
+               th3c_btn_soldout[number -1] = true;
+               break;
+
+            case 'D':
+               th3d_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
+               th3d_btn_soldout[number -1] = true;
+               break;
+
+            case 'E':
+               th3e_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
+               th3e_btn_soldout[number -1] = true;
+               break;
+
+            case 'F':
+               th3f_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
+               th3f_btn_soldout[number -1] = true;
+               break;
+
+            case 'G':
+               th3g_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
+               th3g_btn_soldout[number -1] = true;
+               break;
+
+            case 'H':
+               th3h_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
+               th3h_btn_soldout[number -1] = true;
+               break;
+
+            case 'I':
+               th3i_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
+               th3i_btn_soldout[number -1] = true;
+               break;
+
+            case 'J':
+               th3j_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
+               th3j_btn_soldout[number -1] = true;
+               break;
+
+            case 'K':
+               th3k_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
+               th3k_btn_soldout[number -1] = true;
+               break;
+
+            case 'L':
+               th3l_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
+               th3l_btn_soldout[number -1] = true;
+               break;
+
+            case 'M':
+               th3m_btn.get((number - 1)).setBackground(new Color(0xC0C0C0));
+               th3m_btn_soldout[number -1] = true;
+               break;
+            }
+
+
+
+         }
+      }
+
    }
    public static void main(String[] args) {
       SeatChoice_3 frame = new SeatChoice_3();

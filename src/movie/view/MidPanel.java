@@ -1,8 +1,10 @@
 package movie.view;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.util.ArrayList;
 
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -10,10 +12,11 @@ import movie.model.Movies;
 import movie.model.Timetables;
 import movie.selectmovie.DBList;
 
-public class MidPanel extends JPanel {
+public class MidPanel extends JPanel  {
    ArrayList<Movies> moviesList = new DBList().moviesList();
    ArrayList<Timetables> timeTables = new DBList().timeTablesList();
-
+   ArrayList<String> movies;
+   
    public MidPanel() {
       setBackground(Color.GRAY);
       setBounds(0, 145, 700, 425);
@@ -25,7 +28,7 @@ public class MidPanel extends JPanel {
 
       SelectFastMovie sfm = new SelectFastMovie();
 
-      ArrayList<String> movies = sfm.threeMovies(sfm.fastMovie());
+      movies = sfm.threeMovies(sfm.fastMovie());
       String fastMovies[] = new String[3];
       for (int i = 0; i < fastMovies.length; i++) {
          fastMovies[i] = movies.get(i);
@@ -42,18 +45,16 @@ public class MidPanel extends JPanel {
                   end[i] = timeTables.get(j).getT_end();
                   for (int k = 0; k < moviesList.size(); k++) {
                      if (timeTables.get(j).getM_code() == moviesList.get(k).getM_code()) {
-                        imgs[i] = moviesList.get(k).getM_poster_img();
+                        if(moviesList.get(k).getM_code()==5) {
+                           imgs[i] = moviesList.get(4).getM_poster_img();
+                        }else {
+                           imgs[i] = moviesList.get(k+1).getM_poster_img();
+                        }
                      }
                   }
                }
             }
          }
-      }
-
-      for (int i = 0; i < 3; i++) {
-         System.out.println(imgs[i]);
-         System.out.println(start[i]);
-         System.out.println(end[i]);
       }
 
       MakeImg img1 = new MakeImg(imgs[0], 208, 312);
@@ -116,17 +117,17 @@ public class MidPanel extends JPanel {
       endTime3.setBounds(532, 357, 75, 16);
       add(endTime3);
 
-      ReservationBtn btn1 = new ReservationBtn();
-      btn1.setBounds(46, 380, 117, 29);
-      add(btn1);
-
-      ReservationBtn btn2 = new ReservationBtn();
-      btn2.setBounds(263, 380, 117, 29);
-      add(btn2);
-
-      ReservationBtn btn3 = new ReservationBtn();
-      btn3.setBounds(490, 380, 117, 29);
-      add(btn3);
+      ArrayList<JButton> reservation = new ArrayList<>();
+      int x = 46;
+      for(int i = 0; i < 3; i++) {
+         reservation.add(new JButton());
+         reservation.get(i).setBounds(x, 380, 117, 29);
+         reservation.get(i).setText("예매 하기");
+         reservation.get(i).setFont(new Font("Kannada MN", Font.BOLD, 15));
+         reservation.get(i).addActionListener(new ReservationBtn(reservation.get(i),i));
+         add(reservation.get(i));
+         x += 220;
+      }
    }
 
 }

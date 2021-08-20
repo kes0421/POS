@@ -17,6 +17,7 @@ import movie.seatChoice_ui.SeatChoice_4;
 import movie.seatChoice_ui.SeatChoice_5;
 import movie.seatChoice_ui.SeatChoice_6;
 import movie.selectmovie.SelectMovieMain;
+import movie.view.MovieFrame1;
 
 public class PeopleCheck extends PeopleCheck_frame {
 
@@ -48,6 +49,7 @@ public class PeopleCheck extends PeopleCheck_frame {
     public static SeatChoice_6 seat6;
     
 	public static String time;
+	public static int state;
 
 	public PeopleCheck() {
 		JLabel text1 = new JLabel();
@@ -174,7 +176,14 @@ public class PeopleCheck extends PeopleCheck_frame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				SelectMovieMain.frame.dispose();
+				if(state == 1) {
+                    MovieFrame1.movieFrame.dispose();
+                }
+
+                else if(state == 2) {
+                    SelectMovieMain.frame.dispose();
+                }
+				
 				switch(th_num_check) {
 
 				case 1:

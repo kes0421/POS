@@ -8,13 +8,14 @@ import javax.swing.JLabel;
 
 import movie.selectmovie.ImageSlide;
 import movie.selectmovie.SelectMovieMain;
+import pos.main.MainFrame;
 
 public class MovieFrame1 extends JFrame{
    public static MovieFrame1 movieFrame;
-   public MovieFrame1() {   
-	   String[] slide = {"./image/movie/모가디슈포스터.jpg","./image/movie/보스베이비2포스터.jpg","./image/movie/블랙위도우포스터.jpg"};
+   public MovieFrame1() {
+	   String[] slide = {"./image/movie/모가디슈포스터1.jpg","./image/movie/보스베이비2포스터.jpg","./image/movie/모가디슈포스터2.jpg","./image/movie/블랙위도우포스터.jpg","./image/movie/포스터1.jpg"};
       
-      setBounds(100, 100, 700, 700);
+      setBounds(0, 0, 700, 700);
       setDefaultCloseOperation(EXIT_ON_CLOSE);
       getContentPane().setLayout(null);
 
@@ -50,7 +51,7 @@ public class MovieFrame1 extends JFrame{
          @Override
          public void actionPerformed(ActionEvent e) {
             dispose();
-            //new MainFrame().setVisible(true);
+            new MainFrame().setVisible(true);
          }
       });
       
@@ -59,7 +60,7 @@ public class MovieFrame1 extends JFrame{
          @Override
          public void actionPerformed(ActionEvent e) {
             dispose();
-            //new MainFrame().setVisible(true);
+            new MainFrame().setVisible(true);
          }
       });
    }
