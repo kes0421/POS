@@ -35,6 +35,7 @@ public class MainFrame extends JFrame{
 		setLayout(null);
 		setResizable(false);
 		
+		
 		plusFrame();
 	}
 	
