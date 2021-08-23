@@ -71,7 +71,18 @@ create table movieSales(
     ms_price number(5) NOT NULL,
     ms_quantity number(2) NOT NULL,
     ms_date varchar2(10) NOT NULL
-    );
+);
+    
+-- reservationNum 테이블 CREATE
+CREATE TABLE reservationNum(
+    r_num varchar2(20) primary key,
+    r_name varchar2(100) not null,
+    r_theater varchar2(10) not null,
+    r_quantity number(10) not null,
+    r_img_path varchar2(100) not null,
+    r_start varchar2(10) not null,
+    r_end varchar2(10) not null
+);
 
 -- 영화 매출 코드 시퀀스 CREATE
 create sequence ms_code_Seq start with 1 increment by 1 maxvalue 999 nocycle;
