@@ -20,7 +20,7 @@ public class At2Btn1 extends TicketButton implements ActionListener,MouseListene
 	public At2Btn1(JFrame at2Frame) {
 		super("티켓 출력");
 		this.at2Frame = at2Frame;
-		setFont(new Font("휴먼둥근헤드라인", Font.PLAIN, 20)); 	 
+		setFont(new Font("휴먼둥근헤드라인", Font.BOLD, 20)); 	 
 		setBackground(Color.red);
 		setForeground(Color.white);
 		setBounds(170, 330, 150, 84);

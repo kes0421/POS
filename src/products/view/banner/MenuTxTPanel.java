@@ -17,7 +17,7 @@ public class MenuTxTPanel extends JPanel{
 
 		// ∏ﬁ¥∫∂Û∫ß 
 		JLabel titleLabel = new JLabel("Popcorn Factory");
-		titleLabel.setFont(new Font("»ﬁ∏’µ’±Ÿ«ÏµÂ∂Û¿Œ", Font.PLAIN | Font.ITALIC, 12));
+		titleLabel.setFont(new Font("»ﬁ∏’µ’±Ÿ«ÏµÂ∂Û¿Œ", Font.BOLD | Font.ITALIC, 12));
 		titleLabel.setBounds(279, 6, 107, 16);
 		add(titleLabel);
 	}

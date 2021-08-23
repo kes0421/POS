@@ -13,7 +13,7 @@ public class MainBtn3 extends JButton{
 		super("ªÛ«∞");
 		setForeground(Color.white);
 		setBackground(Color.black);
-		setFont(new Font("»ﬁ∏’µ’±Ÿ«ÏµÂ∂Û¿Œ", Font.PLAIN, 30));
+		setFont(new Font("»ﬁ∏’µ’±Ÿ«ÏµÂ∂Û¿Œ", Font.BOLD, 30));
 		setBounds(480, 471, 192, 180);
 		LineBorder lb = new LineBorder(Color.LIGHT_GRAY, 5, true);
 		setBorder(lb);

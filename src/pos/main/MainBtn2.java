@@ -11,7 +11,7 @@ public class MainBtn2 extends JButton{
 		super("예매티켓출력");
 		setForeground(Color.white);
 		setBackground(Color.black);
-		setFont(new Font("휴먼둥근헤드라인", Font.PLAIN, 25));
+		setFont(new Font("휴먼둥근헤드라인", Font.BOLD, 25));
 		setBounds(253, 471, 192, 180);
 		LineBorder lb = new LineBorder(Color.LIGHT_GRAY, 5, true);
 		setBorder(lb);

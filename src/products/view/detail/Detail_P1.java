@@ -15,7 +15,7 @@ public class Detail_P1 extends JPanel{
 		setVisible(true);
 		
 		JLabel label1 = new JLabel("1) ¡÷πÆ »Æ¿Œ");
-		label1.setFont(new Font("»ﬁ∏’µ’±Ÿ«ÏµÂ∂Û¿Œ", Font.PLAIN | Font.ITALIC, 16));
+		label1.setFont(new Font("»ﬁ∏’µ’±Ÿ«ÏµÂ∂Û¿Œ", Font.BOLD | Font.ITALIC, 16));
 		label1.setForeground(new Color(87,149,255));
 		label1.setBounds(17, 6, 104, 27);
 		add(label1);
