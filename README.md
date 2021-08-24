@@ -456,7 +456,7 @@ public class BlackWidow implements ActionListener {
 <summary>GUI 화면 캡처본</summary>
 <div markdown="1">
 
-캡처본 넣기  
+![main](https://user-images.githubusercontent.com/77534863/130552143-ed417539-f301-4676-a801-4da8b16ce446.jpeg)
 
 
 </div>
