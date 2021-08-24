@@ -480,7 +480,18 @@ public class BlackWidow implements ActionListener {
 
 
 </div>
+</details>    
+	
+<details>
+<summary>영화 인원 선택</summary>
+<div markdown="1">
+
+![KakaoTalk_Photo_2021-08-24-12-40-06 004](https://user-images.githubusercontent.com/77534863/130553049-c2bff907-c470-4ffb-9641-fc9d0fb31270.jpeg)
+
+
+</div>
 </details>     
+	
 	
 <details>
 <summary>영화 좌석 선택</summary>
