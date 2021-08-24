@@ -480,7 +480,102 @@ public class BlackWidow implements ActionListener {
 
 
 </div>
-</details>  
+</details>     
+	
+<details>
+<summary>영화 좌석 선택</summary>
+<div markdown="1">
+
+![KakaoTalk_Photo_2021-08-24-12-40-06 006](https://user-images.githubusercontent.com/77534863/130552449-e2581f16-335a-474e-a85f-e5866a3410da.jpeg)
+
+
+</div>
+</details>     
+	
+	
+<details>
+<summary>영화 티켓 출력</summary>
+<div markdown="1">
+
+![KakaoTalk_Photo_2021-08-24-12-40-06 002](https://user-images.githubusercontent.com/77534863/130552541-a7f47e82-dc79-496e-bfb3-5955bbb6f108.jpeg)
+
+
+</div>
+</details>       
+	
+	
+<details>
+<summary>음식 상품 메인</summary>
+<div markdown="1">
+
+![KakaoTalk_Photo_2021-08-24-12-40-06 007](https://user-images.githubusercontent.com/77534863/130552585-173b7a7c-d9fa-468f-86d0-9fc50fd2880e.jpeg)
+
+
+</div>
+</details>      
+	
+<details>
+<summary>음식 상품 선택</summary>
+<div markdown="1">
+
+![KakaoTalk_Photo_2021-08-24-12-40-06 010](https://user-images.githubusercontent.com/77534863/130552626-a5305f08-e121-4391-a5e1-aab01038f9ff.jpeg)
+
+
+</div>
+</details>     
+	
+	
+<details>
+<summary>음식 장바구니 화면</summary>
+<div markdown="1">
+
+![KakaoTalk_Photo_2021-08-24-12-40-06 008](https://user-images.githubusercontent.com/77534863/130552665-9c6d1153-197f-4494-89ca-ce3725aae862.jpeg)
+
+
+</div>
+</details>      
+	
+<details>
+<summary>음식 원산지 표시판</summary>
+<div markdown="1">
+
+![KakaoTalk_Photo_2021-08-24-12-40-06 009](https://user-images.githubusercontent.com/77534863/130552711-c0e70788-b947-4c37-bcc0-038a7550c8cf.jpeg)
+
+
+</div>
+</details>     
+	
+<details>
+<summary>음식 재고관리</summary>
+<div markdown="1">
+
+![상품수정완료](https://user-images.githubusercontent.com/77534863/130552807-46bd6490-8c0a-4d8e-856d-d7374b866642.png)
+
+
+</div>
+</details>     
+	
+<details>
+<summary>영화 예매 화면</summary>
+<div markdown="1">
+
+![KakaoTalk_Photo_2021-08-24-12-40-06 003](https://user-images.githubusercontent.com/77534863/130552881-b12e07e3-6eca-491c-9dd7-5f29a31750ee.jpeg)
+
+
+</div>
+</details>     
+	
+<details>
+<summary>영화 예매 출력</summary>
+<div markdown="1">
+
+![KakaoTalk_Photo_2021-08-24-12-40-06 005](https://user-images.githubusercontent.com/77534863/130552910-da31fb39-4de3-4b70-bca2-3f1ff2af1768.jpeg)
+
+
+</div>
+</details> 
+	
+
 
 
 
