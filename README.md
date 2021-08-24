@@ -453,14 +453,24 @@ public class BlackWidow implements ActionListener {
 
 ## 📸 _ScreenShot_   
 <details>
-<summary>GUI 화면 캡처본</summary>
+<summary>메인 화면</summary>
 <div markdown="1">
 
 ![main](https://user-images.githubusercontent.com/77534863/130552143-ed417539-f301-4676-a801-4da8b16ce446.jpeg)
 
 
 </div>
-</details>   
+</details>    
+
+<details>
+<summary>가장 빠른 영화</summary>
+<div markdown="1">
+
+![KakaoTalk_Photo_2021-08-24-12-40-06 012](https://user-images.githubusercontent.com/77534863/130552300-6e5e3df6-cbad-4284-b035-5ab81561cab6.jpeg)
+
+
+</div>
+</details>  
 
 
 
