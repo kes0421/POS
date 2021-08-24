@@ -440,20 +440,6 @@ public class BlackWidow implements ActionListener {
 
 ***  
 
-## 🔆 _Bragging Code_    
-
-> `영화관 좌석표`
-> > 간단설명   
-```java
-public class BootSpringBootApplication {
-  public static void main(String[] args) {
-    System.out.println("자랑하고 싶은 코드");
-  }
-}
-```   
- 
-*** 
-
 ## 📌 _Video Solution_
 - Java Swing 동영상 출력
 
@@ -465,9 +451,9 @@ public class BootSpringBootApplication {
 	
 *** 
 
-## 📸 _Demonstration Video_   
+## 📸 _ScreenShot_   
 <details>
-<summary>GUI 화면 영상</summary>
+<summary>GUI 화면 캡처본</summary>
 <div markdown="1">
 
 영상삽입  
